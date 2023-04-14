@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% include 'components/head.html' %}
+    <body class="bg-[url('/source/static/images/main/bg_green_s.png')] bg-right-top bg-no-repeat bg-gray-100">
+        {% include 'components/navbar.html' %}
+        <div class="mx-24 mt-6">
+            <section class="flex flex-col items-center bg-lime-10 rounded-3xl px-[34rem] py-16">
+                <span class="font-montserrat-semibold text-2xl pb-12">Авторизация</span>
+                <input class="mt-10 rounded-full w-full focus:ring-0 focus:border-1 focus:border-lime-500 focus:text-lime-500" type="text" placeholder="Укажите Email">
+                <input class="mt-10 rounded-full w-full focus:ring-0 focus:border-1 focus:border-lime-500 focus:text-lime-500" type="password" placeholder="Пароль">
+                <div class="flex flex-row gap-x-3 self-start pt-10">
+                    <input id="sign_in_radio" class="rounded w-6 h-6 checked:bg-lime-500 focus:ring-1 focus:ring-gray-400 after:bg-transparent" type="checkbox" name="sign_in">
+                    <label for="sign_in_radio" class="select-none text-start font-montserrat-light">Запомнить меня</label>
+                </div>
+                <button class="btn-black w-[30rem] py-4 font-montserrat-semibold text-xl rounded-full mt-16">Войти</button>
+                <a class="font-montserrat underline pt-8">Забыли пароль?</a>
+            </section>
+        </div>
+         {% include 'components/footer.html' %}
+    </body>
+</html>

@@ -1,0 +1,42 @@
+/**/
+/* Переменные, для плагина */
+:root {
+    --bg-color-range-progress: rgb(132 204 22);
+    --bg-color-range-thumb: rgb(0 0 0);
+    --bg-color-range: #E5E7EB;
+    --percents-fill-range-progress: 50%;
+    --bg-webkit-range-progress: linear-gradient(to right, var(--bg-color-range-progress) var(--percents-fill-range-progress), var(--bg-color-range) 0%);
+}
+
+/**/
+/* FireFox */
+.range-lime::-moz-range-thumb{ /* Кастомизация ползунка */
+    -moz-appearance: none !important;
+    background: var(--bg-color-range-thumb)  !important;
+    height: 10px !important;
+    width: 10px !important;
+}
+
+.range-lime::-moz-range-progress{ /* Кастомизация линии за ползунком */
+    -moz-appearance: none !important;
+    background: var(--bg-color-range-progress) !important;
+    height: 100% !important;
+    border-radius: 15px !important;
+}
+
+/**/
+/* Google Chrome, Opera, Safari */
+.range-lime::-webkit-slider-thumb { /* Кастомизация ползунка */
+    -webkit-appearance: none !important;
+    background: var(--bg-color-range-thumb) !important;
+    height: 10px !important;
+    width: 10px !important;
+}
+
+.range-lime::-webkit-slider-container{
+    -webkit-appearance: none !important;
+    background: var(--bg-webkit-range-progress); !important;
+    height: 100% !important;
+    width: 30px !important;
+    border-radius: 15px !important;
+}

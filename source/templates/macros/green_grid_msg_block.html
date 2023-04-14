@@ -1,0 +1,9 @@
+{% macro green_grid_block(header='', description='', button='') %}
+  <div class="bg-lime-10 bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover mt-40">
+    <section class="grid grid-rows-3 pl-24 py-16">
+      <h2 class="row-span-1 font-montserrat-bold text-4xl pt-5">{{ header|safe }}</h2>
+      <span class="row-span-1 font-montserrat text-xl self-center">{{ description|safe }}</span>
+      <button class="row-span-1 btn-black font-montserrat-semibold text-2xl py-8 justify-self-start mt-6 px-20 rounded-full">{{ button|safe }}</button>
+    </section>
+  </div>
+{% endmacro %}

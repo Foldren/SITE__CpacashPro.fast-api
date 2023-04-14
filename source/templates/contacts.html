@@ -1,0 +1,52 @@
+<html lang="ru">
+  {% include 'components/head.html' %}
+  <body class="bg-gray-100">
+    {% include 'components/navbar.html' %}
+    <div class="mt-8 mx-16">
+      <section class="bg-lime-10 bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover rounded-3xl shadow-lg flex flex-col justify-start px-14 py-24 gap-y-10">
+          <h1 class="row-start-2 row-span-2 col-span-9 font-montserrat-bold text-6xl py-5">Контакты</h1>
+          <span class="font-montserrat text-xl w-1/2 text-gray-700">Собрали в одном месте информацию, которая поможет связаться с нами, присоединиться к сообществу единомышленников и дружить с нами в соцсетях</span>
+      </section>
+    </div>
+    <div class="mt-32 mx-24">
+      <section class="flex flex-col justify-start">
+        <h2 class="font-montserrat-bold text-4xl pb-20">Написать нам в Telegram</h2>
+        {% include 'components/contacts.html' %}
+      </section>
+      <section class="flex flex-col justify-start mt-32 mr-24">
+        <h2 class="font-montserrat-bold text-4xl pb-10">Связаться с поддержкой</h2>
+        <span class="font-montserrat text-lg text-gray-700 pb-20">Зарегистрируйся в боте, чтобы смотреть статистику по офферам, не заходя на платформу CPACASH, подключать офферы, заказывать выплаты и связываться с поддержкой.</span>
+        <div class="grid grid-rows-2 grid-cols-6 rounded-3xl bg-white shadow-lg py-6 w-2/6">
+            <img class="col-span-2 row-span-2 w-2/5 justify-self-center" src='/source/static/images/main/tg_avatar.png'>
+            <span class="col-start-3 col-span-4 font-montserrat text-lg  self-center justify-self-start">Личный кабинет в боте</span>
+            <a href="https://telegram.me/cpacashbot" class="col-start-3 row-start-2 col-span-4 font-montserrat lime-url justify-self-start">@cpacashbot</a>
+        </div>
+      </section>
+      <section class="flex flex-col justify-start mt-32 mr-24">
+        <h2 class="font-montserrat-bold text-4xl pb-10">Задать вопрос в чате</h2>
+        <span class="font-montserrat text-lg text-gray-700 pb-20">Помогаем друг другу, шутим и обсуждаем новости арбитража. Присоединяйся — тебя не хватает.</span>
+        <div class="grid grid-rows-2 grid-cols-6 rounded-3xl bg-white shadow-lg py-6 w-2/6">
+            <img class="col-span-2 row-span-2 w-2/5 justify-self-center" src='/source/static/images/main/tg_avatar.png'>
+            <span class="col-start-3 col-span-4 font-montserrat text-lg  self-center justify-self-start">Уютный чат CPACASH</span>
+            <a href="https://telegram.me/Cpacash_Chat" class="col-start-3 row-start-2 col-span-4 font-montserrat lime-url justify-self-start">@Cpacash_Chat</a>
+        </div>
+      </section>
+      <section class="flex flex-col justify-start mt-32 mr-24">
+        <h2 class="font-montserrat-bold text-4xl pb-10">Написать на почту</h2>
+        <div class="flex flex-row gap-x-10">
+          <div class="basis-1/3 grid grid-rows-2 grid-cols-6 rounded-3xl bg-white shadow-lg py-6 w-2/6">
+              <img class="col-span-2 row-span-2 w-2/5 justify-self-center" src='/source/static/images/main/tg_avatar.png'>
+              <span class="col-start-3 col-span-4 font-montserrat text-lg  self-center justify-self-start">HR</span>
+              <a href="mailto:hr@cpacash.pro" class="col-start-3 row-start-2 col-span-4 font-montserrat lime-url justify-self-start">hr@cpacash.pro</a>
+          </div>
+          <div class="basis-1/3 grid grid-rows-2 grid-cols-6 rounded-3xl bg-white shadow-lg py-6 w-2/6">
+            <img class="col-span-2 row-span-2 w-2/5 justify-self-center" src='/source/static/images/main/tg_avatar.png'>
+            <span class="col-start-3 col-span-4 font-montserrat text-lg  self-center justify-self-start">По любым вопросам</span>
+            <a href="mailto:hr@cpacash.pro" class="col-start-3 row-start-2 col-span-4 font-montserrat lime-url justify-self-start">hello@cpacash.pro</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    {% include 'components/footer.html' %}
+  </body>
+</html>

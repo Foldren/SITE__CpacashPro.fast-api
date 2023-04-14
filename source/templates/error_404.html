@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% include 'components/head.html' %}
+    <body class="bg-[url('/source/static/images/main/bg_green_s.png')] bg-right-top bg-no-repeat bg-gray-100">
+        {% include 'components/navbar.html' %}
+        <div class="mx-[32rem]">
+            <section class="flex flex-col items-center">
+                <span class="basis-1/12 font-montserrat-bold text-lime-500 text-5xl self-start">Ой</span>
+                <span class="basis-7/12 font-montserrat-bold text-lime-500 text-[26rem] -mt-32">404</span>
+                <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl pb-14 -mt-8">Похоже кто-то много арбитражил и ошибся адресом.</span>
+                <span class="basis-2/12 font-montserrat text-lg pb-14 text-center">Есть идеи, что делать дальше:<br><br>— напиши нам в <a class="lime-url">чате</a><br>— возвращайся на главную</span>
+                <button class="btn-lime px-28 py-4 font-montserrat-semibold text-xl rounded-full">На главную</button>
+            </section>
+        </div>
+        {% include 'components/footer.html' %}
+    </body>
+</html>
