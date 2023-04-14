@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  bot:
+    build: .
+    image: site-cpacashpro
+    container_name: SITE__CpacashPro.fast-api
+    environment:
+      - TZ=Europe/Moscow
+    volumes:
+      - /home/.VOLUMES/SITE__CpacashPro.fast-api/source:/source:rw
+    tty: true
+    working_dir: /source
+    ports:
+      - "4444:4444"
+    command: ["uvicorn", "source.main:app", "--host", "0.0.0.0", "--port", "4444"]
