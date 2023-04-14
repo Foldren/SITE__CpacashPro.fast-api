@@ -4,5 +4,4 @@ RUN apt update
 COPY /source /source
 WORKDIR /source
 RUN pip install --upgrade pip
-RUN pip install -U --pre aiogram
-RUN pip install fastapi uvicorn pydantic
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
