@@ -12,12 +12,9 @@ export function generate_carousel(number_items, index_carousel) {
             },
 
             // callback functions
-            onNext: () => {
-            },
-            onPrev: () => {
-            },
-            onChange: () => {
-            }
+            onNext: () => {},
+            onPrev: () => {},
+            onChange: () => {}
         }
     }
 
@@ -35,13 +32,8 @@ export function generate_carousel(number_items, index_carousel) {
     const $prevButton = document.getElementById(`data-carousel-${index_carousel}-prev`);
     const $nextButton = document.getElementById(`data-carousel-${index_carousel}-next`);
 
-    $prevButton.addEventListener('click', () => {
-        carousel.prev();
-    });
-
-    $nextButton.addEventListener('click', () => {
-        carousel.next();
-    });
+    $prevButton.addEventListener('click', () => { carousel.prev(); });
+    $nextButton.addEventListener('click', () => { carousel.next(); });
 
     return carousel
 }

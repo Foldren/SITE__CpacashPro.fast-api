@@ -3,11 +3,38 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from os import path
+from sqladmin import Admin
+from admin import ProductAdmin, CategoryAdmin, authentication_backend
+from database import engine
+from models import Base
+from settings import ADMIN_IMAGE_LOGO
 
 app = FastAPI()
+
+# Подключаем статику
 this_directory = path.dirname(__file__)
 app.mount("/source/static", StaticFiles(directory=path.join(this_directory, "static")), name="static")
 templates = Jinja2Templates(directory=path.join(this_directory, "templates"))
+
+# Подключаем админку
+admin = Admin(
+    app=app,
+    engine=engine,
+    authentication_backend=authentication_backend,
+    base_url="/admin-dy73HPyTU1UR_R5",
+    logo_url=ADMIN_IMAGE_LOGO,
+    title="CpacashAdmin",
+
+)
+
+admin.add_view(CategoryAdmin)
+admin.add_view(ProductAdmin)
+
+
+@app.on_event("startup")
+async def create_db_engine():
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 
 @app.get("/", response_class=HTMLResponse)
