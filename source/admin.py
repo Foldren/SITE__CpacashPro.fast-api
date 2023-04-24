@@ -13,8 +13,8 @@ import uuid
 
 
 class CategoryAdmin(ModelView, model=Category):
-    column_list = [Category.id, Category.name]
-    form_columns = [Category.name]
+    column_list = [Category.id, Category.name, Category.image]
+    form_columns = [Category.name, Category.image]
     name = "Категория"
     name_plural = "Категории"
     # icon = "fa-filter"
@@ -34,7 +34,6 @@ class ProductAdmin(ModelView, model=Product):
 
 class AdminAuth(AuthenticationBackend):
     async def login(self, request: Request) -> bool:
-        print(request.client.host)
         form = await request.form()
         username, password = form["username"], form["password"]
         f = Fernet(SECRET_KEY)
@@ -58,7 +57,6 @@ class AdminAuth(AuthenticationBackend):
 
     async def authenticate(self, request: Request) -> Optional[RedirectResponse]:
         token = request.session.get("token")
-
         if not token:
             return RedirectResponse(request.url_for("admin:login"), status_code=302)
 
