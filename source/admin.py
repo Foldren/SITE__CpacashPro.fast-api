@@ -13,7 +13,7 @@ import uuid
 
 
 class CategoryAdmin(ModelView, model=Category):
-    column_list = [Category.id, Category.name, Category.image]
+    column_list = [Category.id, Category.name]
     form_columns = [Category.name, Category.image]
     name = "Категория"
     name_plural = "Категории"
@@ -21,7 +21,7 @@ class CategoryAdmin(ModelView, model=Category):
 
 
 class ProductAdmin(ModelView, model=Product):
-    column_list = [Product.id, Product.name, Product.scores, Product.category_id]
+    column_list = [Product.id, Product.name, Product.scores, Product.category]
     form_columns = [Product.name, Product.scores, Product.category, Product.image]
     # form_include_pk = True
     name = "Товар"

@@ -3,3 +3,8 @@ uvicorn
 pydantic
 jinja2
 alembic
+SQLAlchemy
+starlette
+sqlalchemy-fields
+sqladmin
+cryptography

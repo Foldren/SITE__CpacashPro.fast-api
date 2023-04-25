@@ -7,7 +7,7 @@ from sqladmin import Admin
 from admin import ProductAdmin, CategoryAdmin, authentication_backend
 from database import engine
 from models import Base
-from settings import ADMIN_IMAGE_LOGO
+from settings import ADMIN_IMAGE_LOGO, IS_LOCAL
 
 app = FastAPI()
 
@@ -31,10 +31,10 @@ admin.add_view(CategoryAdmin)
 admin.add_view(ProductAdmin)
 
 
-@app.on_event("startup")
-async def create_db_engine():
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+# @app.on_event("startup")
+# async def create_db_engine():
+#     async with engine.begin() as conn:
+#         await conn.run_sync(Base.metadata.create_all)
 
 
 @app.get("/", response_class=HTMLResponse)

@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy_fields.storages import FileSystemStorage
 from sqlalchemy_fields.types import FileType
-from settings import IMAGES_ADMIN_PATH
+from source.settings import IMAGES_ADMIN_PATH
 
 Base = declarative_base()
 
@@ -20,7 +20,7 @@ class Category(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(90))
-    image = Column(FileType(storage=FileSystemStorage(path=IMAGES_ADMIN_PATH)))
+    image = Column(FileType(storage=FileSystemStorage(path=IMAGES_ADMIN_PATH+"/categories")))
 
     def __str__(self):
         return self.name
@@ -34,5 +34,5 @@ class Product(Base):
     category = relationship("Category")
     name = Column(String(170))
     scores = Column(Integer)
-    image = Column(FileType(storage=FileSystemStorage(path=IMAGES_ADMIN_PATH)))
+    image = Column(FileType(storage=FileSystemStorage(path=IMAGES_ADMIN_PATH+"/products")))
 
