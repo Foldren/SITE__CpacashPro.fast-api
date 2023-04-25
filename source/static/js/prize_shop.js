@@ -1,9 +1,7 @@
 import {generate_range} from "/source/static/plugins/range/range.js"
-import {generate_carousel} from "/source/static/plugins/carousel/carousel.js"
 import {generate_dropdown} from "/source/static/plugins/dropdown/dropdown.js"
 import {generate_accordion} from "/source/static/plugins/accordion/accordion.js"
 
-const carousel_prize_shop = generate_carousel(2, 2)
 
 generate_range(
     '/source/static/plugins/range',

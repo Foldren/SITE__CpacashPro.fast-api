@@ -3,11 +3,12 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from os import path
+from sqlalchemy import select
 from sqladmin import Admin
-from admin import ProductAdmin, CategoryAdmin, authentication_backend
-from database import engine
-from models import Base
-from settings import ADMIN_IMAGE_LOGO, IS_LOCAL
+from admin import ProductAdmin, CategoryAdmin, authentication_backend, TagAdmin
+from database import engine, async_session
+from models import Category, Product, Tag
+from settings import ADMIN_IMAGE_LOGO
 
 app = FastAPI()
 
@@ -22,15 +23,14 @@ admin = Admin(
     engine=engine,
     authentication_backend=authentication_backend,
     base_url="/admin-dy73HPyTU1UR_R5",
-    logo_url=ADMIN_IMAGE_LOGO,
     title="CpacashAdmin",
-
 )
 
 admin.add_view(CategoryAdmin)
+admin.add_view(TagAdmin)
 admin.add_view(ProductAdmin)
 
-
+# При первом запуске
 # @app.on_event("startup")
 # async def create_db_engine():
 #     async with engine.begin() as conn:
@@ -44,7 +44,23 @@ async def main(request: Request):
 
 @app.get("/prize-shop")
 async def prize_shop(request: Request):
-    return templates.TemplateResponse("prize_shop.html", {"request": request})
+    async with async_session() as session:
+        categories_obj = await session.execute(select(Category))
+        products_obj = await session.execute(select(Product))
+        tags_obj = await session.execute(select(Tag))
+        categories = categories_obj.scalars().all()
+        products = products_obj.scalars().all()
+        tags = tags_obj.scalars().all()
+
+    return templates.TemplateResponse(
+        name="prize_shop.html",
+        context={
+          "request": request,
+          "categories": categories,
+          "tags": tags,
+          "products": products
+        }
+    )
 
 
 @app.get("/page-success")

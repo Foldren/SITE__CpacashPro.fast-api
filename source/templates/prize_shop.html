@@ -47,24 +47,14 @@
                     </div>
                 </div>
                 <div class="col-span-full grid grid-cols-4 gap-12 pt-6 mb-24">
-                    <button class="bg-lime-10 shadow-md focus:bg-white focus:border-2 focus:border-lime-500 group flex flex-row rounded-3xl" type="button">
-                        <img class="basis-1/2 w-9/12 ml-6" src="/source/static/images/prize_shop/iphone_mini.png">
-                        <span class="group-focus:text-lime-500 text-xl font-montserrat self-center ml-6">Apple<br>Store</span>
-                    </button>
-                    <button class="bg-lime-10 shadow-md focus:bg-white focus:border-2 focus:border-lime-500 group flex flex-row rounded-3xl" type="button">
-                        <img class="basis-1/2 w-9/12 ml-6" src="/source/static/images/prize_shop/speaker.png">
-                        <span class="group-focus:text-lime-500 text-xl font-montserrat self-center ml-6">Техника</span>
-                    </button>
-                    <button class="bg-lime-10 shadow-md focus:bg-white focus:border-2 focus:border-lime-500 group flex flex-row rounded-3xl" type="button">
-                        <img class="basis-1/2 w-9/12 ml-6" src="/source/static/images/prize_shop/joystick.png">
-                        <span class="group-focus:text-lime-500 text-xl font-montserrat self-center ml-6">Ништяки</span>
-                    </button>
-                    <button class="bg-lime-10 shadow-md focus:bg-white focus:border-2 focus:border-lime-500 group flex flex-row rounded-3xl" type="button">
-                        <img class="basis-1/2 w-9/12 ml-6" src="/source/static/images/prize_shop/mercedes_logo.png">
-                        <span class="group-focus:text-lime-500 text-xl font-montserrat self-center ml-6">Элитные<br>ништяки</span>
-                    </button>
+                    {% for category in categories %}
+                        <button class="bg-lime-10 shadow-md focus:bg-white focus:border focus:border-lime-500 group flex flex-row rounded-3xl" type="button">
+                            <img class="basis-1/2 w-6/12 ml-6 self-end pointer-events-none" src="{{ category.image }}">
+                            <span class="group-focus:text-lime-500 text-xl font-montserrat self-center ml-6 text-start">{{ category.name }}</span>
+                        </button>
+                    {% endfor %}
                 </div>
-                <div class="col-span-1 bg-white rounded-3xl p-6 flex flex-col gap-6 h-[1000px]">
+                <div class="col-span-1 bg-white rounded-3xl p-6 flex flex-col gap-6 h-[800px]">
                     <div class="basis-1/12 relative flex items-center">
                         <input class="flex rounded-full pl-4 bg-gray-200 font-montserrat text-lg border-0 focus:ring-0 appearance-none" type="text" placeholder="Поиск по товарам">
                         <svg class="absolute right-8" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,33 +64,20 @@
                     <div class="basis-5/12 overflow-y-auto">
                         <span class="font-montserrat-semibold text-lg text-lime-500 text-center my-3">Категории товаров</span>
                         <div class="flex flex-col mb-4 gap-4 pt-5">
-                            <label for="radio-category-0" tabindex="0" class="flex flex-row items-center group gap-x-3">
-                                <input id="radio-category-0" name="category" class="w-4 h-4 bg-white border border-lime-500 checked:bg-lime-500 focus:ring-0" type="radio">
-                                <span class="font-montserrat text-lg">Apple Store</span>
-                            </label>
-                            <label for="radio-category-1" tabindex="0" class="flex flex-row items-center group gap-x-3">
-                                <input id="radio-category-1" name="category" class="w-4 h-4 bg-white border border-lime-500 checked:bg-lime-500 focus:ring-0" type="radio">
-                                <span class="font-montserrat text-lg">Apple Store</span>
-                            </label>
-                            <label for="radio-category-2" tabindex="0" class="flex flex-row items-center group gap-x-3">
-                                <input id="radio-category-2" name="category" class="w-4 h-4 bg-white border border-lime-500 checked:bg-lime-500 focus:ring-0" type="radio">
-                                <span class="font-montserrat text-lg">Apple Store</span>
-                            </label>
-                            <label for="radio-category-3" tabindex="0" class="flex flex-row items-center group gap-x-3">
-                                <input id="radio-category-3" name="category" class="w-4 h-4 bg-white border border-lime-500 checked:bg-lime-500 focus:ring-0" type="radio">
-                                <span class="font-montserrat text-lg">Apple Store</span>
-                            </label>
+                            {% for category in categories %}
+                                <label for="radio-category-{{loop.index0}}" tabindex="0" class="flex flex-row items-center group gap-x-3">
+                                    <input id="radio-category-{{loop.index0}}" name="category" class="w-4 h-4 bg-white border border-lime-500 checked:bg-lime-500 focus:ring-0" type="radio">
+                                    <span class="font-montserrat text-lg">{{category.name}}</span>
+                                </label>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="basis-3/12 flex flex-wrap gap-3">
                         <span class="basis-full font-montserrat-semibold text-lg text-lime-500 text-center my-3">Теги</span>
-                        <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">Все</button>
-                        <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">PS4</button>
-                        <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">PS5</button>
-                        <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">Apple Iphone</button>
-                        <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">Часы</button>
-                        <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">Подписка</button>
-                        <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">JBL</button>
+                        <button id="all-tags-checkbox" class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">Все</button>
+                        {% for tag in tags %}
+                            <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">{{tag.name}}</button>
+                        {% endfor %}
                     </div>
                     <div class="basis-2/12 flex flex-col">
                         <span class="basis-full font-montserrat-semibold text-lg text-lime-500 text-center my-3">Цена товара</span>
@@ -108,14 +85,14 @@
                     </div>
                     <button class="basis-1/12 font-montserrat-bold text-xl text-lime-500 my-2" type="button">Сбросить все</button>
                 </div>
-                <div class="col-span-4 flex flex-col">
+                <div class="col-span-4 flex flex-col min-h-[1000px]">
                     <div class="basis-1/12 flex flex-row items-center pb-10 gap-8 px-8">
                         <div class="bg-white rounded-full px-8 py-4 h-min shadow-sm">
                             <span class="font-montserrat-light text-gray-500 text-lg">Найдено 12 товаров</span>
                         </div>
                         <div class="flex flex-row items-center">
                             <span class="text-lg text-gray-500 font-montserrat-light pr-6">Товаров на странице</span>
-                            <input class="w-24 border-0 focus:ring-0 rounded-full pl-5 py-4 text font-montserrat text-lg shadow-sm"  type="number" min="6" size="3" value="6">
+                            <input class="w-24 border-0 focus:ring-0 rounded-full pl-5 py-4 text font-montserrat text-lg shadow-sm"  type="number" min="8" size="3" value="8">
                         </div>
                         <div class="flex">
                             <button id="dropdownButton-1" class="w-[21rem] text-white bg-lime-500 rounded-full text-lg px-6 py-4 flex items-center justify-between" type="button">
@@ -134,131 +111,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="basis-11/12 flex flex-col px-8">
-                      <!-- Carousel wrapper -->
-                      <div class="basis-11/12 relative overflow-hidden">
-                           <!-- Item 1 -->
-                          <div id="carousel-2-item-1" class="hidden duration-700 ease-in-out grid grid-cols-4 grid-rows-2 gap-4 pb-3">
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
+                    <div class="basis-11/12 px-8 grid grid-cols-4 gap-4">
+                        {% for product in products %}
+                          <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-8 gap-2 h-[500px]">
+                              <img class="basis-6/12 pb-6 place-self-center object-scale-down" src="{{product.image}}">
+                              <div class="flex flex-col">
+                                  <span class="font-montserrat text-lime-500 text-lg pb-4">{{product.category.name}}</span>
+                                  <span class="font-montserrat-semibold text-xl pb-4">{{product.name}}</span>
+                                  <span class="font-montserrat-bold text-lime-500 text-3xl place-self-start">{{product.scores}} баллов</span>
+                                  <span data-product-id="{{product.id}}" class="hidden product-tags">{% for tag in product.tag %}{{tag.name}} {% endfor %}</span>
                               </div>
                           </div>
-                          <!-- Item 2 -->
-                          <div id="carousel-2-item-2" class="hidden duration-700 ease-in-out grid grid-cols-4 grid-rows-2 gap-4">
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                              <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-16 gap-2 w-min">
-                                  <img class="basis-9/12 w-max py-6 place-self-center" src="/source/static/images/main/iphone.png">
-                                  <span class="basis-1/12 font-montserrat text-lime-500 text-lg">Элитный ништяк</span>
-                                  <span class="basis-1/12 font-montserrat-semibold text-xl">iPhone 13</span>
-                                  <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl">30&nbsp;000&nbsp;баллов</span>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="basis-1/12 grid grid-cols-5 w-44 items-center place-self-center pt-8">
-                          <!-- Slider controls -->
-                          <button id="data-carousel-2-prev" type="button" class="col-span-2 cursor-pointer group justify-self-start">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="group-hover:stroke-lime-500" d="M18 12L6 12M6 12L11 17M6 12L11 7" stroke="#1F2227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                          </button>
-                          <!-- Slider indicators -->
-                          <div class="grid grid-cols-2 justify-items-center gap-7">
-                            <button id="carousel-2-indicator-1" type="button" class="w-4 h-4 rounded-full" aria-current="true"></button>
-                            <button id="carousel-2-indicator-2" type="button" class="w-4 h-4 rounded-full" aria-current="false"></button>
-                          </div>
-                          <!-- Slider controls -->
-                          <button id="data-carousel-2-next" type="button" class="col-span-2 cursor-pointer group justify-self-end">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="group-hover:stroke-lime-500" d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#1F2227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                          </button>
-                      </div>
+                        {% endfor %}
                     </div>
                 </div>
             </section>

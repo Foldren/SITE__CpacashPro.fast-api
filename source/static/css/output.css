@@ -2140,12 +2140,16 @@ input:checked + .toggle-bg {
   height: 24rem;
 }
 
-.h-\[1000px\] {
-  height: 1000px;
+.h-\[500px\] {
+  height: 500px;
 }
 
 .h-\[600px\] {
   height: 600px;
+}
+
+.h-\[800px\] {
+  height: 800px;
 }
 
 .h-auto {
@@ -2189,6 +2193,10 @@ input:checked + .toggle-bg {
 
 .max-h-\[500px\] {
   max-height: 500px;
+}
+
+.min-h-\[1000px\] {
+  min-height: 1000px;
 }
 
 .\!w-min {
@@ -2312,6 +2320,10 @@ input:checked + .toggle-bg {
   width: 1.5rem;
 }
 
+.w-6\/12 {
+  width: 50%;
+}
+
 .w-60 {
   width: 15rem;
 }
@@ -2342,10 +2354,6 @@ input:checked + .toggle-bg {
 
 .w-9 {
   width: 2.25rem;
-}
-
-.w-9\/12 {
-  width: 75%;
 }
 
 .w-96 {
@@ -2556,6 +2564,10 @@ input:checked + .toggle-bg {
   flex-basis: 1.5rem;
 }
 
+.basis-6\/12 {
+  flex-basis: 50%;
+}
+
 .basis-7 {
   flex-basis: 1.75rem;
 }
@@ -2566,10 +2578,6 @@ input:checked + .toggle-bg {
 
 .basis-9 {
   flex-basis: 2.25rem;
-}
-
-.basis-9\/12 {
-  flex-basis: 75%;
 }
 
 .basis-full {
@@ -4708,6 +4716,11 @@ input:checked + .toggle-bg {
      object-fit: scale-down;
 }
 
+.object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -5220,8 +5233,24 @@ input:checked + .toggle-bg {
   text-align: start;
 }
 
+.align-baseline {
+  vertical-align: baseline;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
 .align-bottom {
   vertical-align: bottom;
+}
+
+.align-text-top {
+  vertical-align: text-top;
 }
 
 .align-text-bottom {
