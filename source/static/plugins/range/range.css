@@ -3,7 +3,7 @@
 :root {
     --bg-color-range-progress: rgb(132 204 22);
     --bg-color-range-thumb: rgb(0 0 0);
-    --bg-color-range: #E5E7EB;
+    --bg-color-range: rgb(243 244 246);
     --percents-fill-range-progress: 50%;
     --bg-webkit-range-progress: linear-gradient(to right, var(--bg-color-range-progress) var(--percents-fill-range-progress), var(--bg-color-range) 0%);
 }

@@ -30,6 +30,10 @@ class CategoryAdmin(ModelView, model=Category):
     async def on_model_delete(self, model):
         remove(IMAGES_ADMIN_PATH + "prizes/categories/" + model.image.name)
 
+    async def on_model_change(self, data, model, is_created):
+        if not is_created:
+            remove(IMAGES_ADMIN_PATH + "prizes/categories/" + model.image.name)
+
 
 class ProductAdmin(ModelView, model=Product):
     column_list = [Product.id, Product.name, Product.category, Product.tag, Product.scores]
@@ -42,6 +46,10 @@ class ProductAdmin(ModelView, model=Product):
 
     async def on_model_delete(self, model):
         remove(IMAGES_ADMIN_PATH + "prizes/products/" + model.image.name)
+
+    async def on_model_change(self, data, model, is_created):
+        if not is_created:
+            remove(IMAGES_ADMIN_PATH + "prizes/products/" + model.image.name)
 
 
 class AdminAuth(AuthenticationBackend):

@@ -5,21 +5,21 @@
 
 @layer components {
   .btn-lime {
-    @apply bg-lime-500 rounded-3xl;
+    @apply cursor-pointer bg-lime-500 rounded-3xl;
   }
   .btn-black {
-    @apply bg-black rounded-full text-white;
+    @apply cursor-pointer bg-black rounded-full text-white;
   }
   .btn-gray {
-    @apply bg-gray-900 text-white rounded-full flex flex-row justify-center items-center
+    @apply cursor-pointer bg-gray-900 text-white rounded-full flex flex-row justify-center items-center
   }
   .btn-sm-focus-lime-text-lime {
-    @apply bg-white focus:bg-lime-500 focus:text-black text-lime-500 rounded-3xl font-montserrat border border-lime-500;
+    @apply cursor-pointer bg-white peer-checked:bg-lime-500 peer-checked:text-black text-lime-500 rounded-3xl font-montserrat border border-lime-500;
   }
   .lime-url {
-    @apply text-lime-500 underline text-xl;
+    @apply cursor-pointer text-lime-500 underline text-xl;
   }
   .lime-url-base {
-    @apply text-lime-500 underline text-base;
+    @apply cursor-pointer text-lime-500 underline text-base;
   }
 }

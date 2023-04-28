@@ -14,7 +14,7 @@
                 </div>
             </section>
         </div>
-        <div class="mt-32 mx-24">
+        <div class="mt-36 mx-24">
             <section class="flex flex-col">
                 <h2 class="font-montserrat-bold text-4xl mb-20">Магазин призов</h2>
                 <div class="flex flex-row bg-white rounded-full shadow-md" role="group">
@@ -22,7 +22,8 @@
                     <button type="button" id="accordion-1-heading-2" class="basis-1/2 rounded-full font-montserrat-semibold text-xl m-2 py-4">Вопросы и ответы</button>
                 </div>
             </section>
-            <section id="accordion-1-body-1" class="grid grid-cols-5 mt-24">
+            <section id="accordion-1-body-1" class="grid grid-cols-5 mt-16">
+                <form id="filters-form" class="hidden"></form>
                 <div class="col-span-full grid grid-cols-3 gap-3 rounded-3xl bg-white shadow-md items-center py-8 my-8">
                     <div class="flex flex-row items-center">
                         <svg class="basis-1/5" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,51 +49,58 @@
                 </div>
                 <div class="col-span-full grid grid-cols-4 gap-12 pt-6 mb-24">
                     {% for category in categories %}
-                        <button class="bg-lime-10 shadow-md focus:bg-white focus:border focus:border-lime-500 group flex flex-row rounded-3xl" type="button">
+                        <label for="radio-category-{{loop.index0}}" class="bg-lime-10 shadow-md checked:bg-white checked:border checked:border-lime-500 group flex flex-row rounded-3xl">
                             <img class="basis-1/2 w-6/12 ml-6 self-end pointer-events-none" src="{{ category.image }}">
-                            <span class="group-focus:text-lime-500 text-xl font-montserrat self-center ml-6 text-start">{{ category.name }}</span>
-                        </button>
+                            <span class="group-checked:text-lime-500 text-xl font-montserrat self-center ml-6 text-start">{{ category.name }}</span>
+                        </label>
                     {% endfor %}
                 </div>
                 <div class="col-span-1 bg-white rounded-3xl p-6 flex flex-col gap-6 h-[800px]">
-                    <div class="basis-1/12 relative flex items-center">
-                        <input class="flex rounded-full pl-4 bg-gray-200 font-montserrat text-lg border-0 focus:ring-0 appearance-none" type="text" placeholder="Поиск по товарам">
-                        <svg class="absolute right-8" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="basis-1/12 relative flex items-center content-center">
+                        <input form="filters-form" name="search" id="search-prize-filter" class="flex basis-full placeholder:text-black rounded-full pl-5 bg-gray-100 font-montserrat text-lg border-0 focus:ring-0 appearance-none" type="text" placeholder="Поиск по товарам">
+                        <svg class="absolute right-6" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5001 7.10544C15.5001 3.46316 12.5367 0.499756 8.89446 0.499756C5.25198 0.499756 2.28878 3.46316 2.28878 7.10544C2.28878 8.70762 2.86209 10.1784 3.81435 11.3233L0.678172 14.4595C0.439958 14.6975 0.439958 15.0837 0.678172 15.3217C0.797293 15.4408 0.953388 15.5004 1.10928 15.5004C1.26537 15.5004 1.42129 15.4408 1.54038 15.3217L4.67656 12.1856C5.82152 13.1378 7.29228 13.7111 8.89446 13.7111C12.5367 13.7111 15.5001 10.7479 15.5001 7.10544ZM14.2806 7.10547C14.2806 10.0754 11.8644 12.4916 8.89446 12.4916C5.92455 12.4916 3.50829 10.0754 3.50829 7.10544C3.50829 4.13553 5.92455 1.71927 8.89446 1.71927C11.8644 1.71927 14.2806 4.13556 14.2806 7.10547Z" fill="#85C83E"/>
                         </svg>
                     </div>
-                    <div class="basis-5/12 overflow-y-auto">
-                        <span class="font-montserrat-semibold text-lg text-lime-500 text-center my-3">Категории товаров</span>
-                        <div class="flex flex-col mb-4 gap-4 pt-5">
+                    <div class="basis-5/12 flex flex-wrap">
+                        <span class="basis-full font-montserrat-semibold text-xl text-lime-500 text-center my-2">Категории товаров</span>
+                        <div class="flex flex-col gap-4">
                             {% for category in categories %}
-                                <label for="radio-category-{{loop.index0}}" tabindex="0" class="flex flex-row items-center group gap-x-3">
-                                    <input id="radio-category-{{loop.index0}}" name="category" class="w-4 h-4 bg-white border border-lime-500 checked:bg-lime-500 focus:ring-0" type="radio">
-                                    <span class="font-montserrat text-lg">{{category.name}}</span>
+                                <label for="radio-category-{{loop.index0}}" tabindex="0" class="flex flex-row items-center group gap-x-3 cursor-pointer">
+                                    <input form="filters-form" name="category" id="radio-category-{{loop.index0}}" value="{{category.name}}" class="radio-category peer w-4 h-4 bg-white border border-lime-500 checked:bg-lime-500 focus:ring-0" type="radio">
+                                    <span class="font-montserrat text-lg peer-checked:text-lime-500 select-none">{{category.name}}</span>
                                 </label>
                             {% endfor %}
                         </div>
                     </div>
                     <div class="basis-3/12 flex flex-wrap gap-3">
-                        <span class="basis-full font-montserrat-semibold text-lg text-lime-500 text-center my-3">Теги</span>
-                        <button id="all-tags-checkbox" class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">Все</button>
+                        <span class="basis-full font-montserrat-semibold text-xl text-lime-500 text-center mb-2">Теги</span>
+                        <div>
+                            <input id="tag-all" class="hidden peer" form="filters-form" name="tags" type="checkbox" value="Все">
+                            <label for="tag-all" class="btn-sm-focus-lime-text-lime py-2 px-5 text-xl" type="button">Все</label>
+                        </div>
                         {% for tag in tags %}
-                            <button class="btn-sm-focus-lime-text-lime py-2 px-5" type="button">{{tag.name}}</button>
+                            <div>
+                                <input id="tag-{{loop.index0}}" class="hidden peer" form="filters-form" name="tags" type="checkbox" value="{{tag.name}}">
+                                <label for="tag-{{loop.index0}}" class="btn-sm-focus-lime-text-lime py-2 px-5 text-xl" type="button">{{tag.name}}</label>
+                            </div>
                         {% endfor %}
                     </div>
                     <div class="basis-2/12 flex flex-col">
-                        <span class="basis-full font-montserrat-semibold text-lg text-lime-500 text-center my-3">Цена товара</span>
-                        <input class="bg-gray-300 h-2 rounded-full appearance-none outline-none range-lime" type="range" value="9987" max="100000">
+                        <span class="font-montserrat-semibold text-xl text-lime-500 text-center my-3">Цена товара</span>
+                        <span id="range-price-value" class="font-montserrat text-lg my-3">до 100000</span>
+                        <input form="filters-form" name="price" id="range-price-input" class="h-2 rounded-full appearance-none outline-none range-lime" type="range" value="100000" max="100000">
                     </div>
-                    <button class="basis-1/12 font-montserrat-bold text-xl text-lime-500 my-2" type="button">Сбросить все</button>
+                    <button id="reset-filters-btn" class="basis-1/12 font-montserrat-bold text-2xl text-lime-500 my-2" type="button">Сбросить все</button>
                 </div>
                 <div class="col-span-4 flex flex-col min-h-[1000px]">
                     <div class="basis-1/12 flex flex-row items-center pb-10 gap-8 px-8">
                         <div class="bg-white rounded-full px-8 py-4 h-min shadow-sm">
-                            <span class="font-montserrat-light text-gray-500 text-lg">Найдено 12 товаров</span>
+                            <span class="font-montserrat-light text-gray-500 text-lg">Найдено <span id="products-number">16</span> товаров</span>
                         </div>
                         <div class="flex flex-row items-center">
                             <span class="text-lg text-gray-500 font-montserrat-light pr-6">Товаров на странице</span>
-                            <input class="w-24 border-0 focus:ring-0 rounded-full pl-5 py-4 text font-montserrat text-lg shadow-sm"  type="number" min="8" size="3" value="8">
+                            <input form="filters-form" name="number" id="products-number-input" class="w-24 border-0 focus:ring-0 rounded-full pl-5 py-4 text font-montserrat text-lg shadow-sm" type="number" min="8" size="3" value="16" max="999">
                         </div>
                         <div class="flex">
                             <button id="dropdownButton-1" class="w-[21rem] text-white bg-lime-500 rounded-full text-lg px-6 py-4 flex items-center justify-between" type="button">
@@ -102,24 +110,38 @@
                                 </svg>
                             </button>
                             <!-- Dropdown menu -->
-                            <div id="dropdownMenu-1" class="w-80 z-50 hidden bg-white rounded-lg shadow cursor-pointer">
-                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownButton">
-                                  <li class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white">По умолчанию</li>
-                                  <li class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white">По убыванию цены  <span class="font-montserrat-bold">↓</span></li>
-                                  <li class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white">По возрастанию цены  <span class="font-montserrat-bold">↑</span></li>
-                                </ul>
+                            <div id="dropdownMenu-1" class="w-80 z-50 hidden bg-white rounded-lg shadow cursor-pointer select-none">
+                                <div class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownButton">
+                                    <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white cursor-pointer">
+                                        <span class="dropdown-text">По умолчанию</span>
+                                        <input form="filters-form" name="sort" value="0" class="hidden dropdown-radio" type="radio" checked>
+                                    </label>
+                                    <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white cursor-pointer">
+                                        <span class="dropdown-text">По убыванию цены  <span class="font-montserrat-bold">↓</span></span>
+                                        <input form="filters-form" name="sort" value="1" class="hidden dropdown-radio" type="radio">
+                                    </label>
+                                    <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white cursor-pointer">
+                                        <span class="dropdown-text">По возрастанию цены  <span class="font-montserrat-bold">↑</span></span>
+                                        <input form="filters-form" name="sort" value="2" class="hidden dropdown-radio" type="radio">
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="basis-11/12 px-8 grid grid-cols-4 gap-4">
+                    <div id="products-container" class="basis-11/12 px-8 grid grid-cols-4 gap-4 auto-rows-min">
                         {% for product in products %}
-                          <div class="flex flex-col bg-white rounded-3xl shadow-md px-10 py-8 gap-2 h-[500px]">
-                              <img class="basis-6/12 pb-6 place-self-center object-scale-down" src="{{product.image}}">
-                              <div class="flex flex-col">
-                                  <span class="font-montserrat text-lime-500 text-lg pb-4">{{product.category.name}}</span>
-                                  <span class="font-montserrat-semibold text-xl pb-4">{{product.name}}</span>
-                                  <span class="font-montserrat-bold text-lime-500 text-3xl place-self-start">{{product.scores}} баллов</span>
-                                  <span data-product-id="{{product.id}}" class="hidden product-tags">{% for tag in product.tag %}{{tag.name}} {% endfor %}</span>
+                          <div class="hidden product-element flex flex-col bg-white rounded-3xl shadow-md px-10 py-8 gap-2 place-content-between"
+                              data-order="{{loop.index}}"
+                              data-tags="{% for tag in product.tag %}{{tag.name}}{% if not loop.last %},{% endif %}{% endfor %}"
+                              data-category="{{product.category.name}}"
+                              data-name="{{product.name}}"
+                              data-price="{{product.scores}}">
+                              <img class="basis-6/12 place-self-center object-scale-down" src="{{product.image}}">
+                              <div class="flex flex-col gap-y-4">
+                                  <span class="font-montserrat text-lime-500 text-lg">{{product.category.name}}</span>
+                                  <span class="font-montserrat-semibold text-xl">{{product.name}}</span>
+                                  <span class="font-montserrat-bold text-lime-500 text-3xl justify-end">{{product.scores}} баллов</span>
+                                  <span data-product-id="{{product.id}}" class="hidden product-tags"></span>
                               </div>
                           </div>
                         {% endfor %}

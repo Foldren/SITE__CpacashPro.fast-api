@@ -11,18 +11,16 @@ export function generate_dropdown(index_dropdown, placement) {
             offsetSkidding: 0,
             offsetDistance: 10,
             delay: 300,
-            onHide: () => {
-            },
-            onShow: () => {
-            },
-            onToggle: () => {
-            }
+            onHide: () => {},
+            onShow: () => {},
+            onToggle: () => {}
         }
     }
 
     // При выборе пункта вставляем содержимое в кнопку
-    $(`#dropdownMenu-${index_dropdown} li`).on("click", function(e){
-        $(`#dropdownButton-${index_dropdown}>span`).html($(e.target).html())
+    $(`#dropdownMenu-${index_dropdown}`).find(".dropdown-radio").on("input", function(e){
+        let dropdown_item_text = $(e.target).parent().find(".dropdown-text").html()
+        $(`#dropdownButton-${index_dropdown}>span`).html(dropdown_item_text)
     })
 
     return new Dropdown(result.$targetEl, result.$triggerEl, result.options)
