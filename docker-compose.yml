@@ -12,4 +12,4 @@ services:
     working_dir: /source
     ports:
       - "4444:4444"
-    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "4444"]
+    command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "4444"]
