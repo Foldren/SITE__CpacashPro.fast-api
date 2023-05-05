@@ -25,16 +25,15 @@ steps:
   - name: api-faketransfer
     path: /home/.VOLUMES/SITE__Cpacash.pro/
   settings:
-    username: gitea-volumes
+    username: root
     key:
       from_secret: site_key_ssh
     host:
       from_secret: site_host_ssh
     script:
-#      - eval "$(ssh-agent -s)"
-       - echo Linux
-#      - ssh-add $SSH_KEY_URL 4
-#      - cd $VOLUME_URL
-#      - git reset --hard
-#      - git pull origin master
-#      - docker restart $CONTAINER_NAME
+      - eval "$(ssh-agent -s)"
+      - ssh-add $SSH_KEY_URL
+      - cd $VOLUME_URL
+      - git reset --hard
+      - git pull origin master
+      - docker restart $CONTAINER_NAME
