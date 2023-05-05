@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy_fields.storages import FileSystemStorage
 from sqlalchemy_fields.types import FileType
-from source.settings import IMAGES_ADMIN_PATH
+from .settings import IMAGES_ADMIN_PATH
 
 Base = declarative_base()
 
