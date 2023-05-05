@@ -27,9 +27,9 @@ steps:
   settings:
     username: gitea-volumes
     key:
-      from_secret: KEY_SSH
+      from_secret: site_key_ssh
     host:
-      from_secret: HOST_SSH
+      from_secret: site_host_ssh
     script:
       - eval "$(ssh-agent -s)"
       - ssh-add $SSH_KEY_URL
