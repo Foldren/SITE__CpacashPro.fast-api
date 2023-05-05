@@ -109,10 +109,10 @@ function sort_element_list(container, selector_items, sort_direction) {
 // теги перечислены через запятую
 export function generate_filter_el(container_sel, elements_sel, id_form_de_hash, find_products_sel, reset_btn_sel) {
     let form_inputs = $(`[form=${id_form_de_hash}]`)
-    let form_obj = format_form_to_obj(id_form_de_hash)
 
     // Привязываем событие изменения фильтров
     form_inputs.on('input', function () {
+        let form_obj = format_form_to_obj(id_form_de_hash)
         if (window.sessionStorage.getItem('filters_form') !== form_obj) {
             let container = $(container_sel)
             let elements = $(container_sel).children()
@@ -141,19 +141,15 @@ export function generate_filter_el(container_sel, elements_sel, id_form_de_hash,
     })
 
     // Привязываем событие для кнопки сброса
-    $(reset_btn_sel).click(function (){
-
+    $(reset_btn_sel).click(function() {
+       location.reload()
     })
 
     // Вызываем событие при загрузке страницы
     form_inputs.first().trigger('input')
 
-    // Сохраняем первые фильтры
-    window.sessionStorage.setItem('fst_filters_form', form_obj)
-
     // При загрузке страницы удаляем переменные
     document.addEventListener("DOMContentLoaded", function(){
         window.sessionStorage.removeItem('filters_form')
-        window.sessionStorage.removeItem('fst_filters_form')
     });
 }
