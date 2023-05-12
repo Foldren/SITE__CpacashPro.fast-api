@@ -11,7 +11,26 @@ export function generate_accordion(number_items,
             alwaysOpen: false,
             activeClasses: active_classes,
             inactiveClasses: inactive_classes,
-            onOpen: () => {},
+            onOpen: function(e) { // Если есть класс disabled не позволяем открыть слайд
+                for(let key in e._items) {
+                    let elem = e._items[key]
+                    if(elem.active === true) {
+                        let current_slide = $("#"+elem.id)
+                        if(current_slide.hasClass("disabled")) {
+                            let length_id = e._items[key].id.length
+                            let id_item = e._items[key].id
+                            let id_without_i = id_item.substring(0, id_item.lastIndexOf("-")+1)
+                            let index_elem = parseInt(id_item.substring(id_item.lastIndexOf("-")+1, length_id))
+
+                            if(index_elem !== 0) {
+                                e.open(id_without_i+(index_elem-1))
+                            } else {
+                                e.open(id_without_i+"1")
+                            }
+                        }
+                    }
+                }
+            },
             onClose: () => {},
             onToggle: () => {},
         }

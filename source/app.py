@@ -8,9 +8,10 @@ from sqladmin import Admin
 from admin import ProductAdmin, CategoryAdmin, authentication_backend, TagAdmin
 from database import engine, async_session
 from models import Category, Product, Tag
-from settings import ADMIN_IMAGE_LOGO
+from routers import registration
 
 app = FastAPI()
+app.include_router(registration.router)
 
 # Подключаем статику
 this_directory = path.dirname(__file__)
