@@ -2436,6 +2436,10 @@ input:checked + .toggle-bg {
   width: 100vw;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -6287,23 +6291,6 @@ input:checked + .toggle-bg {
   color: rgb(249 128 128 / var(--tw-text-opacity));
 }
 
-.group:focus .group-focus\:bg-lime-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(132 204 22 / var(--tw-bg-opacity));
-}
-
-.group:focus .group-focus\:fill-lime-10 {
-  fill: #EAFFD8;
-}
-
-.group:focus .group-focus\:fill-lime-500 {
-  fill: #84cc16;
-}
-
-.group:focus .group-focus\:stroke-lime-10 {
-  stroke: #EAFFD8;
-}
-
 .group.is-active-ac-i .group-\[\.is-active-ac-i\]\:-rotate-90 {
   --tw-rotate: -90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -6315,6 +6302,18 @@ input:checked + .toggle-bg {
 
 .group.is-active-ac-i .group-\[\.is-active-ac-i\]\:fill-lime-500 {
   fill: #84cc16;
+}
+
+.group.is-active .group-\[\.is-active\]\:fill-lime-10 {
+  fill: #EAFFD8;
+}
+
+.group.is-active .group-\[\.is-active\]\:fill-lime-500 {
+  fill: #84cc16;
+}
+
+.group.is-active .group-\[\.is-active\]\:stroke-lime-10 {
+  stroke: #EAFFD8;
 }
 
 .peer:checked ~ .peer-checked\:border-lime-500 {

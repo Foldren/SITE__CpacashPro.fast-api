@@ -17,11 +17,14 @@
                     <span class="col-span-1">Шаг 2</span>
                     <span class="col-span-1">Шаг 3</span>
                 </div>
-                <div class="flex flex-col gap-y-4">
+                <div class="flex flex-col gap-y-4 place-items-center">
                     <input form="registration-form" required name="login" class="rounded-full w-[30rem] focus:ring-0 focus:border-2 focus:border-lime-500 focus:text-lime-500" type="email" placeholder="Email">
-                    <input id="password-reg" form="registration-form" required name="password" class="rounded-full w-[30rem] focus:ring-0 focus:border-2 focus:border-lime-500 focus:text-lime-500" type="password" placeholder="Пароль">
+                    <span class="font-montserrat text-sm text-dark text-wrap w-2/3 text-center">Пример валидного email: steve990@gmail.com</span>
+                    <input id="password-reg" pattern="(?=.*[@\$!%\*\?&#/\|\\~<>^\{\}\[\]\(\):;'])(?=.*[a-z])(?=.*[A-Z]).{8,30}" form="registration-form" required name="password" class="rounded-full w-[30rem] focus:ring-0 focus:border-2 focus:border-lime-500 focus:text-lime-500" type="password" placeholder="Пароль">
                     <input id="retype-password-reg" form="registration-form" required name="retype_pasw" class="rounded-full w-[30rem] focus:ring-0 focus:border-2 focus:border-lime-500 focus:text-lime-500" type="password" placeholder="Повторите пароль">
+                    <span class="font-montserrat text-sm text-dark text-wrap w-2/3 text-center">Пароль должен содержать от 8 до 30 символов, состоящих из латинских заглавных и маленьких букв, минимум одной цифры, а также одного из разрешенных символов: @$!%*?&#/|\~<>^{}[]():;'</span>
                     <span id="invaild-password" class="font-montserrat text-red-500 text-center invisible">Пароли не совпадают</span>
+                    <span id="invaild-email" class="font-montserrat text-red-500 text-center invisible">Указан невалидный email</span>
                 </div>
                 <button type="submit" form="registration-form" id="accordion-3-heading-2" class="auth-btn btn-black w-[30rem] py-4 font-montserrat-semibold text-xl rounded-full mt-12">Продолжить</button>
             </section>
@@ -103,7 +106,7 @@
                         </svg>
                     </label>
                 </div>
-                <input class="reg-input-required mt-10 rounded-full w-[30rem] focus:ring-0 focus:border-2 focus:border-lime-500 focus:text-lime-500" type="text" placeholder="Ваш ник в соцсети" form="registration-form" required>
+                <input name="social_nickname" form="registration-form" class="reg-input-required mt-10 rounded-full w-[30rem] focus:ring-0 focus:border-2 focus:border-lime-500 focus:text-lime-500" type="text" placeholder="Ваш ник в соцсети" required>
                 <span class="font-montserrat-semibold text-2xl pt-20">У вас есть опыт в арбитраже трафика?</span>
                 <div class="flex flex-row bg-white rounded-full border border-gray-500 my-8" role="group">
                     <div class="flex p-1">

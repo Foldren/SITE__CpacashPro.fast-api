@@ -19,10 +19,11 @@ stop_acc_on_valid_listener(
     ".auth-block input",
     ".auth-btn",
     {
-        check_pasw: true,
+        check_auth: true,
         s_password: "#password-reg",
         s_retype: "#retype-password-reg",
-        s_message: "#invaild-password"},
+        s_message: "#invaild-password",
+        s_valid_email_m: "#invaild-email"},
 )
 
 stop_acc_on_valid_listener(
@@ -32,4 +33,15 @@ stop_acc_on_valid_listener(
 
 activate_empty_forms("#registration-form")
 
-set_form_ajax_listener("#registration-form", ".end-reg-btn")
+set_form_ajax_listener(
+    "#registration-form",
+    "api/registration/signup",
+    ".end-reg-btn",
+    {success_f: function(data) {
+            if(data.status === 2) {
+                if(data.error === "Enter code from image") {
+                    console.log(data.captcha)
+                }
+            }
+        }
+    })
