@@ -39,9 +39,34 @@ set_form_ajax_listener(
     ".end-reg-btn",
     {success_f: function(data) {
             if(data.status === 2) {
-                if(data.error === "Enter code from image") {
-                    console.log(data.captcha)
+                let error_block = $("#error-registration")
+
+                if((data.error === "Enter code from image" || data.error === 'Wrong code')) { // Если неверный код меняем картинку
+                    $("#reg-captcha-block").find("img").attr("src", data.captcha)
+                    $("#reg-captcha-block").removeClass("hidden")
+                    if (data.error === 'Wrong code') {
+                        error_block.html("Код введен неверно") // Выводим ошибку
+                    } else if (data.error === 'Enter code from image') {
+                        error_block.html("Введите код с картинки")
+                    } else {
+                        error_block.html(data.error)
+                    }
+                    error_block.removeClass("invisible")
                 }
+                else if(data.error === "Такой email уже зарегистрирован") {
+                    error_block.html(data.error + ". Обновите страницу и укажите другой email.")
+                    error_block.removeClass("invisible")
+                    $("#reg-captcha-block").removeClass("hidden")
+                    $("#reg-captcha-block").addClass("hidden")
+                    $(".end-reg-btn").addClass("opacity-50")
+                    $(".end-reg-btn").attr("disabled", "disabled")
+                    $(".end-reg-btn").addClass("disabled")
+                }
+            } else if(data.status === 1) {
+                $(".end-reg-btn").attr("disabled", "disabled")
+                $(".end-reg-btn").addClass("opacity-50")
+                $(".end-reg-btn").addClass("disabled")
+                location.replace("/page-success")
             }
         }
     })

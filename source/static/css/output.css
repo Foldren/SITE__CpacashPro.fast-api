@@ -1978,6 +1978,10 @@ input:checked + .toggle-bg {
   margin-top: 10rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -2281,6 +2285,10 @@ input:checked + .toggle-bg {
   width: 0.5rem;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .w-2\/5 {
   width: 40%;
 }
@@ -2434,10 +2442,6 @@ input:checked + .toggle-bg {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
 }
 
 .min-w-0 {

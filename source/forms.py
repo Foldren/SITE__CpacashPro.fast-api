@@ -15,3 +15,4 @@ class RegistrationForm:
     verticals: list[int] = Form()
     yes_no_exp: str = Form()
     social_nickname: str = Form()
+    captcha: str = Form(default="")

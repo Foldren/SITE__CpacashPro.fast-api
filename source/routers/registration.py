@@ -1,5 +1,4 @@
 from typing import Annotated
-
 from forms import RegistrationForm
 from fastapi import APIRouter, Depends, Form
 from httpx import AsyncClient
@@ -37,6 +36,7 @@ async def signup(form_data: RegistrationForm = Depends()):
         # 'custom_fields[6]': промокод
         'custom_fields[15]': social_networks[form_data.social_network],
         'custom_fields[16]': form_data.social_nickname,
+        'captcha': form_data.captcha if form_data.captcha != "" else "",
     }
 
     async with AsyncClient(verify=False) as session:
@@ -48,5 +48,8 @@ async def signup(form_data: RegistrationForm = Depends()):
                 'X-Requested-With': 'XMLHttpRequest',
             }
         )
+
+        print(form_data.captcha)
+        print(response.json())
 
         return response.json()
