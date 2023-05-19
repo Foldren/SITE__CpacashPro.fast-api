@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 @layer components {
+  /* Основные классы */
   .btn-lime {
     @apply cursor-pointer bg-lime-500 rounded-3xl;
   }
@@ -21,5 +22,15 @@
   }
   .lime-url-base {
     @apply cursor-pointer text-lime-500 underline text-base;
+  }
+
+  /* Классы с текстом */
+
+  .text-h2 {
+    @apply font-montserrat leading-[56px] text-[40px] text-black-custom font-normal
+  }
+
+  .text-regular-16-400 {
+    @apply font-montserrat text-base text-black-custom font-normal leading-6
   }
 }

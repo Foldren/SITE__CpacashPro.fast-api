@@ -18,8 +18,18 @@ module.exports = {
               'montserrat-bold': ["Montserrat-Bold", 'sans-serif'],
           },
           colors: {
-              'lime-10': '#EAFFD8',
+              'black-custom': '#1F2227',
+              'lime-custom': '#85C83E',
+              'lime-light-custom': '#EAFFD8',
+              'gray-custom': '#808080',
+              'gray-light-custom': '#EDEEEF',
+              'rose-custom': '#FF7E7E'
           },
+          padding: {
+              '46': '180px',
+              '13': '51px',
+
+          }
       },
       container: {
           center: true,
