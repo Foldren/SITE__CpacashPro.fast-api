@@ -2,36 +2,25 @@
 <html lang="ru">
 {% include 'components/head.html' %}
 <body class="bg-[url('/source/static/images/main/bg_green_s.png')] bg-right-top bg-no-repeat bg-white-custom">
-  {% include 'components/navbar.html' %}
-  {% from "macros/green_grid_msg_block.html" import green_grid_block with context %}
-  {% from "macros/in_end_body.html" import in_end_body with context %}
-  <div class="mx-24 pt-44">
-    <section class="grid grid-cols-7">
-      <div class="col-span-3 grid grid-rows-4 items-center max-h-[500px]">
-        <span class="font-montserrat-semibold text-gray-400 pt-10">CPA-сеть и команда медиабаинга</span>
-        <h1 class="font-montserrat-bold row-span-2 text-6xl">Помогаем получать максимум дохода с каждого лида</h1>
-        <span class="font-montserrat my-14 text-xl">Регистрируйтесь и получите 10% к первой выплате и 1000 бонусов в программе лояльности.</span>
-        <button class="btn-lime font-montserrat-semibold text-2xl py-7 justify-self-start px-20 rounded-full">Стать партнёром</button>
-      </div>
-      <div class="col-span-4 grid grid-cols-6 ml-12">
-        <div class="col-span-2 grid grid-rows-9 gap-y-5 -mr-6">
-          <div class="row-start-3 row-span-1 grid grid-rows-2 rounded-l-3xl border-2 border-white bg-white/30 backdrop-blur p-5">
-            <span class="font-montserrat-bold text-lime-500 text-3xl">92-97%</span>
-            <span class="font-montserrat text-lime-500 text-lg">Средний апрув трафика наших веб-мастеров</span>
-          </div>
-          <div class="row-start-4 row-span-1 grid grid-rows-2 rounded-l-3xl border-2 border-white bg-white/30 backdrop-blur p-5">
-            <span class="font-montserrat-bold text-lime-500 text-3xl">$150</span>
-            <span class="font-montserrat text-lime-500 text-lg">Средняя стоимость выплаты за один лид.</span>
-          </div>
-          <div class="row-start-5 row-span-1 grid grid-rows-2 rounded-l-3xl border-2 border-white bg-white/30 backdrop-blur p-5">
-            <span class="font-montserrat-bold text-lime-500 text-3xl">60+ ГЕО</span>
-            <span class="font-montserrat text-lime-500 text-lg">Больше 400 офферов в iGaming от проверенных рекламодателей</span>
-          </div>
-          <div class="row-span-4"></div>
-        </div>
-        <img class="col-span-4" src='/source/static/images/main/chat_with_cpacash.png'>
-      </div>
-    </section>
+    {% include 'components/navbar.html' %}
+    {% from "macros/green_grid_msg_block.html" import green_grid_block with context %}
+    {% from "macros/in_end_body.html" import in_end_body with context %}
+    <div class="xl-custom:px-46 px-13 sm-custom:pt-44 pt-32">
+        <section class="flex flex-col lg-custom:flex-row lg-custom:justify-between">
+            <div class="flex flex-col">
+                <span class="hidden sm-custom:inline-block text-regular-gray-14-400-L20 pb-3">CPA-сеть и команда медиабаинга</span>
+                <h2 class="pb-8 text-h2-mobile sm-custom:text-h2">Помогаем получать<br>максимум дохода<br>с каждого лида</h2>
+                <span class="sm-custom:text-regular-18-400-L28 text-regular-16-400-L24 pb-12">Регистрируйтесь и получите 10% к первой<br>выплате и 1000 бонусов в программе лояльности.</span>
+                <button class="hidden btn-lime px-18 w-max lg-custom:flex">Стать партнёром</button>
+            </div>
+            <div class="hidden basis-1/2 lg-custom:flex">
+                <img src='/source/static/images/main/chat.png'>
+            </div>
+            <div class="flex flex-col lg-custom:hidden min-w-[340px] max-w-[492px] lg-custom:ml-0 -ml-4 items-center">
+                <img src='/source/static/images/main/table_mobile.png'>
+                <button class="w-11/12 btn-lime lg-custom:hidden mt-2">Стать партнёром</button>
+            </div>
+        </section>
     <section class="grid grid-rows-5 bg-lime-10 px-14 py-16 rounded-3xl mt-20 shadow-lg">
       <h2 class="row-span-1 font-montserrat-bold text-4xl pb-16">Что получают вебмастера и команды, <br> которые работают с нами</h2>
       <div class="row-span-4 grid grid-cols-2 grid-rows-3">

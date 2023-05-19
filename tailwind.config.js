@@ -27,16 +27,28 @@ module.exports = {
               'rose-custom': '#FF7E7E',
           },
           padding: {
-              '46': '180px',
               '13': '51px',
+              '17': '66px',
+              '18': '75px',
               '21': '84px',
-
+              '38': '156px',
+              '46': '180px',
+              '47': '187px',
+          },
+          margin: {
+              '29': '120px',
           },
           screens: {
-            'xl-custom': '1410px',
+              'sm-custom': '590px',
+              'lg-custom': '976px',
+              'xl-custom': '1410px',
+          },
+          fontSize: {
+              '2.5xl': '28px',
           },
           boxShadow: {
-              'custom': '4px 8px 24px rgba(36, 107, 253, 0.25)'
+              'custom': '4px 8px 24px rgba(36, 107, 253, 0.25)',
+              'custom-sm': '0px 12px 16px rgba(33, 33, 33, 0.04)',
           },
       },
       container: {

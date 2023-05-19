@@ -27,7 +27,7 @@
   /* Основные классы 2 */
 
   .btn-lime {
-    @apply cursor-pointer py-4 px-8 font-montserrat font-medium text-xl text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-500 hover:bg-lime-light-custom hover:shadow-custom;
+    @apply cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-500 hover:bg-lime-light-custom hover:shadow-custom;
   }
 
   .url {
@@ -38,10 +38,26 @@
   /* Классы с текстом */
 
   .text-h2 {
-    @apply font-montserrat leading-[56px] text-[40px] text-black-custom font-normal
+    @apply font-montserrat-semibold leading-[56px] text-[40px] text-black-custom font-semibold
   }
 
-  .text-regular-16-400 {
+  .text-regular-16-400-L24 {
     @apply font-montserrat text-base text-black-custom font-normal leading-6
   }
+
+  .text-regular-18-400-L28 {
+    @apply font-montserrat text-lg text-black-custom font-normal leading-7
+  }
+
+  .text-regular-gray-14-400-L20 {
+    @apply font-montserrat text-sm text-black-custom font-normal leading-5 text-gray-custom
+  }
+
+
+  /* Классы с текстом (мобильный) */
+
+  .text-h2-mobile {
+    @apply font-montserrat-semibold leading-9 text-2.5xl text-black-custom font-semibold
+  }
+
 }
