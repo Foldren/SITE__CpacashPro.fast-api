@@ -5,9 +5,9 @@
 
 @layer components {
   /* Основные классы */
-  .btn-lime {
-    @apply cursor-pointer bg-lime-500 rounded-3xl;
-  }
+  /*.btn-lime {*/
+  /*  @apply cursor-pointer bg-lime-500 rounded-3xl;*/
+  /*}*/
   .btn-black {
     @apply cursor-pointer bg-black rounded-full text-white;
   }
@@ -23,6 +23,17 @@
   .lime-url-base {
     @apply cursor-pointer text-lime-500 underline text-base;
   }
+
+  /* Основные классы 2 */
+
+  .btn-lime {
+    @apply cursor-pointer py-4 px-8 font-montserrat font-medium text-xl text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-500 hover:bg-lime-light-custom hover:shadow-custom;
+  }
+
+  .url {
+    @apply hover:text-lime-custom select-none cursor-pointer;
+  }
+
 
   /* Классы с текстом */
 

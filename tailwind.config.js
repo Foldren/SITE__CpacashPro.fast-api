@@ -23,13 +23,21 @@ module.exports = {
               'lime-light-custom': '#EAFFD8',
               'gray-custom': '#808080',
               'gray-light-custom': '#EDEEEF',
-              'rose-custom': '#FF7E7E'
+              'white-custom': '#E5E5E5',
+              'rose-custom': '#FF7E7E',
           },
           padding: {
               '46': '180px',
               '13': '51px',
+              '21': '84px',
 
-          }
+          },
+          screens: {
+            'xl-custom': '1410px',
+          },
+          boxShadow: {
+              'custom': '4px 8px 24px rgba(36, 107, 253, 0.25)'
+          },
       },
       container: {
           center: true,
