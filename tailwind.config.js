@@ -25,23 +25,34 @@ module.exports = {
               'gray-light-custom': '#EDEEEF',
               'white-custom': '#E5E5E5',
               'rose-custom': '#FF7E7E',
+              'rose-light-custom': '#ffe6e6',
           },
           padding: {
               '13': '51px',
+              '13.5': '54px',
               '17': '66px',
+              '17.5': '70px',
               '18': '75px',
               '21': '84px',
+              '29': '119px',
               '38': '156px',
+              '41': '164px',
               '46': '180px',
               '47': '187px',
           },
           margin: {
+              '13': '51px',
               '29': '120px',
+              '33': '132px',
+              '46': '180px',
           },
           screens: {
               'sm-custom': '590px',
+              'sm-2-custom': '886px',
               'lg-custom': '976px',
+              'lg-2-custom': '1289px',
               'xl-custom': '1410px',
+              'xl-2-custom': '1441px',
           },
           fontSize: {
               '2.5xl': '28px',
@@ -50,6 +61,20 @@ module.exports = {
               'custom': '4px 8px 24px rgba(36, 107, 253, 0.25)',
               'custom-sm': '0px 12px 16px rgba(33, 33, 33, 0.04)',
           },
+          borderRadius: {
+              '4xl': '30px',
+          },
+          backgroundSize: {
+              'size-500': '500% 100%',
+          },
+          backgroundPosition: {
+              'left--40': 'left -220rem',
+              'pos-0': '0% 0%',
+              'pos-100': '100% 100%',
+          },
+          width: {
+              '81': '330px',
+          }
       },
       container: {
           center: true,

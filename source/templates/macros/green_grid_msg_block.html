@@ -1,9 +1,9 @@
 {% macro green_grid_block(header='', description='', button='') %}
-  <div class="bg-lime-10 bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover mt-40">
-    <section class="grid grid-rows-3 pl-24 py-16">
-      <h2 class="row-span-1 font-montserrat-bold text-4xl pt-5">{{ header|safe }}</h2>
-      <span class="row-span-1 font-montserrat text-xl self-center">{{ description|safe }}</span>
-      <button class="row-span-1 btn-black font-montserrat-semibold text-2xl py-8 justify-self-start mt-6 px-20 rounded-full">{{ button|safe }}</button>
+  <div class="bg-lime-light-custom bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover mt-32">
+    <section class="flex flex-col gap-y-8 lg-2-custom:px-40 sm-custom:px-18 px-12 py-20">
+      <h2 class="sm-custom:text-h2 text-semibold-20-600-L28">{{ header|safe }}</h2>
+      <span class="sm-custom:text-regular-18-400-L28 text-regular-16-400-L24">{{ description|safe }}</span>
+      <button class="btn-black mt-6 sm-custom:px-28 px-24 w-max">{{ button|safe }}</button>
     </section>
   </div>
 {% endmacro %}

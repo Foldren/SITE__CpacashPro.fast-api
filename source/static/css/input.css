@@ -27,7 +27,11 @@
   /* Основные классы 2 */
 
   .btn-lime {
-    @apply cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-500 hover:bg-lime-light-custom hover:shadow-custom;
+    @apply outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-custom hover:bg-lime-light-custom hover:shadow-custom;
+  }
+
+  .btn-black {
+    @apply outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-white rounded-[30px] transition-shadow ease-in-out duration-500 bg-black hover:bg-gray-light-custom hover:shadow-custom hover:text-black-custom;
   }
 
   .url {
@@ -41,6 +45,10 @@
     @apply font-montserrat-semibold leading-[56px] text-[40px] text-black-custom font-semibold
   }
 
+  .text-regular-14-400-L20 {
+    @apply font-montserrat text-sm text-black-custom font-normal leading-5
+  }
+
   .text-regular-16-400-L24 {
     @apply font-montserrat text-base text-black-custom font-normal leading-6
   }
@@ -50,7 +58,19 @@
   }
 
   .text-regular-gray-14-400-L20 {
-    @apply font-montserrat text-sm text-black-custom font-normal leading-5 text-gray-custom
+    @apply font-montserrat text-sm text-gray-custom font-normal leading-5
+  }
+
+  .text-semibold-28-600-L36 {
+    @apply font-montserrat-semibold text-2.5xl text-black-custom font-semibold leading-9
+  }
+
+  .text-semibold-20-600-L28 {
+    @apply font-montserrat-semibold text-xl text-black-custom font-semibold leading-7
+  }
+
+  .text-semibold-16-600-L24 {
+    @apply font-montserrat-semibold text-base text-black-custom font-semibold leading-6
   }
 
 
