@@ -28,6 +28,10 @@ module.exports = {
               'rose-custom': '#FF7E7E',
               'rose-light-custom': '#ffe6e6',
           },
+          gap: {
+              '10.5': '42px',
+              '6.5': '26px',
+          },
           padding: {
               '11.5': '46px',
               '13': '51px',
@@ -38,6 +42,7 @@ module.exports = {
               '17.5': '70px',
               '18': '75px',
               '21': '84px',
+              '23.5': '94px',
               '29': '119px',
               '38': '156px',
               '41': '164px',
@@ -46,6 +51,8 @@ module.exports = {
           },
           margin: {
               '5.5': '21px',
+              '8.3': '30px',
+              '8.5': '34px',
               '13': '51px',
               '29': '120px',
               '33': '132px',

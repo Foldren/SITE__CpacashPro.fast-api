@@ -17,9 +17,9 @@
   .btn-sm-focus-lime-text-lime {
     @apply cursor-pointer bg-white peer-checked:bg-lime-500 peer-checked:text-black text-lime-500 rounded-3xl font-montserrat border border-lime-500;
   }
-  .lime-url {
-    @apply cursor-pointer text-lime-500 underline text-xl;
-  }
+  /*.lime-url {*/
+  /*  @apply cursor-pointer text-lime-500 underline text-xl;*/
+  /*}*/
   .lime-url-base {
     @apply cursor-pointer text-lime-500 underline text-base;
   }
@@ -31,11 +31,19 @@
   }
 
   .btn-black {
-    @apply outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-white rounded-[30px] transition-shadow ease-in-out duration-500 bg-black hover:bg-gray-light-custom hover:shadow-custom hover:text-black-custom;
+    @apply outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-white rounded-[30px] transition-shadow ease-in-out duration-500 bg-black-custom hover:bg-gray-light-custom hover:shadow-custom hover:text-black-custom;
+  }
+
+  .btn-black-de-text-color {
+    @apply outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl rounded-[30px] transition-shadow ease-in-out duration-500 bg-black-custom hover:bg-gray-light-custom hover:shadow-custom;
   }
 
   .url {
     @apply hover:text-lime-custom select-none cursor-pointer;
+  }
+
+  .lime-url {
+    @apply text-lime-custom select-none cursor-pointer;
   }
 
 
@@ -43,6 +51,10 @@
 
   .text-h2 {
     @apply font-montserrat-semibold leading-[56px] text-[40px] text-black-custom font-semibold
+  }
+
+  .text-regular-14-300-L14 {
+    @apply font-montserrat text-sm text-black-custom font-light leading-[14px]
   }
 
   .text-regular-14-400-L20 {
@@ -53,8 +65,20 @@
     @apply font-montserrat text-base text-black-custom font-normal leading-6
   }
 
+  .text-regular-16-400-L24--c {
+    @apply font-montserrat text-base font-normal leading-6
+  }
+
+  .text-regular-18-400-L24--c {
+    @apply font-montserrat text-base font-normal leading-6
+  }
+
   .text-regular-18-400-L28 {
     @apply font-montserrat text-lg text-black-custom font-normal leading-7
+  }
+
+  .text-regular-18-400-L28--c {
+    @apply font-montserrat text-lg font-normal leading-7
   }
 
   .text-regular-gray-14-400-L20 {
