@@ -3613,6 +3613,10 @@ input:checked + .toggle-bg {
   row-gap: 2.5rem;
 }
 
+.gap-y-11 {
+  row-gap: 2.75rem;
+}
+
 .gap-y-12 {
   row-gap: 3rem;
 }
@@ -3659,10 +3663,6 @@ input:checked + .toggle-bg {
 
 .gap-y-8 {
   row-gap: 2rem;
-}
-
-.gap-y-11 {
-  row-gap: 2.75rem;
 }
 
 .-space-x-3 > :not([hidden]) ~ :not([hidden]) {
@@ -4930,6 +4930,10 @@ input:checked + .toggle-bg {
   background-color: rgb(212 212 216 / var(--tw-bg-opacity));
 }
 
+.bg-\[left_bottom-30rem\] {
+  background-color: left bottom-30rem;
+}
+
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -5343,12 +5347,72 @@ input:checked + .toggle-bg {
   background-position: right;
 }
 
+.bg-right--40 {
+  background-position: right -220rem;
+}
+
 .bg-right-bottom {
   background-position: right bottom;
 }
 
 .bg-right-top {
   background-position: right top;
+}
+
+.bg-\[right_30rem\] {
+  background-position: right 30rem;
+}
+
+.bg-\[top_30rem\] {
+  background-position: top 30rem;
+}
+
+.bg-\[top_10rem\] {
+  background-position: top 10rem;
+}
+
+.bg-\[right_top_10rem\] {
+  background-position: right top 10rem;
+}
+
+.bg-\[right_top_-10rem\] {
+  background-position: right top -10rem;
+}
+
+.bg-\[right_bottom_-10rem\] {
+  background-position: right bottom -10rem;
+}
+
+.bg-\[right_top_-30rem\] {
+  background-position: right top -30rem;
+}
+
+.bg-\[right_top_-50rem\] {
+  background-position: right top -50rem;
+}
+
+.bg-\[right_-30rem\] {
+  background-position: right -30rem;
+}
+
+.bg-\[bottom_-30rem\] {
+  background-position: bottom -30rem;
+}
+
+.bg-\[left_-30rem\] {
+  background-position: left -30rem;
+}
+
+.bg-\[left_bottom_-30rem\] {
+  background-position: left bottom -30rem;
+}
+
+.bg-\[left_bottom_-10rem\] {
+  background-position: left bottom -10rem;
+}
+
+.bg-\[left_bottom_-2rem\] {
+  background-position: left bottom -2rem;
 }
 
 .bg-repeat {
@@ -5963,8 +6027,16 @@ input:checked + .toggle-bg {
   padding-top: 2.5rem;
 }
 
+.pt-11 {
+  padding-top: 2.75rem;
+}
+
 .pt-12 {
   padding-top: 3rem;
+}
+
+.pt-13 {
+  padding-top: 51px;
 }
 
 .pt-14 {
@@ -6065,14 +6137,6 @@ input:checked + .toggle-bg {
 
 .pt-9 {
   padding-top: 2.25rem;
-}
-
-.pt-13 {
-  padding-top: 51px;
-}
-
-.pt-11 {
-  padding-top: 2.75rem;
 }
 
 .text-left {
@@ -7382,6 +7446,10 @@ input:checked + .toggle-bg {
   .lg\:self-auto {
     align-self: auto;
   }
+
+  .lg\:bg-contain {
+    background-size: contain;
+  }
 }
 
 @media (min-width: 590px) {
@@ -7561,6 +7629,10 @@ input:checked + .toggle-bg {
   .sm-custom-max\:items-center {
     align-items: center;
   }
+
+  .sm-custom-max\:bg-contain {
+    background-size: contain;
+  }
 }
 
 @media (min-width: 886px) {
@@ -7585,16 +7657,16 @@ input:checked + .toggle-bg {
     justify-content: space-between;
   }
 
-  .sm-2-custom\:gap-y-7 {
-    row-gap: 1.75rem;
+  .sm-2-custom\:gap-y-3 {
+    row-gap: 0.75rem;
   }
 
   .sm-2-custom\:gap-y-6 {
     row-gap: 1.5rem;
   }
 
-  .sm-2-custom\:gap-y-3 {
-    row-gap: 0.75rem;
+  .sm-2-custom\:gap-y-7 {
+    row-gap: 1.75rem;
   }
 
   .sm-2-custom\:rounded-4xl {
@@ -7634,21 +7706,27 @@ input:checked + .toggle-bg {
 }
 
 @media (max-width: 886px) {
-  .sm-2-custom-max\:p-6 {
-    padding: 1.5rem;
-  }
-
   .sm-2-custom-max\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  .sm-2-custom-max\:pt-9 {
-    padding-top: 2.25rem;
-  }
-
   .sm-2-custom-max\:pt-11 {
     padding-top: 2.75rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lg-max\:bg-\[top_-10rem\] {
+    background-position: top -10rem;
+  }
+
+  .lg-max\:bg-\[bottom_30rem\] {
+    background-position: bottom 30rem;
+  }
+
+  .lg-max\:bg-\[left_bottom_-2rem\] {
+    background-position: left bottom -2rem;
   }
 }
 

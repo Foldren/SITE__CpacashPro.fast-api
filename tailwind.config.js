@@ -65,6 +65,7 @@ module.exports = {
               'sm-custom-max': {max: '590px'},
               'sm-2-custom': '886px',
               'sm-2-custom-max': {max: '886px'},
+              'lg-max': {max: '1024px'},
               'lg-custom': '976px',
               'lg-1.5-custom': '1175px',
               'lg-2-custom': '1289px',
@@ -86,6 +87,7 @@ module.exports = {
           },
           backgroundPosition: {
               'left--40': 'left -220rem',
+              'right--40': 'right -220rem',
               'pos-0': '0% 0%',
               'pos-100': '100% 100%',
           },
