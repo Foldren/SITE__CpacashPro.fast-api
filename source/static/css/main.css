@@ -1,0 +1,26 @@
+.green_grid_block {
+    padding-left: 66px;
+    padding-right: 66px;
+}
+
+.green_grid_btn {
+    width: max-content;
+    min-width: 330px;
+}
+
+@media (min-width: 1289px) {
+    .green_grid_block {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+}
+
+@media (max-width: 590px) {
+    .green_grid_block {
+        padding-left: 51px;
+        padding-right: 51px;
+    }
+    .green_grid_btn {
+        width: 100%;
+    }
+}

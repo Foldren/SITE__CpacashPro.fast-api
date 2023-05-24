@@ -29,8 +29,9 @@ module.exports = {
               'rose-light-custom': '#ffe6e6',
           },
           gap: {
-              '10.5': '42px',
               '6.5': '26px',
+              '10.5': '42px',
+              '37': '149px',
           },
           padding: {
               '11.5': '46px',
@@ -61,8 +62,11 @@ module.exports = {
           },
           screens: {
               'sm-custom': '590px',
+              'sm-custom-max': {max: '590px'},
               'sm-2-custom': '886px',
+              'sm-2-custom-max': {max: '886px'},
               'lg-custom': '976px',
+              'lg-1.5-custom': '1175px',
               'lg-2-custom': '1289px',
               'xl-custom': '1410px',
               'xl-2-custom': '1441px',
