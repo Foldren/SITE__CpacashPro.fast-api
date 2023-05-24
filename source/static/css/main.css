@@ -1,3 +1,11 @@
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent; /* Убирает синее свчение в моб версии */
+}
+
 .green_grid_block {
     padding-left: 72px;
     padding-right: 72px;
