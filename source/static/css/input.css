@@ -31,23 +31,23 @@
   }
 
   .btn-lime-sm {
-    @apply outline-none cursor-pointer py-3 px-17 font-montserrat font-semibold text-sm text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-custom hover:bg-lime-light-custom hover:shadow-custom;
+    @apply whitespace-nowrap outline-none cursor-pointer py-3 px-17 font-montserrat font-semibold text-sm text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-custom hover:bg-lime-light-custom hover:shadow-custom;
   }
 
   .btn-lime {
-    @apply outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-custom hover:bg-lime-light-custom hover:shadow-custom;
+    @apply whitespace-nowrap outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-custom hover:bg-lime-light-custom hover:shadow-custom;
   }
 
   .btn-black-sm {
-    @apply outline-none cursor-pointer py-4 px-17 font-montserrat font-semibold text-sm text-white rounded-[30px] transition-shadow ease-in-out duration-500 bg-black-custom hover:bg-gray-light-custom hover:shadow-custom hover:text-black-custom;
+    @apply whitespace-nowrap outline-none cursor-pointer py-4 px-17 font-montserrat font-semibold text-sm text-white rounded-[30px] transition-shadow ease-in-out duration-500 bg-black-custom hover:bg-gray-light-custom hover:shadow-custom hover:text-black-custom;
   }
 
   .btn-black {
-    @apply outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-white rounded-[30px] transition-shadow ease-in-out duration-500 bg-black-custom hover:bg-gray-light-custom hover:shadow-custom hover:text-black-custom;
+    @apply whitespace-nowrap outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl text-white rounded-[30px] transition-shadow ease-in-out duration-500 bg-black-custom hover:bg-gray-light-custom hover:shadow-custom hover:text-black-custom;
   }
 
   .btn-black-de-text-color {
-    @apply outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl rounded-[30px] transition-shadow ease-in-out duration-500 bg-black-custom hover:bg-gray-light-custom hover:shadow-custom;
+    @apply whitespace-nowrap outline-none cursor-pointer py-4 px-8 font-montserrat-medium font-medium text-xl rounded-[30px] transition-shadow ease-in-out duration-500 bg-black-custom hover:bg-gray-light-custom hover:shadow-custom;
   }
 
   .url {

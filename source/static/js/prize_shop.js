@@ -2,12 +2,21 @@ import {generate_range} from "/source/static/plugins/range/range.js"
 import {generate_dropdown} from "/source/static/plugins/dropdown/dropdown.js"
 import {generate_accordion} from "/source/static/plugins/accordion/accordion.js"
 import {generate_filter_el} from "/source/static/plugins/filter-elements/filter-elements.js";
+import {generate_carousel_flick} from "/source/static/plugins/carousel_flick/carousel_flick.js";
+import {add_sticky_object} from "/source/static/plugins/sticky-object/sticky-object.js";
+
+
+add_sticky_object(
+    "<a href='#carousel-8' class='bg-lime-custom text-black-custom text-regular-16-400-L24 absolute -bottom-8 w-full -ml-12 pl-12 py-2'>Вернуться к фильтрам</a>",
+    document.getElementById("products-container").getBoundingClientRect().bottom,
+    '#navbar-item',
+)
 
 generate_filter_el(
     "#products-container",
     ".product-element",
     "filters-form",
-    "#products-number",
+    ".products-number",
     "#reset-filters-btn"
 )
 
@@ -23,6 +32,10 @@ const dropdown_prize_shop_sort = generate_dropdown(
     1,
     'bottom')
 
+generate_dropdown(
+    2,
+    'bottom')
+
 const accordion_prize_shop = generate_accordion(
     2,
     1,
@@ -32,6 +45,17 @@ const accordion_answer_questions = generate_accordion(
     6,
     2,
     {active_item: 0, active_classes: 'is-active-ac-i bg-white/100'})
+
+generate_carousel_flick(
+    '#carousel-8',
+    {"prevNextButtons": false,
+            "groupCells": '100%',
+            "initialIndex": 0,
+            "pageDots": false,
+            'cellAlign': 'left',
+    },
+    {}
+)
 
 
 

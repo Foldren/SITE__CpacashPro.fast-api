@@ -66,13 +66,17 @@ module.exports = {
               'sm-2-custom': '886px',
               'sm-2-custom-max': {max: '886px'},
               'md-custom': '710px',
+              'md-max': {max: '768px'},
               'lg-max': {max: '1024px'},
               'lg-custom': '976px',
               'lg-1.5-custom': '1175px',
+              'lg-1.5max': {max: '1175px'},
               'lg-2-custom': '1289px',
               'lg-2.5-custom': '1350px',
               'xl-custom': '1410px',
               'xl-2-custom': '1441px',
+              'xl-3-custom-max': {max: '1700px'},
+              'xl-custom-max': {max: '1536px'},
           },
           fontSize: {
               '2.5xl': '28px',
@@ -99,6 +103,9 @@ module.exports = {
           width: {
               '81': '330px',
               '82': '344px',
+          },
+          flexBasis: {
+              '6.75/10': '67.5%',
           }
       },
       container: {
