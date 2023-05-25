@@ -26,6 +26,10 @@
 
   /* Основные классы 2 */
 
+  .btn-tag {
+    @apply cursor-pointer bg-white peer-checked:bg-lime-custom peer-checked:text-black-custom text-lime-500 rounded-4xl font-montserrat text-base font-normal leading-6 border border-lime-custom;
+  }
+
   .btn-lime-sm {
     @apply outline-none cursor-pointer py-3 px-17 font-montserrat font-semibold text-sm text-black-custom rounded-[30px] transition-shadow ease-in-out duration-500 bg-lime-custom hover:bg-lime-light-custom hover:shadow-custom;
   }
@@ -57,12 +61,20 @@
 
   /* Классы с текстом */
 
+  .text-h1 {
+    @apply font-montserrat-semibold leading-[70px] text-[56px] text-black-custom font-semibold
+  }
+
   .text-h2 {
     @apply font-montserrat-semibold leading-[56px] text-[40px] text-black-custom font-semibold
   }
 
   .text-regular-14-300-L14 {
     @apply font-montserrat text-sm text-black-custom font-light leading-[14px]
+  }
+
+  .text-regular-12-400-L16 {
+    @apply font-montserrat text-xs text-black-custom font-normal leading-4
   }
 
   .text-regular-14-400-L20 {

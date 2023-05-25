@@ -1,146 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
     {% include 'components/head.html' %}
-    <body class="bg-gray-100">
+    <body class="bg-gray-light-custom">
         {% include 'components/navbar.html' %}
         {% from "macros/in_end_body.html" import in_end_body with context %}
         {% from "macros/green_grid_msg_block.html" import green_grid_block with context %}
-        <div class="mt-8 mx-16">
-            <section class="bg-lime-10 bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover rounded-3xl shadow-lg">
-                <div class="bg-[url('/source/static/images/main/iphone.png')] bg-no-repeat bg-[right_top_3em] bg-[length:440px] grid grid-rows-4 grid-cols-12 p-14">
-                    <span class="row-span-1 col-span-9 font-montserrat-semibold text-lg text-gray-500 self-center">Магазин призов</span>
-                    <h1 class="row-start-2 row-span-2 col-span-9 font-montserrat-bold text-6xl pt-5">Получай баллы за лиды<br>и обменивай их на подарки</h1>
-                    <button class="row-start-4 row-span-1 col-span-9 btn-lime font-montserrat-semibold text-2xl py-5 justify-self-start mt-6 px-14 rounded-full">Регистрация в CPACash</button>
+        <div class="sm-custom:pt-46 pt-29 lg-2.5-custom:mx-33 mx-5">
+            <section class="bg-lime-light-custom bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover bg-right rounded-4xl shadow-lg">
+                <div class="bg-[url('/source/static/images/main/iphone.png')] bg-no-repeat lg-1.5-custom:bg-pos-90-66 bg-pos-90-121 md-custom:bg-[length:300px] bg-[length:170px] flex flex-col gap-y-3 sm-custom:py-11.5 sm-custom:px-12 py-8 px-8">
+                    <span class="text-regular-14-400-L20 text-gray-custom">Магазин призов</span>
+                    <h1 class="lg-1.5-custom:text-h1 sm-custom:text-h2 text-semibold-20-600-L28 pb-13">Получай баллы<br class="sm-custom:block hidden"> за лиды и<br class="block lg-custom:hidden"> обменивай<br class="sm-custom:block hidden"> их<br class="block sm-custom:hidden"> на подарки</h1>
+                    <button class="btn-lime max-w-[330px] md-custom:flex hidden">Регистрация в CPACash</button>
                 </div>
+            </section>
+            <section class="flex justify-center sm-custom:justify-start">
+                <button class="btn-lime max-w-[330px] flex md-custom:hidden mt-8">Регистрация в CPACash</button>
             </section>
         </div>
-        <div class="mt-36 mx-24">
-            <section class="flex flex-col">
-                <h2 class="font-montserrat-bold text-4xl mb-20">Магазин призов</h2>
-                <div class="flex flex-row bg-white rounded-full shadow-md" role="group">
-                    <button type="button" id="accordion-1-heading-1" class="basis-1/2 rounded-full font-montserrat-semibold text-xl m-2 py-4">Все призы</button>
-                    <button type="button" id="accordion-1-heading-2" class="basis-1/2 rounded-full font-montserrat-semibold text-xl m-2 py-4">Вопросы и ответы</button>
+        <div class="sm-custom:mt-24 mt-16 lg-2.5-custom:mx-46 sm-custom:mx-14 mx-5">
+            <section class="flex flex-col gap-y-8">
+                <h2 class="sm-custom:text-h2 text-semibold-20-600-L28 sm-custom:pl-0 pl-8">Магазин призов</h2>
+                <div class="flex flex-row h-[52px] bg-white rounded-full shadow-md" role="group">
+                    <button type="button" id="accordion-1-heading-1" class="basis-1/2 rounded-full sm-custom:text-semibold-20-600-L28 text-regular-12-400-L16 text-center m-1.5">Все призы</button>
+                    <button type="button" id="accordion-1-heading-2" class="basis-1/2 rounded-full sm-custom:text-semibold-20-600-L28 text-regular-12-400-L16 text-center m-1.5">Вопросы и ответы</button>
                 </div>
             </section>
-            <section id="accordion-1-body-1" class="grid grid-cols-5 mt-16">
+            <section id="accordion-1-body-1" class="flex flex-col mt-6 gap-y-6">
                 <form id="filters-form" class="hidden"></form>
-                <div class="col-span-full grid grid-cols-3 gap-3 rounded-3xl bg-white shadow-md items-center py-8 my-8">
-                    <div class="flex flex-row items-center">
-                        <svg class="basis-1/5" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="flex flex-row gap-x-5 rounded-4xl bg-white shadow-md items-center p-6">
+                    <div class="flex flex-row gap-x-5 items-center">
+                        <svg class="min-w-[50px]" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="25" cy="25" r="25" fill="#85C83E"/>
                             <path d="M24.7416 33V19.8H21.9216V18.1H26.7216V33H24.7416Z" fill="#1F2227"/>
                         </svg>
-                        <span class="font-montserrat text-lg text-gray-500">Регистрируйся в CPACASH и в программе лояльности.</span>
+                        <span class="text-regular-16-400-L24 text-gray-custom">Регистрируйся в CPACASH и в программе лояльности.</span>
                     </div>
-                    <div class="flex flex-row items-center">
-                        <svg class="basis-1/5" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="flex flex-row gap-x-5 items-center">
+                        <svg class="min-w-[50px]" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="25" cy="25" r="25" fill="#85C83E"/>
                             <path d="M20.0937 33V31.64L24.2137 27.18C25.027 26.3133 25.6737 25.6 26.1537 25.04C26.647 24.48 27.007 23.98 27.2337 23.54C27.4603 23.1 27.5737 22.6333 27.5737 22.14C27.5737 21.3267 27.3337 20.7 26.8537 20.26C26.3737 19.82 25.7403 19.6 24.9537 19.6C24.1537 19.6 23.4737 19.8333 22.9137 20.3C22.3537 20.7533 21.967 21.4 21.7537 22.24L19.9737 21.78C20.147 20.98 20.467 20.2867 20.9337 19.7C21.4003 19.1133 21.9803 18.66 22.6737 18.34C23.367 18.02 24.127 17.86 24.9537 17.86C25.8603 17.86 26.6537 18.04 27.3337 18.4C28.027 18.7467 28.567 19.2333 28.9537 19.86C29.3537 20.4867 29.5537 21.2133 29.5537 22.04C29.5537 22.5867 29.4403 23.12 29.2137 23.64C28.987 24.16 28.6537 24.7133 28.2137 25.3C27.7737 25.8733 27.2003 26.54 26.4937 27.3L22.8137 31.3H29.8737V33H20.0937Z" fill="#1F2227"/>
                         </svg>
-                        <span class="font-montserrat text-lg text-gray-500">Лей трафик и получай баллы за конверсии.</span>
+                        <span class="text-regular-16-400-L24 text-gray-custom">Лей трафик и получай баллы за конверсии.</span>
                     </div>
-                    <div class="flex flex-row items-center">
-                        <svg class="basis-1/5" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="flex flex-row gap-x-5 items-center">
+                        <svg class="min-w-[50px]" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="25" cy="25" r="25" fill="#85C83E"/>
                             <path d="M25.2765 33.24C24.4898 33.24 23.7565 33.1 23.0765 32.82C22.3965 32.54 21.8098 32.1467 21.3165 31.64C20.8232 31.12 20.4565 30.5067 20.2165 29.8L21.8765 29.12C22.1565 29.8667 22.5965 30.4467 23.1965 30.86C23.7965 31.2733 24.4898 31.48 25.2765 31.48C25.8898 31.48 26.4365 31.36 26.9165 31.12C27.3965 30.88 27.7698 30.5333 28.0365 30.08C28.3165 29.6267 28.4565 29.08 28.4565 28.44C28.4565 27.7867 28.3165 27.24 28.0365 26.8C27.7698 26.3467 27.3965 26 26.9165 25.76C26.4365 25.52 25.8832 25.4 25.2565 25.4C25.0565 25.4 24.8365 25.4133 24.5965 25.44C24.3698 25.4667 24.1765 25.5067 24.0165 25.56L23.5965 24.66L27.5765 19.8H20.9765V18.1H29.7965V19.74L25.9965 24.42L25.8765 23.9C26.7698 23.9267 27.5565 24.1333 28.2365 24.52C28.9165 24.9067 29.4498 25.4333 29.8365 26.1C30.2232 26.7533 30.4165 27.52 30.4165 28.4C30.4165 29.3067 30.1965 30.1267 29.7565 30.86C29.3165 31.5933 28.7098 32.1733 27.9365 32.6C27.1632 33.0267 26.2765 33.24 25.2765 33.24Z" fill="#1F2227"/>
                         </svg>
-                        <span class="font-montserrat text-lg text-gray-500">Обменивай баллы на технику и другие ништяки.</span>
+                        <span class="text-regular-16-400-L24 text-gray-custom">Обменивай баллы на технику и другие ништяки.</span>
                     </div>
                 </div>
-                <div class="col-span-full grid grid-cols-4 gap-12 pt-6 mb-24">
+                <div class="flex flex-row gap-x-6 mt-2">
                     {% for category in categories %}
-                        <label for="radio-category-{{loop.index0}}" class="bg-lime-10 shadow-md checked:bg-white checked:border checked:border-lime-500 group flex flex-row rounded-3xl">
-                            <img class="basis-1/2 w-6/12 ml-6 self-end pointer-events-none" src="{{ category.image }}">
-                            <span class="group-checked:text-lime-500 text-xl font-montserrat self-center ml-6 text-start">{{ category.name }}</span>
+                        <label for="radio-category-{{loop.index0}}" class="basis-1/4 flex flex-row cursor-pointer justify-around bg-lime-light-custom shadow-md checked:bg-white checked:border checked:border-lime-custom group rounded-2.5xl pr-5">
+                            <img class="basis-1/2 max-w-[136px] ml-2 self-end pointer-events-none" src="{{ category.image }}">
+                            <span class="group-checked:text-lime-500 text-regular-16-400-L24 self-center ml-3">{{ category.name }}</span>
                         </label>
                     {% endfor %}
                 </div>
-                <div class="col-span-1 bg-white rounded-3xl p-6 flex flex-col gap-6 h-[800px]">
-                    <div class="basis-1/12 relative flex items-center content-center">
-                        <input form="filters-form" name="search" id="search-prize-filter" class="flex basis-full placeholder:text-black rounded-full pl-5 bg-gray-100 font-montserrat text-lg border-0 focus:ring-0 appearance-none" type="text" placeholder="Поиск по товарам">
-                        <svg class="absolute right-6" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5001 7.10544C15.5001 3.46316 12.5367 0.499756 8.89446 0.499756C5.25198 0.499756 2.28878 3.46316 2.28878 7.10544C2.28878 8.70762 2.86209 10.1784 3.81435 11.3233L0.678172 14.4595C0.439958 14.6975 0.439958 15.0837 0.678172 15.3217C0.797293 15.4408 0.953388 15.5004 1.10928 15.5004C1.26537 15.5004 1.42129 15.4408 1.54038 15.3217L4.67656 12.1856C5.82152 13.1378 7.29228 13.7111 8.89446 13.7111C12.5367 13.7111 15.5001 10.7479 15.5001 7.10544ZM14.2806 7.10547C14.2806 10.0754 11.8644 12.4916 8.89446 12.4916C5.92455 12.4916 3.50829 10.0754 3.50829 7.10544C3.50829 4.13553 5.92455 1.71927 8.89446 1.71927C11.8644 1.71927 14.2806 4.13556 14.2806 7.10547Z" fill="#85C83E"/>
-                        </svg>
+                <div class="flex flex-row items-center justify-between gap-x-7">
+                    <div class="bg-white rounded-full px-17 py-4 h-min shadow-sm">
+                        <span class="text-regular-16-400-L24">Найдено <span id="products-number">16</span> товаров</span>
                     </div>
-                    <div class="basis-5/12 flex flex-wrap">
-                        <span class="basis-full font-montserrat-semibold text-xl text-lime-500 text-center my-2">Категории товаров</span>
-                        <div class="flex flex-col gap-4">
-                            {% for category in categories %}
-                                <label for="radio-category-{{loop.index0}}" tabindex="0" class="flex flex-row items-center group gap-x-3 cursor-pointer">
-                                    <input form="filters-form" name="category" id="radio-category-{{loop.index0}}" value="{{category.name}}" class="radio-category peer w-4 h-4 bg-white border border-lime-500 checked:bg-lime-500 focus:ring-0" type="radio">
-                                    <span class="font-montserrat text-lg peer-checked:text-lime-500 select-none">{{category.name}}</span>
+                    <div class="flex flex-row items-center">
+                        <span class="text-regular-16-400-L24 pr-5">Товаров на странице</span>
+                        <input form="filters-form" name="number" id="products-number-input" class="w-24 border-0 focus:ring-0 rounded-full pl-5 py-4 text font-montserrat text-lg shadow-sm" type="number" min="8" size="3" value="16" max="999">
+                    </div>
+                    <div class="flex">
+                        <button id="dropdownButton-1" class="text-white bg-lime-custom rounded-full text-lg px-12 py-4 flex items-center justify-between" type="button">
+                            <span class="text-regular-16-400-L24 text-white">Сортировка по параметру</span>
+                            <svg aria-hidden="true" class="w-3 h-3 ml-4" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 5L9.33013 0.5L0.669873 0.5L5 5Z" fill="white"/>
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownMenu-1" class="w-80 z-50 hidden bg-white rounded-lg shadow cursor-pointer select-none">
+                            <div class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownButton">
+                                <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-custom group cursor-pointer">
+                                    <span class="dropdown-text text-regular-16-400-L24 group-hover:text-white">По умолчанию</span>
+                                    <input form="filters-form" name="sort" value="0" class="hidden dropdown-radio" type="radio" checked>
                                 </label>
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <div class="basis-3/12 flex flex-wrap gap-3">
-                        <span class="basis-full font-montserrat-semibold text-xl text-lime-500 text-center mb-2">Теги</span>
-                        <div>
-                            <input id="tag-all" class="hidden peer" form="filters-form" name="tags" type="checkbox" value="Все">
-                            <label for="tag-all" class="btn-sm-focus-lime-text-lime py-2 px-5 text-xl" type="button">Все</label>
-                        </div>
-                        {% for tag in tags %}
-                            <div>
-                                <input id="tag-{{loop.index0}}" class="hidden peer" form="filters-form" name="tags" type="checkbox" value="{{tag.name}}">
-                                <label for="tag-{{loop.index0}}" class="btn-sm-focus-lime-text-lime py-2 px-5 text-xl" type="button">{{tag.name}}</label>
+                                <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-custom group cursor-pointer">
+                                    <span class="dropdown-text text-regular-16-400-L24 group-hover:text-white">По убыванию цены  <span class="font-montserrat-bold">↓</span></span>
+                                    <input form="filters-form" name="sort" value="1" class="hidden dropdown-radio" type="radio">
+                                </label>
+                                <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-custom group cursor-pointer">
+                                    <span class="dropdown-text text-regular-16-400-L24 group-hover:text-white">По возрастанию цены  <span class="font-montserrat-bold">↑</span></span>
+                                    <input form="filters-form" name="sort" value="2" class="hidden dropdown-radio" type="radio">
+                                </label>
                             </div>
-                        {% endfor %}
+                        </div>
                     </div>
-                    <div class="basis-2/12 flex flex-col">
-                        <span class="font-montserrat-semibold text-xl text-lime-500 text-center my-3">Цена товара</span>
-                        <span id="range-price-value" class="font-montserrat text-lg my-3">до 100000</span>
-                        <input form="filters-form" name="price" id="range-price-input" class="h-2 rounded-full appearance-none outline-none range-lime" type="range" value="100000" max="100000">
-                    </div>
-                    <button id="reset-filters-btn" class="basis-1/12 font-montserrat-bold text-2xl text-lime-500 my-2" type="button">Сбросить все</button>
                 </div>
-                <div class="col-span-4 flex flex-col min-h-[1000px]">
-                    <div class="basis-1/12 flex flex-row items-center pb-10 gap-8 px-8">
-                        <div class="bg-white rounded-full px-8 py-4 h-min shadow-sm">
-                            <span class="font-montserrat-light text-gray-500 text-lg">Найдено <span id="products-number">16</span> товаров</span>
+                <div class="flex flex-row gap-x-6">
+                    <div class="flex flex-col gap-y-8 min-w-[344px] max-w-[344px] bg-white rounded-4xl p-6 h-max shadow-md">
+                        <div class="relative flex items-center content-center">
+                            <input form="filters-form" name="search" id="search-prize-filter" class="flex basis-full placeholder:text-black-custom rounded-full px-5 py-2.5 bg-gray-100 text-regular-16-400-L24 border-0 focus:ring-0 appearance-none" type="text" placeholder="Поиск по товарам">
+                            <svg class="absolute right-6" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5001 7.10544C15.5001 3.46316 12.5367 0.499756 8.89446 0.499756C5.25198 0.499756 2.28878 3.46316 2.28878 7.10544C2.28878 8.70762 2.86209 10.1784 3.81435 11.3233L0.678172 14.4595C0.439958 14.6975 0.439958 15.0837 0.678172 15.3217C0.797293 15.4408 0.953388 15.5004 1.10928 15.5004C1.26537 15.5004 1.42129 15.4408 1.54038 15.3217L4.67656 12.1856C5.82152 13.1378 7.29228 13.7111 8.89446 13.7111C12.5367 13.7111 15.5001 10.7479 15.5001 7.10544ZM14.2806 7.10547C14.2806 10.0754 11.8644 12.4916 8.89446 12.4916C5.92455 12.4916 3.50829 10.0754 3.50829 7.10544C3.50829 4.13553 5.92455 1.71927 8.89446 1.71927C11.8644 1.71927 14.2806 4.13556 14.2806 7.10547Z" fill="#85C83E"/>
+                            </svg>
                         </div>
-                        <div class="flex flex-row items-center">
-                            <span class="text-lg text-gray-500 font-montserrat-light pr-6">Товаров на странице</span>
-                            <input form="filters-form" name="number" id="products-number-input" class="w-24 border-0 focus:ring-0 rounded-full pl-5 py-4 text font-montserrat text-lg shadow-sm" type="number" min="8" size="3" value="16" max="999">
-                        </div>
-                        <div class="flex">
-                            <button id="dropdownButton-1" class="w-[21rem] text-white bg-lime-500 rounded-full text-lg px-6 py-4 flex items-center justify-between" type="button">
-                                <span class="font-montserrat-bold text-lg">Сортировка по параметру</span>
-                                <svg aria-hidden="true" class="w-3 h-3 ml-4" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 5L9.33013 0.5L0.669873 0.5L5 5Z" fill="white"/>
-                                </svg>
-                            </button>
-                            <!-- Dropdown menu -->
-                            <div id="dropdownMenu-1" class="w-80 z-50 hidden bg-white rounded-lg shadow cursor-pointer select-none">
-                                <div class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownButton">
-                                    <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white cursor-pointer">
-                                        <span class="dropdown-text">По умолчанию</span>
-                                        <input form="filters-form" name="sort" value="0" class="hidden dropdown-radio" type="radio" checked>
+                        <div class="flex flex-col gap-y-5">
+                            <span class="text-semibold-20-600-L28 text-lime-custom text-center">Категории товаров</span>
+                            <div class="flex flex-col gap-y-2.5">
+                                {% for category in categories %}
+                                    <label for="radio-category-{{loop.index0}}" tabindex="0" class="flex flex-row items-center group gap-x-3 cursor-pointer">
+                                        <input form="filters-form" name="category" id="radio-category-{{loop.index0}}" value="{{category.name}}" class="radio-category peer w-2.5 h-2.5 bg-white border border-lime-custom checked:bg-lime-custom focus:ring-0 outline-none" type="radio">
+                                        <span class="text-regular-16-400-L24 peer-checked:text-lime-custom select-none">{{category.name}}</span>
                                     </label>
-                                    <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white cursor-pointer">
-                                        <span class="dropdown-text">По убыванию цены  <span class="font-montserrat-bold">↓</span></span>
-                                        <input form="filters-form" name="sort" value="1" class="hidden dropdown-radio" type="radio">
-                                    </label>
-                                    <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-500 hover:text-white cursor-pointer">
-                                        <span class="dropdown-text">По возрастанию цены  <span class="font-montserrat-bold">↑</span></span>
-                                        <input form="filters-form" name="sort" value="2" class="hidden dropdown-radio" type="radio">
-                                    </label>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
+                        <div class="flex flex-col gap-y-5">
+                            <span class="text-semibold-20-600-L28 text-lime-custom text-center">Теги</span>
+                            <div class="flex flex-wrap gap-2.5">
+                                <div>
+                                    <input id="tag-all" class="hidden peer" form="filters-form" name="tags" type="checkbox" value="Все">
+                                    <label for="tag-all" class="btn-tag py-1 px-5" type="button">Все</label>
+                                </div>
+                                {% for tag in tags %}
+                                    <div>
+                                        <input id="tag-{{loop.index0}}" class="hidden peer" form="filters-form" name="tags" type="checkbox" value="{{tag.name}}">
+                                        <label for="tag-{{loop.index0}}" class="btn-tag py-1 px-5" type="button">{{tag.name}}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-y-5">
+                            <span class="text-semibold-20-600-L28 text-lime-custom text-center">Цена товара</span>
+                            <div class="flex flex-col">
+                                <span id="range-price-value" class="text-regular-16-400-L24">до 100000</span>
+                                <input form="filters-form" name="price" id="range-price-input" class="h-2 rounded-full appearance-none outline-none range-lime" type="range" value="100000" max="100000">
+                            </div>
+                        </div>
+                        <button id="reset-filters-btn" class="text-semibold-20-600-L28 text-lime-custom text-center" type="button">Сбросить все</button>
                     </div>
-                    <div id="products-container" class="basis-11/12 px-8 grid grid-cols-4 gap-4 auto-rows-min">
+                    <div id="products-container" class="grid grid-cols-2 lg-max:grid-cols-1 h-max gap-6 auto-rows-min">
                         {% for product in products %}
-                          <div class="hidden product-element flex flex-col bg-white rounded-3xl shadow-md px-10 py-8 gap-2 place-content-between"
+                          <div class="hidden product-element flex flex-col bg-white rounded-4xl shadow-md p-6 place-content-between"
                               data-order="{{loop.index}}"
                               data-tags="{% for tag in product.tag %}{{tag.name}}{% if not loop.last %},{% endif %}{% endfor %}"
                               data-category="{{product.category.name}}"
                               data-name="{{product.name}}"
                               data-price="{{product.scores}}">
-                              <img class="basis-6/12 place-self-center object-scale-down" src="{{product.image}}">
-                              <div class="flex flex-col gap-y-4">
-                                  <span class="font-montserrat text-lime-500 text-lg">{{product.category.name}}</span>
-                                  <span class="font-montserrat-semibold text-xl">{{product.name}}</span>
-                                  <span class="font-montserrat-bold text-lime-500 text-3xl justify-end">{{product.scores}} баллов</span>
+                              <img class="max-w-[206px] min-w-[206px] max-h-[206px] min-h-[206px] place-self-center object-scale-down" src="{{product.image}}">
+                              <div class="flex flex-col gap-y-3.5">
+                                  <span class="text-regular-16-400-L24 text-lime-custom">{{product.category.name}}</span>
+                                  <span class="text-regular-18-400-L28">{{product.name}}</span>
+                                  <span class="text-semibold-20-600-L28 text-lime-custom justify-end">{{product.scores}} БАЛЛОВ</span>
                                   <span data-product-id="{{product.id}}" class="hidden product-tags"></span>
                               </div>
                           </div>

@@ -65,10 +65,12 @@ module.exports = {
               'sm-custom-max': {max: '590px'},
               'sm-2-custom': '886px',
               'sm-2-custom-max': {max: '886px'},
+              'md-custom': '710px',
               'lg-max': {max: '1024px'},
               'lg-custom': '976px',
               'lg-1.5-custom': '1175px',
               'lg-2-custom': '1289px',
+              'lg-2.5-custom': '1350px',
               'xl-custom': '1410px',
               'xl-2-custom': '1441px',
           },
@@ -80,6 +82,7 @@ module.exports = {
               'custom-sm': '0px 12px 16px rgba(33, 33, 33, 0.04)',
           },
           borderRadius: {
+              '2.5xl': '20px',
               '4xl': '30px',
           },
           backgroundSize: {
@@ -90,9 +93,12 @@ module.exports = {
               'right--40': 'right -220rem',
               'pos-0': '0% 0%',
               'pos-100': '100% 100%',
+              'pos-90-66': '90% 66px',
+              'pos-90-121': '90% 121px',
           },
           width: {
               '81': '330px',
+              '82': '344px',
           }
       },
       container: {

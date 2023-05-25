@@ -26,7 +26,7 @@ const dropdown_prize_shop_sort = generate_dropdown(
 const accordion_prize_shop = generate_accordion(
     2,
     1,
-    {active_item: 1, active_classes: 'bg-lime-500', inactive_classes: 'bg_white'})
+    {active_item: 1, active_classes: 'bg-lime-custom text-white', inactive_classes: 'bg_white'})
 
 const accordion_answer_questions = generate_accordion(
     6,
