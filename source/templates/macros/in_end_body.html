@@ -2,6 +2,8 @@
     <script type="text/javascript" src="{{ url_for('static', path='/frameworks/flowbite.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', path='/frameworks/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', path='/plugins/flickity/flickity.pkgd.min.js') }}"></script>
-    <script type="module" src="/source/static/js/{{name_page}}.js"></script>
+    {% if name_page %}
+        <script type="module" src="/source/static/js/{{name_page}}.js"></script>
+    {% endif %}
     <script type="module" src="/source/static/js/navbar.js"></script>
 {% endmacro %}
