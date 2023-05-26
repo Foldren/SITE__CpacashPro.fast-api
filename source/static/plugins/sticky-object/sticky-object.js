@@ -1,30 +1,38 @@
-export function add_sticky_object(html_obj, s_obj, position_top, position_bottom, s_push_in_element) {
-    var lastScrollTop = 0
+export function add_sticky_object(html_obj, s_obj, s_container_top, position_bottom, s_push_in_element) {
+    $(document).ready(function() {
+        let position_top = $(s_container_top).position().top + 500
 
-    $(window).on('scroll', function() {
-
-        let st = $(this).scrollTop()
-        if(st < lastScrollTop) {
-            if(st < position_top && st < position_bottom){
-                $(s_push_in_element).find(s_obj).remove()
-            }
-            else if (st >= position_bottom) {
-                $(s_push_in_element).find(s_obj).remove()
-            }
+        if (window.innerWidth < 768) {
+            position_top = $(s_container_top).position().top - 200
         }
-        else {
-            if(st >= position_top && st < position_bottom){
-                $(s_push_in_element).find(s_obj).remove()
-                $(s_push_in_element).append(html_obj)
-            }
-            else if (st >= position_bottom) {
-                $(s_push_in_element).find(s_obj).remove()
-            }
-        }
-        lastScrollTop = st
-    })
 
-    $(s_obj).on('click', function () {
-        $(s_obj).remove()
+        var lastScrollTop = 0
+        $(window).on('scroll', function () {
+            if (window.innerWidth < 1025) {
+                let st = $(this).scrollTop()
+                if (st < lastScrollTop) {
+                    if (st < position_top && st < position_bottom) {
+                        $(s_push_in_element).find(s_obj).remove()
+                    } else if (st >= position_bottom) {
+                        $(s_push_in_element).find(s_obj).remove()
+                    } else if (st < position_bottom && st > position_top) {
+                        $(s_push_in_element).find(s_obj).remove()
+                        $(s_push_in_element).append(html_obj)
+                    }
+                } else {
+                    if (st >= position_top && st < position_bottom) {
+                        $(s_push_in_element).find(s_obj).remove()
+                        $(s_push_in_element).append(html_obj)
+                    } else if (st >= position_bottom) {
+                        $(s_push_in_element).find(s_obj).remove()
+                    }
+                }
+                lastScrollTop = st
+            }
+        })
+
+        $(s_obj).on('click', function () {
+            $(s_obj).remove()
+        })
     })
 }

@@ -1781,6 +1781,10 @@ input:checked + .toggle-bg {
   z-index: -10;
 }
 
+.-z-30 {
+  z-index: -30;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -2480,6 +2484,10 @@ input:checked + .toggle-bg {
 
 .mt-16 {
   margin-top: 4rem;
+}
+
+.mt-16\.2 {
+  margin-top: 60px;
 }
 
 .mt-2 {
@@ -8088,6 +8096,11 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1350px) {
+  .lg-2\.5-custom\:mx-24 {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
   .lg-2\.5-custom\:mx-33 {
     margin-left: 132px;
     margin-right: 132px;

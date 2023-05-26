@@ -82,7 +82,7 @@
                             </svg>
                         </button>
                         <!-- Dropdown menu -->
-                        <div id="dropdownMenu-1" class="w-80 z-50 hidden bg-white rounded-lg shadow cursor-pointer select-none">
+                        <div id="dropdownMenu-1" class="w-80 hidden bg-white rounded-lg shadow cursor-pointer select-none">
                             <div class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownButton">
                                 <label class="block px-4 py-2 bg-white font-montserrat text-lg hover:bg-lime-custom group cursor-pointer">
                                     <span class="dropdown-text text-regular-16-400-L24 group-hover:text-white">По умолчанию</span>
@@ -290,8 +290,8 @@
             </section>
         </div>
         {{ green_grid_block('Ты ещё не партнёр CPACASH?<br>Присоединяйся и получай бонус', '+10% к первой выплате в первый месяц<br>и 1000 баллов в программе лояльности.', 'Присоединиться')}}
-        <div class="mt-32 mx-24">
-            <h2 class="font-montserrat-bold text-4xl pb-20">Мы на связи</h2>
+        <div class="sm-custom:mt-32 mt-16.2 lg-2.5-custom:mx-24 mx-13 flex flex-col gap-y-8 sm-custom:gap-y-12">
+            <h2 class="sm-custom:text-h2 text-semibold-20-600-L28">Мы на связи</h2>
             {% include 'components/social_networks.html' %}
             {% include 'components/contacts.html' %}
         </div>
