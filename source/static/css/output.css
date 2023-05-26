@@ -2213,6 +2213,14 @@ input:checked + .toggle-bg {
   margin-bottom: -5rem;
 }
 
+.-mb-23 {
+  margin-bottom: -90px;
+}
+
+.-mb-24 {
+  margin-bottom: -6rem;
+}
+
 .-mb-5 {
   margin-bottom: -1.25rem;
 }
@@ -2611,6 +2619,10 @@ input:checked + .toggle-bg {
 
 .mt-px {
   margin-top: 1px;
+}
+
+.-mb-22 {
+  margin-bottom: -80px;
 }
 
 .box-border {
@@ -8007,6 +8019,10 @@ input:checked + .toggle-bg {
 }
 
 @media (max-width: 590px) {
+  .sm-custom-max\:-mb-24 {
+    margin-bottom: -6rem;
+  }
+
   .sm-custom-max\:-mt-12 {
     margin-top: -3rem;
   }
@@ -8021,6 +8037,14 @@ input:checked + .toggle-bg {
 
   .sm-custom-max\:mt-8\.3 {
     margin-top: 30px;
+  }
+
+  .sm-custom-max\:-mb-22 {
+    margin-bottom: -80px;
+  }
+
+  .sm-custom-max\:-mb-16 {
+    margin-bottom: -4rem;
   }
 
   .sm-custom-max\:hidden {
