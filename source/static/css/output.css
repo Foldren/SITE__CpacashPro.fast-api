@@ -1360,18 +1360,12 @@ input:checked + .toggle-bg {
 
 .\!lime-url {
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   --tw-text-opacity: 1;
   color: rgb(133 200 62 / var(--tw-text-opacity));
 }
 
 .lime-url {
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   --tw-text-opacity: 1;
   color: rgb(133 200 62 / var(--tw-text-opacity));
 }
@@ -2530,6 +2524,10 @@ input:checked + .toggle-bg {
   margin-top: 10rem;
 }
 
+.mt-46 {
+  margin-top: 180px;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -2805,10 +2803,6 @@ input:checked + .toggle-bg {
   width: 0.25rem;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-1\/6 {
   width: 16.666667%;
 }
@@ -2847,14 +2841,6 @@ input:checked + .toggle-bg {
 
 .w-2\/3 {
   width: 66.666667%;
-}
-
-.w-2\/5 {
-  width: 40%;
-}
-
-.w-2\/6 {
-  width: 33.333333%;
 }
 
 .w-20 {
@@ -3169,10 +3155,6 @@ input:checked + .toggle-bg {
 
 .basis-1\/2 {
   flex-basis: 50%;
-}
-
-.basis-1\/3 {
-  flex-basis: 33.333333%;
 }
 
 .basis-1\/4 {
@@ -3801,6 +3783,10 @@ input:checked + .toggle-bg {
 
 .gap-y-20 {
   row-gap: 5rem;
+}
+
+.gap-y-24 {
+  row-gap: 6rem;
 }
 
 .gap-y-3 {
@@ -6271,6 +6257,10 @@ input:checked + .toggle-bg {
   padding-top: 187px;
 }
 
+.pt-48 {
+  padding-top: 12rem;
+}
+
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -6855,6 +6845,11 @@ input:checked + .toggle-bg {
   color: rgb(14 165 233 / var(--tw-text-opacity));
 }
 
+.text-stone-custom {
+  --tw-text-opacity: 1;
+  color: rgb(89 103 128 / var(--tw-text-opacity));
+}
+
 .text-teal-600 {
   --tw-text-opacity: 1;
   color: rgb(4 116 129 / var(--tw-text-opacity));
@@ -7307,6 +7302,15 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 590px) {
+  .sm-custom\:text-h1 {
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 70px;
+    --tw-text-opacity: 1;
+    color: rgb(31 34 39 / var(--tw-text-opacity));
+  }
+
   .sm-custom\:text-h2 {
     font-family: Montserrat-SemiBold, sans-serif;
     font-size: 40px;
@@ -7823,6 +7827,11 @@ input:checked + .toggle-bg {
     padding-right: 3rem;
   }
 
+  .sm-custom\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
   .sm-custom\:py-11 {
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
@@ -7868,6 +7877,10 @@ input:checked + .toggle-bg {
     padding-top: 180px;
   }
 
+  .sm-custom\:pt-48 {
+    padding-top: 12rem;
+  }
+
   .sm-custom\:pt-6 {
     padding-top: 1.5rem;
   }
@@ -7882,6 +7895,10 @@ input:checked + .toggle-bg {
 @media (max-width: 590px) {
   .sm-custom-max\:mt-2 {
     margin-top: 0.5rem;
+  }
+
+  .sm-custom-max\:hidden {
+    display: none;
   }
 
   .sm-custom-max\:w-\[44px\] {

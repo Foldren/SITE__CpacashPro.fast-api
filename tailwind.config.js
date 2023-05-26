@@ -27,6 +27,7 @@ module.exports = {
               'white-custom': '#E5E5E5',
               'rose-custom': '#FF7E7E',
               'rose-light-custom': '#ffe6e6',
+              'stone-custom': '#596780'
           },
           gap: {
               '6.5': '26px',

@@ -55,7 +55,7 @@
   }
 
   .lime-url {
-    @apply text-lime-custom select-none cursor-pointer;
+    @apply text-lime-custom cursor-pointer;
   }
 
 
