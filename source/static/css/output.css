@@ -1427,6 +1427,16 @@ input:checked + .toggle-bg {
   color: rgb(31 34 39 / var(--tw-text-opacity));
 }
 
+.text-regular-20-400-L30 {
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  line-height: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(31 34 39 / var(--tw-text-opacity));
+}
+
 .text-regular-16-400-L24--c {
   font-family: Montserrat-Regular, sans-serif;
   font-size: 1rem;
@@ -1787,6 +1797,18 @@ input:checked + .toggle-bg {
 
 .isolate {
   isolation: isolate;
+}
+
+.\!-z-20 {
+  z-index: -20 !important;
+}
+
+.\!z-0 {
+  z-index: 0 !important;
+}
+
+.\!z-10 {
+  z-index: 10 !important;
 }
 
 .-z-10 {
@@ -2263,6 +2285,18 @@ input:checked + .toggle-bg {
   margin-top: -0.25rem;
 }
 
+.-mt-10 {
+  margin-top: -2.5rem;
+}
+
+.-mt-12 {
+  margin-top: -3rem;
+}
+
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+
 .-mt-20 {
   margin-top: -5rem;
 }
@@ -2513,6 +2547,10 @@ input:checked + .toggle-bg {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-23 {
+  margin-top: 90px;
 }
 
 .mt-24 {
@@ -3387,6 +3425,10 @@ input:checked + .toggle-bg {
   list-style-position: inside;
 }
 
+.list-outside {
+  list-style-position: outside;
+}
+
 .list-decimal {
   list-style-type: decimal;
 }
@@ -4145,6 +4187,11 @@ input:checked + .toggle-bg {
 .rounded-b-3xl {
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
+}
+
+.rounded-b-4xl {
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .rounded-b-full {
@@ -5738,6 +5785,10 @@ input:checked + .toggle-bg {
   padding: 1.75rem;
 }
 
+.p-7\.5 {
+  padding: 30px;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -5819,6 +5870,11 @@ input:checked + .toggle-bg {
 .px-24 {
   padding-left: 6rem;
   padding-right: 6rem;
+}
+
+.px-24\.5 {
+  padding-left: 101px;
+  padding-right: 101px;
 }
 
 .px-28 {
@@ -6044,6 +6100,10 @@ input:checked + .toggle-bg {
   padding-bottom: 4rem;
 }
 
+.pb-17 {
+  padding-bottom: 66px;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -6230,6 +6290,10 @@ input:checked + .toggle-bg {
 
 .pt-20 {
   padding-top: 5rem;
+}
+
+.pt-21 {
+  padding-top: 84px;
 }
 
 .pt-24 {
@@ -6572,6 +6636,10 @@ input:checked + .toggle-bg {
 
 .leading-\[14px\] {
   line-height: 14px;
+}
+
+.leading-\[30px\] {
+  line-height: 30px;
 }
 
 .leading-\[32px\] {
@@ -7415,6 +7483,17 @@ input:checked + .toggle-bg {
   }
 }
 
+@media (max-width: 590px) {
+  .sm-custom-max\:text-regular-14-400-L20 {
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(31 34 39 / var(--tw-text-opacity));
+  }
+}
+
 @media (min-width: 886px) {
   .sm-2-custom\:btn-lime-sm {
     cursor: pointer;
@@ -7654,10 +7733,6 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 640px) {
-  .sm\:ml-0 {
-    margin-left: 0px;
-  }
-
   .sm\:max-w-\[439px\] {
     max-width: 439px;
   }
@@ -7819,6 +7894,10 @@ input:checked + .toggle-bg {
     row-gap: 3.5rem;
   }
 
+  .sm-custom\:gap-y-24 {
+    row-gap: 6rem;
+  }
+
   .sm-custom\:gap-y-3 {
     row-gap: 0.75rem;
   }
@@ -7833,10 +7912,6 @@ input:checked + .toggle-bg {
 
   .sm-custom\:gap-y-8 {
     row-gap: 2rem;
-  }
-
-  .sm-custom\:gap-y-24 {
-    row-gap: 6rem;
   }
 
   .sm-custom\:bg-transparent {
@@ -7932,8 +8007,20 @@ input:checked + .toggle-bg {
 }
 
 @media (max-width: 590px) {
+  .sm-custom-max\:-mt-12 {
+    margin-top: -3rem;
+  }
+
   .sm-custom-max\:mt-2 {
     margin-top: 0.5rem;
+  }
+
+  .sm-custom-max\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .sm-custom-max\:mt-8\.3 {
+    margin-top: 30px;
   }
 
   .sm-custom-max\:hidden {
@@ -7948,8 +8035,26 @@ input:checked + .toggle-bg {
     align-items: center;
   }
 
+  .sm-custom-max\:gap-x-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+
   .sm-custom-max\:bg-contain {
     background-size: contain;
+  }
+
+  .sm-custom-max\:p-5 {
+    padding: 1.25rem;
+  }
+
+  .sm-custom-max\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .sm-custom-max\:pb-5 {
+    padding-bottom: 1.25rem;
   }
 }
 
@@ -8103,6 +8208,13 @@ input:checked + .toggle-bg {
 
   .lg-custom\:justify-between {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 1003px) {
+  .lg-1\.2-custom-max\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
