@@ -1473,11 +1473,29 @@ input:checked + .toggle-bg {
   color: rgb(128 128 128 / var(--tw-text-opacity));
 }
 
+.text-semibold-26-600-L36 {
+  font-family: Montserrat-SemiBold, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 34 39 / var(--tw-text-opacity));
+}
+
 .text-semibold-28-600-L36 {
   font-family: Montserrat-SemiBold, sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 34 39 / var(--tw-text-opacity));
+}
+
+.text-semibold-23-600-L32 {
+  font-family: Montserrat-SemiBold, sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 32px;
   --tw-text-opacity: 1;
   color: rgb(31 34 39 / var(--tw-text-opacity));
 }
@@ -2064,6 +2082,11 @@ input:checked + .toggle-bg {
 .mx-8\.5 {
   margin-left: 34px;
   margin-right: 34px;
+}
+
+.mx-9 {
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
 }
 
 .mx-96 {
@@ -6434,6 +6457,14 @@ input:checked + .toggle-bg {
   line-height: 1;
 }
 
+.text-\[23px\] {
+  font-size: 23px;
+}
+
+.text-\[26px\] {
+  font-size: 26px;
+}
+
 .text-\[26rem\] {
   font-size: 26rem;
 }
@@ -6541,6 +6572,10 @@ input:checked + .toggle-bg {
 
 .leading-\[14px\] {
   line-height: 14px;
+}
+
+.leading-\[32px\] {
+  line-height: 32px;
 }
 
 .leading-\[56px\] {
@@ -7798,6 +7833,10 @@ input:checked + .toggle-bg {
 
   .sm-custom\:gap-y-8 {
     row-gap: 2rem;
+  }
+
+  .sm-custom\:gap-y-24 {
+    row-gap: 6rem;
   }
 
   .sm-custom\:bg-transparent {
