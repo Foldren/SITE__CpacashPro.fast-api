@@ -1,13 +1,4 @@
 @font-face {
-  font-family: 'Raleway-Regular';
-
-  src: url("/source/static/fonts/Raleway/Regular/Raleway-Regular.ttf") format('ttf'),
-    url("/source/static/fonts/Raleway/Regular/Raleway-Regular.eot") format('eot'),
-    url("/source/static/fonts/Raleway/Regular/Raleway-Regular.woff") format('woff'),
-    url("/source/static/fonts/Raleway/Regular/Raleway-Regular.woff2") format('woff2');
-}
-
-@font-face {
   font-family: 'Montserrat-Regular';
 
   src: url("/source/static/fonts/Montserrat/Regular/Montserrat-Regular.ttf") format('ttf'),
@@ -4457,6 +4448,11 @@ input:checked + .toggle-bg {
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
 }
 
+.border-gray-light-custom {
+  --tw-border-opacity: 1;
+  border-color: rgb(237 238 239 / var(--tw-border-opacity));
+}
+
 .border-green-300 {
   --tw-border-opacity: 1;
   border-color: rgb(132 225 188 / var(--tw-border-opacity));
@@ -4569,11 +4565,6 @@ input:checked + .toggle-bg {
 .border-yellow-800 {
   --tw-border-opacity: 1;
   border-color: rgb(114 59 19 / var(--tw-border-opacity));
-}
-
-.border-gray-light-custom {
-  --tw-border-opacity: 1;
-  border-color: rgb(237 238 239 / var(--tw-border-opacity));
 }
 
 .border-l-gray-100 {
@@ -6481,10 +6472,6 @@ input:checked + .toggle-bg {
   font-family: Montserrat-SemiBold, sans-serif;
 }
 
-.font-raleway {
-  font-family: Raleway-Regular, sans-serif;
-}
-
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -7246,14 +7233,14 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(31 41 55 / var(--tw-ring-opacity));
 }
 
-.ring-white {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
-}
-
 .ring-lime-custom {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(133 200 62 / var(--tw-ring-opacity));
+}
+
+.ring-white {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
 }
 
 .ring-opacity-0 {
@@ -7575,15 +7562,6 @@ input:checked + .toggle-bg {
   background-color: transparent;
 }
 
-.checked\:border:checked {
-  border-width: 1px;
-}
-
-.checked\:border-lime-custom:checked {
-  --tw-border-opacity: 1;
-  border-color: rgb(133 200 62 / var(--tw-border-opacity));
-}
-
 .checked\:bg-lime-500:checked {
   --tw-bg-opacity: 1;
   background-color: rgb(132 204 22 / var(--tw-bg-opacity));
@@ -7594,18 +7572,8 @@ input:checked + .toggle-bg {
   background-color: rgb(133 200 62 / var(--tw-bg-opacity));
 }
 
-.checked\:bg-white:checked {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .hover\:border:hover {
   border-width: 1px;
-}
-
-.hover\:border-lime-custom:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(133 200 62 / var(--tw-border-opacity));
 }
 
 .hover\:bg-gray-light-custom:hover {
@@ -7662,11 +7630,6 @@ input:checked + .toggle-bg {
   border-color: rgb(132 204 22 / var(--tw-border-opacity));
 }
 
-.focus\:bg-white:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .focus\:text-lime-500:focus {
   --tw-text-opacity: 1;
   color: rgb(132 204 22 / var(--tw-text-opacity));
@@ -7689,16 +7652,6 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(156 163 175 / var(--tw-ring-opacity));
 }
 
-.active\:bg-white:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.group:checked .group-checked\:text-lime-500 {
-  --tw-text-opacity: 1;
-  color: rgb(132 204 22 / var(--tw-text-opacity));
-}
-
 .group:hover .group-hover\:fill-black-custom {
   fill: #1F2227;
 }
@@ -7710,6 +7663,11 @@ input:checked + .toggle-bg {
 .group:hover .group-hover\:text-black-custom {
   --tw-text-opacity: 1;
   color: rgb(31 34 39 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-lime-500 {
+  --tw-text-opacity: 1;
+  color: rgb(132 204 22 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-lime-custom {
@@ -7725,11 +7683,6 @@ input:checked + .toggle-bg {
 .group:hover .group-hover\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:text-lime-500 {
-  --tw-text-opacity: 1;
-  color: rgb(132 204 22 / var(--tw-text-opacity));
 }
 
 .group.is-active-ac-i .group-\[\.is-active-ac-i\]\:-rotate-90 {
