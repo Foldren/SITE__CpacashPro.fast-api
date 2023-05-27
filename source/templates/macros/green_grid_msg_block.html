@@ -1,5 +1,5 @@
 {% macro green_grid_block(header='', description='', button='') %}
-    <div class="green-grid-block bg-lime-light-custom bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover bg-right mt-32">
+    <div class="green-grid-block bg-lime-light-custom bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover bg-right sm-custom:mt-32 mt-16">
         <section class="flex flex-col sm-custom:gap-y-8 gap-y-3 green_grid_block py-20">
             <h2 class="sm-custom:text-h2 text-semibold-20-600-L28">{{ header|safe }}</h2>
             <span class="sm-custom:text-regular-18-400-L28 text-regular-16-400-L24">{{ description|safe }}</span>
