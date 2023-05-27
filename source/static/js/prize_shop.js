@@ -10,7 +10,7 @@ add_sticky_object(
     "<a id='sticky-0' href='#carousel-8' class='bg-lime-custom text-black-custom text-regular-16-400-L24 absolute -bottom-8 w-full -ml-12 pl-12 py-2'>Вернуться к фильтрам</a>",
     '#sticky-0',
     "#products-container",
-    $(".green-grid-block").position().top - 0,
+    ".green-grid-block",
     '#navbar-item',
 )
 

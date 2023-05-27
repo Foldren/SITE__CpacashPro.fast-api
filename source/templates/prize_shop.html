@@ -52,17 +52,17 @@
                 </div>
                 <div class="lg-1.5max:hidden flex flex-row gap-x-6 mt-2">
                     {% for category in categories %}
-                        <label for="radio-category-{{loop.index0}}" class="basis-1/4 flex flex-row cursor-pointer justify-around bg-lime-light-custom shadow-md checked:bg-white checked:border checked:border-lime-custom group rounded-2.5xl pr-5">
+                        <label for="radio-category-{{loop.index0}}" class="basis-1/4 flex flex-row cursor-pointer justify-around bg-lime-light-custom shadow-md hover:bg-white select-none group rounded-2.5xl pr-5 hover:ring-1 ring-lime-custom">
                             <img class="basis-1/2 max-w-[136px] ml-2 self-end pointer-events-none" src="{{ category.image }}">
-                            <span class="group-checked:text-lime-500 text-regular-16-400-L24 self-center ml-3">{{ category.name }}</span>
+                            <span class="group-hover:text-lime-500 text-regular-16-400-L24 self-center ml-3">{{ category.name }}</span>
                         </label>
                     {% endfor %}
                 </div>
                 <div id="carousel-8" class="hidden lg-1.5max:block main-carousel mt-2">
                     {% for category in categories %}
-                        <label for="radio-category-{{loop.index0}}" class="carousel-cell mr-6 mb-2 flex flex-row cursor-pointer justify-around bg-lime-light-custom shadow-md checked:bg-white checked:border checked:border-lime-custom group rounded-2.5xl pr-5">
+                        <label for="radio-category-{{loop.index0}}" class="carousel-cell mr-6 flex flex-row cursor-pointer justify-around bg-lime-light-custom shadow-md hover:bg-white select-none group rounded-2.5xl pr-5 hover:border border-lime-custom my-1">
                             <img class="basis-1/2 max-w-[136px] ml-2 self-end pointer-events-none" src="{{ category.image }}">
-                            <span class="group-checked:text-lime-500 text-regular-16-400-L24 self-center ml-3">{{ category.name }}</span>
+                            <span class="group-hover:text-lime-500 text-regular-16-400-L24 self-center ml-3">{{ category.name }}</span>
                         </label>
                     {% endfor %}
                 </div>
