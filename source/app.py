@@ -5,6 +5,8 @@ from fastapi.templating import Jinja2Templates
 from os import path
 from sqlalchemy import select
 from sqladmin import Admin
+from starlette.exceptions import HTTPException
+from starlette.responses import PlainTextResponse
 from admin import ProductAdmin, CategoryAdmin, authentication_backend, TagAdmin
 from database import engine, async_session
 from models import Category, Product, Tag
@@ -31,11 +33,17 @@ admin.add_view(CategoryAdmin)
 admin.add_view(TagAdmin)
 admin.add_view(ProductAdmin)
 
+
 # При первом запуске
 # @app.on_event("startup")
 # async def create_db_engine():
 #     async with engine.begin() as conn:
 #         await conn.run_sync(Base.metadata.create_all)
+
+
+@app.exception_handler(404) # Вывод при ошибке 404
+async def http_exception_404(request: Request, exc: HTTPException):
+    return templates.TemplateResponse("error_404.html", {"request": request})
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -56,10 +64,10 @@ async def prize_shop(request: Request):
     return templates.TemplateResponse(
         name="prize_shop.html",
         context={
-          "request": request,
-          "categories": categories,
-          "tags": tags,
-          "products": products
+            "request": request,
+            "categories": categories,
+            "tags": tags,
+            "products": products
         }
     )
 
@@ -72,12 +80,6 @@ async def page_success(request: Request):
 @app.get("/contacts")
 async def contacts(request: Request):
     return templates.TemplateResponse("contacts.html", {"request": request})
-
-
-@app.get("/error-404")
-async def error404(request: Request):
-    return templates.TemplateResponse("error_404.html", {"request": request})
-
 
 @app.get("/registration")
 async def registration(request: Request):

@@ -3047,10 +3047,6 @@ input:checked + .toggle-bg {
   width: 44px;
 }
 
-.w-\[50rem\] {
-  width: 50rem;
-}
-
 .w-\[78px\] {
   width: 78px;
 }
@@ -3080,10 +3076,6 @@ input:checked + .toggle-bg {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
 }
 
 .min-w-0 {
@@ -3604,6 +3596,10 @@ input:checked + .toggle-bg {
 
 .flex-col-reverse {
   flex-direction: column-reverse;
+}
+
+.\!flex-wrap {
+  flex-wrap: wrap !important;
 }
 
 .flex-wrap {
@@ -4480,6 +4476,11 @@ input:checked + .toggle-bg {
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
 }
 
+.border-gray-custom {
+  --tw-border-opacity: 1;
+  border-color: rgb(128 128 128 / var(--tw-border-opacity));
+}
+
 .border-gray-light-2-custom {
   --tw-border-opacity: 1;
   border-color: rgb(216 216 216 / var(--tw-border-opacity));
@@ -4602,11 +4603,6 @@ input:checked + .toggle-bg {
 .border-yellow-800 {
   --tw-border-opacity: 1;
   border-color: rgb(114 59 19 / var(--tw-border-opacity));
-}
-
-.border-gray-custom {
-  --tw-border-opacity: 1;
-  border-color: rgb(128 128 128 / var(--tw-border-opacity));
 }
 
 .border-l-gray-100 {
@@ -5841,6 +5837,10 @@ input:checked + .toggle-bg {
   padding: 0.75rem;
 }
 
+.p-3\.5 {
+  padding: 0.875rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -6142,11 +6142,6 @@ input:checked + .toggle-bg {
 .py-px {
   padding-top: 1px;
   padding-bottom: 1px;
-}
-
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
 }
 
 .pb-0 {
@@ -7576,6 +7571,22 @@ input:checked + .toggle-bg {
     --tw-text-opacity: 1;
     color: rgb(31 34 39 / var(--tw-text-opacity));
   }
+
+  .sm-custom-max\:text-regular-16-400-L24 {
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    --tw-text-opacity: 1;
+    color: rgb(31 34 39 / var(--tw-text-opacity));
+  }
+
+  .sm-custom-max\:text-regular-16-400-L24--c {
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 886px) {
@@ -7694,10 +7705,6 @@ input:checked + .toggle-bg {
 
 .focus\:border:focus {
   border-width: 1px;
-}
-
-.focus\:border-2:focus {
-  border-width: 2px;
 }
 
 .focus\:border-lime-500:focus {
@@ -7967,10 +7974,6 @@ input:checked + .toggle-bg {
     margin-top: 10rem;
   }
 
-  .sm-custom\:mt-6 {
-    margin-top: 1.5rem;
-  }
-
   .sm-custom\:block {
     display: block;
   }
@@ -7983,36 +7986,16 @@ input:checked + .toggle-bg {
     display: none;
   }
 
+  .sm-custom\:w-2\/3 {
+    width: 66.666667%;
+  }
+
   .sm-custom\:w-3\/5 {
     width: 60%;
   }
 
   .sm-custom\:w-\[50px\] {
     width: 50px;
-  }
-
-  .sm-custom\:w-1\/2 {
-    width: 50%;
-  }
-
-  .sm-custom\:w-2\/3 {
-    width: 66.666667%;
-  }
-
-  .sm-custom\:w-4\/5 {
-    width: 80%;
-  }
-
-  .sm-custom\:w-9\/12 {
-    width: 75%;
-  }
-
-  .sm-custom\:w-7\/12 {
-    width: 58.333333%;
-  }
-
-  .sm-custom\:w-5\/12 {
-    width: 41.666667%;
   }
 
   .sm-custom\:min-w-\[44px\] {
@@ -8027,8 +8010,9 @@ input:checked + .toggle-bg {
     justify-content: flex-start;
   }
 
-  .sm-custom\:gap-5 {
-    gap: 1.25rem;
+  .sm-custom\:gap-x-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .sm-custom\:gap-y-12 {
@@ -8057,11 +8041,6 @@ input:checked + .toggle-bg {
 
   .sm-custom\:gap-y-8 {
     row-gap: 2rem;
-  }
-
-  .sm-custom\:gap-x-5 {
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
   }
 
   .sm-custom\:bg-transparent {
@@ -8106,6 +8085,21 @@ input:checked + .toggle-bg {
     padding-right: 101px;
   }
 
+  .sm-custom\:px-9 {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  .sm-custom\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .sm-custom\:py-1\.5 {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+
   .sm-custom\:py-11 {
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
@@ -8129,21 +8123,6 @@ input:checked + .toggle-bg {
   .sm-custom\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .sm-custom\:px-9 {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-  }
-
-  .sm-custom\:py-1 {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
-  .sm-custom\:py-1\.5 {
-    padding-top: 0.375rem;
-    padding-bottom: 0.375rem;
   }
 
   .sm-custom\:pb-12 {
@@ -8192,6 +8171,10 @@ input:checked + .toggle-bg {
 
   .sm-custom-max\:-mt-12 {
     margin-top: -3rem;
+  }
+
+  .sm-custom-max\:-mt-2 {
+    margin-top: -0.5rem;
   }
 
   .sm-custom-max\:mb-5 {
@@ -8254,6 +8237,14 @@ input:checked + .toggle-bg {
 
   .sm-custom-max\:text-center {
     text-align: center;
+  }
+
+  .sm-custom-max\:font-semibold {
+    font-weight: 600;
+  }
+
+  .sm-custom-max\:font-medium {
+    font-weight: 500;
   }
 }
 
