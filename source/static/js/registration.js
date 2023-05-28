@@ -47,7 +47,7 @@ set_form_ajax_listener(
                     if (data.error === 'Wrong code') {
                         error_block.html("Код введен неверно") // Выводим ошибку
                     } else if (data.error === 'Enter code from image') {
-                        error_block.html("Введите код с картинки")
+                        error_block.html("Введите код с картинки. Иногда код нужно ввести несколько раз.")
                     } else {
                         error_block.html(data.error)
                     }
@@ -58,13 +58,13 @@ set_form_ajax_listener(
                     error_block.removeClass("invisible")
                     $("#reg-captcha-block").removeClass("hidden")
                     $("#reg-captcha-block").addClass("hidden")
-                    $(".end-reg-btn").addClass("opacity-50")
+                    $(".end-reg-btn").addClass("opacity-20")
                     $(".end-reg-btn").attr("disabled", "disabled")
                     $(".end-reg-btn").addClass("disabled")
                 }
             } else if(data.status === 1) {
                 $(".end-reg-btn").attr("disabled", "disabled")
-                $(".end-reg-btn").addClass("opacity-50")
+                $(".end-reg-btn").addClass("opacity-20")
                 $(".end-reg-btn").addClass("disabled")
                 location.replace("/page-success")
             }

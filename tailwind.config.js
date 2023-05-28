@@ -23,6 +23,7 @@ module.exports = {
               'gray-custom': '#808080',
               'gray-md-custom': '#E8E8E8',
               'gray-light-custom': '#EDEEEF',
+              'gray-light-2-custom': '#D8D8D8',
               'white-custom': '#E5E5E5',
               'rose-custom': '#FF7E7E',
               'rose-light-custom': '#ffe6e6',
