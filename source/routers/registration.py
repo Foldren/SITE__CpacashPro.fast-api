@@ -49,7 +49,4 @@ async def signup(form_data: RegistrationForm = Depends()):
             }
         )
 
-        print(form_data.captcha)
-        print(response.json())
-
         return response.json()

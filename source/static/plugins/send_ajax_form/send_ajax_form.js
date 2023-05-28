@@ -5,7 +5,7 @@ export function set_form_ajax_listener(s_form, url, s_submit_btn, {success_f = n
         $(s_submit_btn).removeClass("opacity-20")
         $(s_submit_btn).addClass("opacity-20")
 
-        if(valid || !check_valid_email){
+        if(valid){
             $.ajax({
                 url: url,
                 method: 'post',

@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
     {% include 'components/head.html' %}
-    <body class="bg-[url('/source/static/images/main/bg_green_s.png')] bg-right-top bg-no-repeat bg-gray-100">
+    <body class="bg-gray-light-custom">
         {% include 'components/navbar.html' %}
-        <div class="mx-24 mt-6">
-            <section class="flex flex-col items-center bg-lime-10 rounded-3xl px-[34rem] py-16">
-                <span class="font-montserrat-semibold text-2xl pb-12">Авторизация</span>
-                <input class="mt-10 rounded-full w-full focus:ring-0 focus:border-1 focus:border-lime-500 focus:text-lime-500" type="text" placeholder="Укажите Email">
-                <input class="mt-10 rounded-full w-full focus:ring-0 focus:border-1 focus:border-lime-500 focus:text-lime-500" type="password" placeholder="Пароль">
-                <div class="flex flex-row gap-x-3 self-start pt-10">
-                    <input id="sign_in_radio" class="rounded w-6 h-6 checked:bg-lime-500 focus:ring-1 focus:ring-gray-400 after:bg-transparent" type="checkbox" name="sign_in">
-                    <label for="sign_in_radio" class="select-none text-start font-montserrat-light">Запомнить меня</label>
+        {% from "macros/in_end_body.html" import in_end_body with context %}
+        <form id="authorization-form" class="hidden"></form>
+        <div class="lg-2-custom:mx-46 mx-5 sm-custom:pt-47 pt-32">
+            <section class="flex flex-col sm-custom:gap-y-12 gap-y-8 items-center bg-lime-light-custom rounded-4xl lg-2-custom:px-24 lg-2-custom:py-12 p-8">
+                <span class="sm-custom:text-semibold-28-600-L36 text-semibold-20-600-L28 sm-custom-max:text-center">Авторизация</span>
+                <div class="flex flex-col gap-y-3 sm-custom:w-1/2 w-full">
+                    <input form="authorization-form" name="email" required class="rounded-full focus:ring-0 focus:border focus:border-lime-custom focus:text-lime-custom text-regular-16-400-L24 p-4 w-full" type="text" placeholder="Укажите Email">
+                    <input form="authorization-form" name="password" required class="rounded-full focus:ring-0 focus:border focus:border-lime-custom focus:text-lime-custom text-regular-16-400-L24 p-4 w-full" type="password" placeholder="Пароль">
+                    <div class="flex flex-row gap-x-3 w-full">
+                        <input id="sign_in_radio" form="authorization-form" name="remember" class="rounded w-6 h-6 checked:bg-lime-500 focus:ring-1 focus:ring-gray-400 after:bg-transparent" type="checkbox" value="1">
+                        <label for="sign_in_radio" class="select-none text-start text-regular-14-300-L24">Запомнить меня</label>
+                    </div>
+                    <div id="auth-captcha-block" class="hidden flex flex-col place-items-center mt-5 sm-custom:w-2/3 w-full self-center">
+                        <img class="mb-3" src="">
+                        <input type="text" name="captcha" placeholder="Введите код здесь" form="authorization-form" class="focus:ring-0 focus:border focus:border-lime-custom focus:text-lime-custom text-regular-16-400-L24 p-4 w-full rounded-full">
+                    </div>
+                    <span id="error-authorization" class="text-regular-12-400-L16 text-red-500 text-center invisible"></span>
+                    <button id="auth-btn" form="authorization-form" type="submit" class="btn-black py-4">Войти</button>
+                    <a class="text-regular-14-300-L24 cursor-pointer self-center">Забыли пароль?</a>
                 </div>
-                <button class="btn-black w-[30rem] py-4 font-montserrat-semibold text-xl rounded-full mt-16">Войти</button>
-                <a class="font-montserrat underline pt-8">Забыли пароль?</a>
             </section>
         </div>
-         {% include 'components/footer.html' %}
+        {% include 'components/footer.html' %}
+        {{ in_end_body('authorization') }}
     </body>
 </html>

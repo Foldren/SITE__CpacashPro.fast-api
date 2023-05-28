@@ -73,6 +73,10 @@
     @apply font-montserrat text-sm text-black-custom font-light leading-[14px]
   }
 
+  .text-regular-14-300-L24 {
+    @apply font-montserrat text-sm text-black-custom font-light leading-[24px]
+  }
+
   .text-regular-12-400-L16 {
     @apply font-montserrat text-xs text-black-custom font-normal leading-4
   }
