@@ -2216,6 +2216,11 @@ input:checked + .toggle-bg {
   margin-bottom: 2.25rem;
 }
 
+.mx-80 {
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
 .-mb-14 {
   margin-bottom: -3.5rem;
 }
@@ -6460,6 +6465,10 @@ input:checked + .toggle-bg {
   padding-top: 2.25rem;
 }
 
+.pt-41 {
+  padding-top: 164px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -6634,6 +6643,14 @@ input:checked + .toggle-bg {
   line-height: 1rem;
 }
 
+.text-\[360px\] {
+  font-size: 360px;
+}
+
+.text-\[140px\] {
+  font-size: 140px;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -6740,6 +6757,14 @@ input:checked + .toggle-bg {
 
 .leading-tight {
   line-height: 1.25;
+}
+
+.leading-\[380px\] {
+  line-height: 380px;
+}
+
+.leading-\[150px\] {
+  line-height: 150px;
 }
 
 .tracking-normal {
@@ -7520,6 +7545,16 @@ input:checked + .toggle-bg {
     color: rgb(31 34 39 / var(--tw-text-opacity));
   }
 
+  .sm-custom\:text-regular-20-400-L30 {
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    line-height: 30px;
+    --tw-text-opacity: 1;
+    color: rgb(31 34 39 / var(--tw-text-opacity));
+  }
+
   .sm-custom\:text-regular-16-400-L24--c {
     font-family: Montserrat-Regular, sans-serif;
     font-size: 1rem;
@@ -7619,6 +7654,34 @@ input:checked + .toggle-bg {
     --tw-shadow: 4px 8px 24px rgba(36, 107, 253, 0.25);
     --tw-shadow-colored: 4px 8px 24px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm-2-custom\:text-h1 {
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 70px;
+    --tw-text-opacity: 1;
+    color: rgb(31 34 39 / var(--tw-text-opacity));
+  }
+
+  .sm-2-custom\:text-h2 {
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+    --tw-text-opacity: 1;
+    color: rgb(31 34 39 / var(--tw-text-opacity));
+  }
+
+  .sm-2-custom\:text-regular-20-400-L30 {
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    line-height: 30px;
+    --tw-text-opacity: 1;
+    color: rgb(31 34 39 / var(--tw-text-opacity));
   }
 }
 
@@ -8006,6 +8069,10 @@ input:checked + .toggle-bg {
     flex-direction: row;
   }
 
+  .sm-custom\:items-start {
+    align-items: flex-start;
+  }
+
   .sm-custom\:justify-start {
     justify-content: flex-start;
   }
@@ -8157,6 +8224,14 @@ input:checked + .toggle-bg {
     padding-top: 1.5rem;
   }
 
+  .sm-custom\:text-\[360px\] {
+    font-size: 360px;
+  }
+
+  .sm-custom\:leading-\[380px\] {
+    line-height: 380px;
+  }
+
   .sm-custom\:shadow-none {
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
@@ -8254,6 +8329,10 @@ input:checked + .toggle-bg {
     width: max-content;
   }
 
+  .sm-2-custom\:w-full {
+    width: 100%;
+  }
+
   .sm-2-custom\:basis-1\/2 {
     flex-basis: 50%;
   }
@@ -8309,12 +8388,30 @@ input:checked + .toggle-bg {
     padding-right: 70px;
   }
 
+  .sm-2-custom\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .sm-2-custom\:px-24\.5 {
+    padding-left: 101px;
+    padding-right: 101px;
+  }
+
   .sm-2-custom\:pt-9 {
     padding-top: 2.25rem;
   }
 
   .sm-2-custom\:text-start {
     text-align: start;
+  }
+
+  .sm-2-custom\:text-\[360px\] {
+    font-size: 360px;
+  }
+
+  .sm-2-custom\:leading-\[380px\] {
+    line-height: 380px;
   }
 }
 
@@ -8446,6 +8543,11 @@ input:checked + .toggle-bg {
   .lg-2-custom\:mx-46 {
     margin-left: 180px;
     margin-right: 180px;
+  }
+
+  .lg-2-custom\:mx-80 {
+    margin-left: 20rem;
+    margin-right: 20rem;
   }
 
   .lg-2-custom\:px-24 {

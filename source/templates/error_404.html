@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
     {% include 'components/head.html' %}
-    <body class="bg-[url('/source/static/images/main/bg_green_s.png')] bg-right-top bg-no-repeat bg-gray-100">
+    <body class="bg-[url('/source/static/images/main/bg_green_s.png')] bg-right-top sm-custom-max:bg-contain bg-no-repeat bg-gray-light-custom">
         {% include 'components/navbar.html' %}
-        <div class="mx-[32rem]">
-            <section class="flex flex-col items-center">
-                <span class="basis-1/12 font-montserrat-bold text-lime-500 text-5xl self-start">Ой</span>
-                <span class="basis-7/12 font-montserrat-bold text-lime-500 text-[26rem] -mt-32">404</span>
-                <span class="basis-1/12 font-montserrat-bold text-lime-500 text-3xl pb-14 -mt-8">Похоже кто-то много арбитражил и ошибся адресом.</span>
-                <span class="basis-2/12 font-montserrat text-lg pb-14 text-center">Есть идеи, что делать дальше:<br><br>— напиши нам в <a class="lime-url">чате</a><br>— возвращайся на главную</span>
-                <button class="btn-lime px-28 py-4 font-montserrat-semibold text-xl rounded-full">На главную</button>
+        <div class="lg-2-custom:mx-80 mx-13 pt-41">
+            <section class="flex flex-col items-center gap-y-6">
+                <div class="flex flex-col sm-2-custom:items-start items-center">
+                    <h1 class="sm-2-custom:text-h1 text-semibold-28-600-L36 !text-lime-custom">Ой</h1>
+                    <span class="font-montserrat-bold !text-lime-custom sm-2-custom:text-[360px] sm-2-custom:leading-[380px] text-[140px] leading-[150px] font-bold">404</span>
+                </div>
+                <h2 class="sm-2-custom:text-h2 text-semibold-20-600-L28 !text-lime-custom text-center">Похоже кто-то много арбитражил и ошибся адресом.</h2>
+                <span class="sm-2-custom:text-regular-20-400-L30 text-regular-14-400-L20 text-center">Есть идеи, что делать дальше:<br><br>— напиши нам в <a href="https://telegram.me/Cpacash_Chat" class="lime-url">чате</a><br>— возвращайся на главную</span>
+                <a href="/" class="btn-lime sm-2-custom:px-24.5 sm-2-custom:w-full text-center py-4 mt-2">На главную</a>
             </section>
         </div>
         {% include 'components/footer.html' %}
