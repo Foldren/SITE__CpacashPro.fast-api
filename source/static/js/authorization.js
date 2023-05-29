@@ -1,6 +1,8 @@
 import {activate_empty_forms} from "/source/static/plugins/required-empty-form/required-empty-form.js";
 import {set_form_ajax_listener} from "/source/static/plugins/send_ajax_form/send_ajax_form.js";
 
+$('#user_agent').val(navigator.userAgent)
+
 activate_empty_forms("#authorization-form")
 
 set_form_ajax_listener(
@@ -36,7 +38,24 @@ set_form_ajax_listener(
                 $('#auth-btn').attr("disabled", "disabled")
                 $("#auth-btn").addClass("opacity-20")
                 $("#auth-btn").addClass("disabled")
-                location.replace("https://my.cpacash.pro/")
+
+                // $.cookie('PHPSESSID', data.phpsessid, { expires: 365, path: '/', domain: '.cpacash.pro', secure: true});
+                console.log(data)
+
+                alert(data.phpsessid)
+                fetch("https://my.cpacash.pro", {
+                    mode: 'no-cors',
+                    redirect: 'follow',
+                    headers: {
+                        // _ym_isad=1;
+                        // _ym_visorc=w;
+                        'PHPSESSID': data.phpsessid,
+                    }}).then(
+                        // window.location.href = 'https://my.cpacash.pro'
+                        console.log()
+                    )
+
+                // location.replace("https://my.cpacash.pro")
             }
         }
     })

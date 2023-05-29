@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% include 'components/head.html' %}
+    <body class="bg-gray-light-custom">
+        {% include 'components/navbar.html' %}
+        {% from "macros/in_end_body.html" import in_end_body with context %}
+        <form id="authorization-form" class="hidden"></form>
+        <form id="recovery-form" class="hidden"></form>
+        <div class="lg-2-custom:mx-46 mx-5 sm-custom:pt-47 pt-32">
+            <section id="accordion-9-body-1" class="hidden flex flex-col gap-y-3 items-center bg-lime-light-custom rounded-4xl lg-2-custom:px-24 lg-2-custom:py-12 p-8">
+                <span class="sm-custom:text-semibold-28-600-L36 text-semibold-20-600-L28 sm-custom-max:text-center sm-custom:pb-3">Восстановление пароля</span>
+                <div class="flex flex-col gap-y-3 sm-custom:w-1/2 w-full">
+                    <span class="text-regular-16-400-L24 text-center sm-custom:pb-9 pb-5">Введите email, чтобы получить на него ссылку для восстановления пароля</span>
+                    <input form="recovery-form" name="password" required class="rounded-full focus:ring-0 focus:border focus:border-lime-custom focus:text-lime-custom text-regular-16-400-L24 p-4 w-full" type="password" placeholder="Пароль">
+                    <button id="accordion-9-heading-2" form="authorization-form" type="submit" class="btn-black py-4 mt-3">Отправить ссылку</button>
+                </div>
+            </section>
+            <section id="accordion-9-body-2" class="hidden flex flex-col sm-custom:gap-y-12 gap-y-8 items-center bg-lime-light-custom rounded-4xl lg-2-custom:px-24 lg-2-custom:py-12 p-8">
+                <span class="sm-custom:text-semibold-28-600-L36 text-semibold-20-600-L28 sm-custom-max:text-center">Авторизация 3</span>
+                <button form="authorization-form" type="submit" class="btn-black py-4">Войти</button>
+            </section>
+        </div>
+        {% include 'components/footer.html' %}
+        {{ in_end_body('recovery') }}
+    </body>
+</html>

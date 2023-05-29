@@ -16,3 +16,11 @@ class RegistrationForm:
     yes_no_exp: str = Form()
     social_nickname: str = Form()
     captcha: str = Form(default="")
+
+@dataclass
+class AuthorizationForm:
+    password: str = Form()
+    email: str = Form()
+    remember: str = Form(default=0)
+    captcha: str = Form(default="")
+    user_agent: str = Form()
