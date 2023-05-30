@@ -17,10 +17,20 @@ class RegistrationForm:
     social_nickname: str = Form()
     captcha: str = Form(default="")
 
+
 @dataclass
-class AuthorizationForm:
-    password: str = Form()
-    email: str = Form()
-    remember: str = Form(default=0)
-    captcha: str = Form(default="")
-    user_agent: str = Form()
+class ExchangePrizeForm:
+    id_user: int = Form()
+    email_user: str = Form()
+    telegram_nickname: str = Form()
+    name_product: str = Form()
+    price_product: int = Form()
+
+
+# @dataclass
+# class AuthorizationForm:
+#     password: str = Form()
+#     email: str = Form()
+#     remember: str = Form(default=0)
+#     captcha: str = Form(default="")
+#     user_agent: str = Form()

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
     {% include 'components/head.html' %}
-    <body class="bg-gray-light-custom">
+    <header>
         {% include 'components/navbar.html' %}
         {% from "macros/in_end_body.html" import in_end_body with context %}
-        <form id="registration-form" class="hidden"></form>
+        <div id="forms" class="hidden">
+            <form id="registration-form" class="hidden"></form>
+        </div>
+    </header>
+    <body class="bg-gray-light-custom">
         <div id="registration-block" class="lg-2-custom:mx-46 mx-5 sm-custom:pt-47 pt-32">
             <section id="accordion-3-body-1" class="auth-block flex flex-col sm-custom:gap-y-6 gap-y-3 items-center bg-lime-light-custom rounded-4xl lg-2-custom:px-24 lg-2-custom:py-12 p-8">
                 <span class="sm-custom:text-semibold-28-600-L36 text-semibold-20-600-L28 sm-custom-max:text-center">Стань партнером CPACASH</span>

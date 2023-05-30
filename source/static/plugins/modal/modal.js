@@ -10,10 +10,10 @@ export function generate_modal(index_model, s_btn_open) {
         backdropClasses: 'z-40',
         closable: true,
         onHide: () => {
-            $('body').find(`:not(#modalEl-${index_model})`).removeClass("bg-black/10")
+            $('body').find("#modal-backdrop-main").toggleClass('hidden')
         },
         onShow: () => {
-            $('body').children(`:not(#modalEl-${index_model})`).addClass("bg-black/10")
+            $('body').find("#modal-backdrop-main").toggleClass('hidden')
         },
         onToggle: () => {}
     }

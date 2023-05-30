@@ -9,10 +9,11 @@ from starlette.exceptions import HTTPException
 from admin import ProductAdmin, CategoryAdmin, authentication_backend, TagAdmin
 from database import engine, async_session
 from models import Category, Product, Tag
-from routers import registration
+from routers import registration, exchange_prize
 
 app = FastAPI()
 app.include_router(registration.router)
+app.include_router(exchange_prize.router)
 
 # Подключаем статику
 this_directory = path.dirname(__file__)

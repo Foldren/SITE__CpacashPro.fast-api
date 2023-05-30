@@ -13,6 +13,17 @@ svg{
 /*    font-size: 16px !important;*/
 /*}*/
 
+/* Убираем стрелочки для input с id юзера */
+input[name="id_user"]::-webkit-outer-spin-button,
+input[name="id_user"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[name="id_user"]{
+    -moz-appearance: textfield;
+}
+
+
 .green_grid_block {
     padding-left: 72px;
     padding-right: 72px;

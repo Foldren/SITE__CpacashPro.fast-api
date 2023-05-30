@@ -1,8 +1,10 @@
 <html lang="ru">
   {% include 'components/head.html' %}
-  <body class="bg-gray-light-custom">
+  <header>
     {% include 'components/navbar.html' %}
     {% from "macros/in_end_body.html" import in_end_body with context %}
+  </header>
+  <body class="bg-gray-light-custom">
     <div class="sm-custom:pt-48 pt-32 lg-2.5-custom:mx-33 mx-5">
         <section class="bg-lime-light-custom bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover bg-right rounded-4xl shadow-lg flex flex-col sm-custom:gap-y-8 gap-y-3 sm-custom:py-11.5 sm-custom:px-14 py-8 px-8">
             <h1 class="sm-custom:text-h1 text-semibold-28-600-L36">Контакты</h1>

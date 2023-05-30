@@ -5,9 +5,22 @@ import {generate_filter_el} from "/source/static/plugins/filter-elements/filter-
 import {generate_carousel_flick} from "/source/static/plugins/carousel_flick/carousel_flick.js";
 import {add_sticky_object} from "/source/static/plugins/sticky-object/sticky-object.js";
 import {generate_modal} from "/source/static/plugins/modal/modal.js";
+import {activate_empty_forms} from "/source/static/plugins/required-empty-form/required-empty-form.js";
+import {set_form_ajax_listener} from "/source/static/plugins/send_ajax_form/send_ajax_form.js";
 
 
-generate_modal(1, ".open-modal")
+activate_empty_forms("#exchange-prize-form")
+
+const modal_exchange_prize = generate_modal(1, ".open-modal")
+
+set_form_ajax_listener(
+    "#exchange-prize-form",
+    "/api/prizes/send_request",
+    "#get-prize-submit",
+    {success_f: function(data) {
+        modal_exchange_prize.hide()
+    }
+})
 
 add_sticky_object(
     "<a id='sticky-0' href='#carousel-8' class='bg-lime-custom text-black-custom text-regular-16-400-L24 absolute -bottom-8 w-full -ml-12 pl-12 py-2 rounded-b-4xl'>Вернуться к фильтрам</a>",
