@@ -139,7 +139,12 @@
                             <div class="flex flex-col gap-y-2.5">
                                 {% for category in categories %}
                                     <label for="radio-category-{{loop.index0}}" tabindex="0" class="flex flex-row items-center group gap-x-3 cursor-pointer">
-                                        <input form="filters-form" name="category" id="radio-category-{{loop.index0}}" value="{{category.name}}" class="radio-category peer w-2.5 h-2.5 bg-white border border-lime-custom checked:bg-lime-custom focus:ring-0 outline-none" type="radio">
+                                        <input form="filters-form"
+                                               name="category"
+                                               id="radio-category-{{loop.index0}}" value="{{category.name}}"
+                                               class="radio-category peer w-2.5 h-2.5 bg-white border border-lime-custom checked:bg-lime-custom focus:ring-0 outline-none"
+                                               type="radio"
+                                               {% if category_index == loop.index0|string %} checked {% endif %}>
                                         <span class="text-regular-16-400-L24 peer-checked:text-lime-custom select-none">{{category.name}}</span>
                                     </label>
                                 {% endfor %}

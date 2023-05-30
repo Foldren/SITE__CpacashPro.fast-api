@@ -52,7 +52,7 @@ async def main(request: Request):
 
 
 @app.get("/prize-shop")
-async def prize_shop(request: Request):
+async def prize_shop(request: Request, category: str = ""):
     async with async_session() as session:
         categories_obj = await session.execute(select(Category))
         products_obj = await session.execute(select(Product))
@@ -67,7 +67,8 @@ async def prize_shop(request: Request):
             "request": request,
             "categories": categories,
             "tags": tags,
-            "products": products
+            "products": products,
+            "category_index": category
         }
     )
 
