@@ -9,11 +9,10 @@ from starlette.exceptions import HTTPException
 from admin import ProductAdmin, CategoryAdmin, authentication_backend, TagAdmin
 from database import engine, async_session
 from models import Category, Product, Tag
-from routers import registration, authorization
+from routers import registration
 
 app = FastAPI()
 app.include_router(registration.router)
-app.include_router(authorization.router)
 
 # Подключаем статику
 this_directory = path.dirname(__file__)
@@ -84,13 +83,3 @@ async def contacts(request: Request):
 @app.get("/registration")
 async def registration(request: Request):
     return templates.TemplateResponse("registration.html", {"request": request})
-
-
-@app.get("/sign-in")
-async def sign_in(request: Request):
-    return templates.TemplateResponse("sign_in.html", {"request": request})
-
-
-@app.get("/password-recovery")
-async def sign_in(request: Request):
-    return templates.TemplateResponse("password_recovery.html", {"request": request})

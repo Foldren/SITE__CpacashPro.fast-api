@@ -4,10 +4,13 @@ import {generate_accordion} from "/source/static/plugins/accordion/accordion.js"
 import {generate_filter_el} from "/source/static/plugins/filter-elements/filter-elements.js";
 import {generate_carousel_flick} from "/source/static/plugins/carousel_flick/carousel_flick.js";
 import {add_sticky_object} from "/source/static/plugins/sticky-object/sticky-object.js";
+import {generate_modal} from "/source/static/plugins/modal/modal.js";
 
+
+generate_modal(1, ".open-modal")
 
 add_sticky_object(
-    "<a id='sticky-0' href='#carousel-8' class='bg-lime-custom text-black-custom text-regular-16-400-L24 absolute -bottom-8 w-full -ml-12 pl-12 py-2'>Вернуться к фильтрам</a>",
+    "<a id='sticky-0' href='#carousel-8' class='bg-lime-custom text-black-custom text-regular-16-400-L24 absolute -bottom-8 w-full -ml-12 pl-12 py-2 rounded-b-4xl'>Вернуться к фильтрам</a>",
     '#sticky-0',
     "#products-container",
     ".green-grid-block",

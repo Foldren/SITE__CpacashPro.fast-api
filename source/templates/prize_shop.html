@@ -2,6 +2,39 @@
 <html lang="ru">
     {% include 'components/head.html' %}
     <body class="bg-gray-light-custom">
+        <div id="modalEl-1" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-screen p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-screen">
+            <div class="relative w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative flex flex-col gap-y-8 rounded-lg bg-white shadow px-4 py-10">
+                    <!-- Modal header -->
+                    <div class="flex flex-col mb-2">
+                        <button type="button" class="-mt-24 bg-white p-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                            <svg class="w-5 h-5 flex-none" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <h2 class="text-bold-700-32-44L mt-14">
+                            Оставить заявку
+                        </h2>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="flex flex-col gap-y-8">
+                        <div class="flex flex-col gap-y-2">
+                            <span class="text-regular-500-14-19L">Имя</span>
+                            <input form="send-application" class="text-regular-400-14-19L rounded-lg bg-gray-light-custom border-0 py-3 px-4" type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="flex flex-col gap-y-2">
+                            <span class="text-regular-500-14-19L">Телефон</span>
+                            <input form="send-application" class="text-regular-400-14-19L rounded-lg bg-gray-light-custom border-0 py-3 px-4" type="tel" placeholder="8 (888) 888 - 88 - 88">
+                        </div>
+                        <label class="flex flex-row items-center gap-x-2.5 cursor-pointer">
+                            <input class="text-lime-custom focus:ring-0" type="checkbox">
+                            <span class="text-semibold-600-16-24 select-none">Я согласен(-на) с политикой конфидециальности</span>
+                        </label>
+                    </div>
+                    <!-- Modal footer -->
+                    <button type="submit" form="send-application" class="btn-custom text-white text-semibold-600-16-24">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
         {% include 'components/navbar.html' %}
         {% from "macros/in_end_body.html" import in_end_body with context %}
         {% from "macros/green_grid_msg_block.html" import green_grid_block with context %}
@@ -9,12 +42,12 @@
             <section class="bg-lime-light-custom bg-[url('/source/static/images/main/bg_green_grid.png')] bg-no-repeat bg-cover bg-right rounded-4xl shadow-lg">
                 <div class="bg-[url('/source/static/images/main/iphone.png')] bg-no-repeat lg-1.5-custom:bg-pos-90-66 bg-pos-90-121 md-custom:bg-[length:300px] bg-[length:170px] flex flex-col gap-y-3 sm-custom:py-11.5 sm-custom:px-12 py-8 px-8">
                     <span class="text-regular-14-400-L20 text-gray-custom">Магазин призов</span>
-                    <h1 class="lg-1.5-custom:text-h1 sm-custom:text-h2 text-semibold-20-600-L28 pb-13">Получай баллы<br class="sm-custom:block hidden"> за лиды и<br class="block lg-custom:hidden"> обменивай<br class="sm-custom:block hidden"> их<br class="block sm-custom:hidden"> на подарки</h1>
-                    <button class="btn-lime max-w-[330px] md-custom:flex hidden">Регистрация в CPACash</button>
+                    <h1 class="lg-1.5-custom:text-h1 sm-custom:text-h2 text-semibold-20-600-L28 pb-13">Получай баллы<br class="sm-custom:block hidden"> за лиды и <br class="lg-custom:hidden block"> обменивай<br> их на <br class="block sm-custom:hidden">подарки</h1>
+                    <a href="/registration" class="btn-lime max-w-[330px] md-custom:flex hidden px-10">Регистрация в CPACash</a>
                 </div>
             </section>
             <section class="flex justify-center sm-custom:justify-start">
-                <button class="btn-lime max-w-[330px] flex md-custom:hidden mt-8">Регистрация в CPACash</button>
+                <a href="/registration" class="btn-lime max-w-[330px] flex md-custom:hidden mt-8 px-10">Регистрация в CPACash</a>
             </section>
         </div>
         <div id="prize-shop-block" class="sm-custom:mt-24 mt-16 lg-2.5-custom:mx-46 sm-custom:mx-14 mx-5">
@@ -175,7 +208,7 @@
                     </div>
                     <div id="products-container" class="grid grid-cols-2 2xl:grid-cols-3 lg-max:grid-cols-1 h-max gap-6">
                         {% for product in products %}
-                          <div class="hidden product-element flex flex-col bg-white rounded-4xl shadow-md p-6 place-content-between"
+                          <div class="hidden product-element flex flex-col bg-white rounded-4xl shadow-md p-6 place-content-between group cursor-pointer open-modal"
                               data-order="{{loop.index}}"
                               data-tags="{% for tag in product.tag %}{{tag.name}}{% if not loop.last %},{% endif %}{% endfor %}"
                               data-category="{{product.category.name}}"
@@ -187,14 +220,15 @@
                                   <span class="text-regular-18-400-L28">{{product.name}}</span>
                                   <span class="text-semibold-20-600-L28 text-lime-custom justify-end">{{product.scores}} БАЛЛОВ</span>
                                   <span data-product-id="{{product.id}}" class="hidden product-tags"></span>
+                                  <button type="button" class="btn-lime invisible group-hover:visible">Обменять</button>
                               </div>
                           </div>
                         {% endfor %}
                     </div>
                 </div>
             </section>
-            <section id="accordion-1-body-2" class="hidden flex flex-col gap-y-5 mt-23 sm-custom-max:mt-8.3 lg-1.2-custom-max:px-0 px-24.5 sm-custom-max:-mb-16">
-                <button type="button" id="accordion-2-heading-1" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md z-10">
+            <section id="accordion-1-body-2" class="hidden flex flex-col gap-y-5 mt-23 sm-custom-max:mt-8.3 lg-1.2-custom-max:px-0 px-24.5">
+                <button type="button" id="accordion-2-heading-1" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
@@ -205,7 +239,7 @@
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
-                <div id="accordion-2-body-1" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12">
+                <div id="accordion-2-body-1" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12 -z-10">
                     <ul class="list-decimal list-inside">
                         <li>Зарегистрируйся в партнёрской сети.</li>
                         <li>Запусти бота <a href="https://t.me/Cpacashbot" class="lime-url">https://t.me/Cpacashbot.</a></li>
@@ -213,7 +247,7 @@
                         <li>Нажми кнопку «баллы» → затем — кнопку «Я хочу участвовать».</li>
                     </ul>
                 </div>
-                <button type="button" id="accordion-2-heading-2" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md z-10">
+                <button type="button" id="accordion-2-heading-2" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
@@ -224,10 +258,10 @@
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
-                <div id="accordion-2-body-2" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12">
+                <div id="accordion-2-body-2" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12 -z-10">
                     <span>Мы начисляем баллы для любых офферов в вертикали iGaming кроме тех, что оплачиваются по модели Revshare. Количество баллов за лиды по каждому офферу различаются: узнать подробнее можно в описании оффера в партнёрской программе. Не начисляем баллы для dating-офферов.</span>
                 </div>
-                <button type="button" id="accordion-2-heading-3" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md z-10">
+                <button type="button" id="accordion-2-heading-3" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
@@ -238,14 +272,14 @@
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
-                <div id="accordion-2-body-3" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12">
+                <div id="accordion-2-body-3" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12 -z-10">
                     <span>Мы начисляем баллы за каждый подтверждённый рекламодателем лид. Например, вы налили 100 лидов, но рекламодатель принял только 98. Мы начислим баллы за 98 лидов.<br><br>Статистику по баллам можно смотреть в боте <a href="https://t.me/Cpacashbot" class="lime-url">https://t.me/Cpacashbot</a>.<br><br></span>
                     <ul class="list-disc list-inside">
                         <li>Принятые баллы — сколько баллов зачислено на счёт. Их можно обменять на призы.</li>
                         <li>Холд — баллы ждут сверки.</li>
                     </ul>
                 </div>
-                <button type="button" id="accordion-2-heading-4" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md z-10">
+                <button type="button" id="accordion-2-heading-4" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
@@ -256,10 +290,10 @@
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
-                <div id="accordion-2-body-4" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12">
+                <div id="accordion-2-body-4" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12 -z-10">
                     <span>Выберите товар в <a href="/prize-shop" class="text-lime-500">магазине</a> → нажмите кнопку «Обменять» и укажи свой ID, email и Телеграм. Обязательно указывайте актуальные данные, иначе менеджер не сможет связаться и договориться о передаче подарка.</span>
                 </div>
-                <button type="button" id="accordion-2-heading-5" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md z-10">
+                <button type="button" id="accordion-2-heading-5" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
@@ -270,10 +304,10 @@
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
-                <div id="accordion-2-body-5" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12">
+                <div id="accordion-2-body-5" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12 -z-10">
                     <span>Напишите своему менеджеру, что хотите обменять баллы, и укажите, в какой вы стране. Мы найдём способ доставить подарок<br> или придумаем что-то ещё.</span>
                 </div>
-                <button type="button" id="accordion-2-heading-6" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md z-10">
+                <button type="button" id="accordion-2-heading-6" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
@@ -284,7 +318,7 @@
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
-                <div id="accordion-2-body-6" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12">
+                <div id="accordion-2-body-6" class="bg-white/[.90] hidden px-24.5 pt-13 pb-17 sm-custom-max:px-5 sm-custom-max:pb-5 text-regular-16-400-L24 sm-custom-max:text-regular-14-400-L20 rounded-b-4xl -mt-10 sm-custom-max:-mt-12 -z-10">
                     <span>Напиши менеджеру, какой товар хочешь получить,<br>и мы найдём способ обменять баллы именно на этот подарок :)</span>
                 </div>
             </section>
