@@ -2338,12 +2338,20 @@ input:checked + .toggle-bg {
   margin-top: -3rem;
 }
 
+.-mt-16 {
+  margin-top: -4rem;
+}
+
 .-mt-2 {
   margin-top: -0.5rem;
 }
 
 .-mt-20 {
   margin-top: -5rem;
+}
+
+.-mt-22 {
+  margin-top: -80px;
 }
 
 .-mt-24 {
@@ -2664,14 +2672,6 @@ input:checked + .toggle-bg {
 
 .mt-px {
   margin-top: 1px;
-}
-
-.-mt-16 {
-  margin-top: -4rem;
-}
-
-.-mt-22 {
-  margin-top: -80px;
 }
 
 .box-border {
@@ -3102,6 +3102,14 @@ input:checked + .toggle-bg {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .min-w-0 {
@@ -7189,6 +7197,10 @@ input:checked + .toggle-bg {
   opacity: 0.5;
 }
 
+.opacity-10 {
+  opacity: 0.1;
+}
+
 .bg-blend-multiply {
   background-blend-mode: multiply;
 }
@@ -7829,6 +7841,18 @@ input:checked + .toggle-bg {
 .group:hover .group-hover\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:opacity-50 {
+  opacity: 0.5;
+}
+
+.group:hover .group-hover\:opacity-10 {
+  opacity: 0.1;
+}
+
+.group:hover .group-hover\:opacity-20 {
+  opacity: 0.2;
 }
 
 .group:hover .group-hover\:blur-sm {

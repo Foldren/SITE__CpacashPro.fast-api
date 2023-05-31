@@ -212,15 +212,15 @@
                               data-category="{{product.category.name}}"
                               data-name="{{product.name}}"
                               data-price="{{product.scores}}">
-                              <img class="max-w-[206px] min-w-[206px] max-h-[206px] min-h-[206px] place-self-center object-scale-down group-hover:blur-sm" src="{{product.image}}">
+                              <img class="max-w-[206px] min-w-[206px] max-h-[206px] min-h-[206px] place-self-center object-scale-down" src="{{product.image}}">
                               <div class="flex flex-col gap-y-3.5">
                                   <input name="name_product" type="hidden" value="{{product.name}}" form="exchange-prize-form">
                                   <input name="price_product" type="hidden" value="{{product.scores}}" form="exchange-prize-form">
-                                  <span class="text-regular-16-400-L24 text-lime-custom group-hover:blur-sm">{{product.category.name}}</span>
-                                  <span class="text-regular-18-400-L28 group-hover:blur-sm">{{product.name}}</span>
-                                  <span class="text-semibold-20-600-L28 text-lime-custom justify-end group-hover:blur-sm">{{product.scores}} БАЛЛОВ</span>
+                                  <span class="text-regular-16-400-L24 text-lime-custom">{{product.category.name}}</span>
+                                  <span class="text-regular-18-400-L28 group-hover:opacity-20">{{product.name}}</span>
+                                  <span class="text-semibold-20-600-L28 text-lime-custom justify-end group-hover:opacity-20">{{product.scores}} БАЛЛОВ</span>
                                   <span data-product-id="{{product.id}}" class="hidden product-tags"></span>
-                                  <button type="button" class="btn-lime hidden group-hover:block -mt-22 z-40">Обменять</button>
+                                  <button type="button" class="btn-black hidden group-hover:block -mt-22 z-40 w-2/3 self-center">Обменять</button>
                               </div>
                           </div>
                         {% endfor %}

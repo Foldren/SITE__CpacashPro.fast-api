@@ -23,7 +23,7 @@ set_form_ajax_listener(
 })
 
 add_sticky_object(
-    "<a id='sticky-0' href='#carousel-8' class='bg-lime-custom text-black-custom text-regular-16-400-L24 absolute -bottom-8 w-full -ml-12 pl-12 py-2 rounded-b-4xl'>Вернуться к фильтрам</a>",
+    "<a id='sticky-0' href='#carousel-8' class='bg-black-custom text-white text-regular-16-400-L24 absolute -bottom-8 w-full -ml-12 py-2 rounded-b-4xl text-center'>Вернуться к фильтрам</a>",
     '#sticky-0',
     "#products-container",
     ".green-grid-block",
