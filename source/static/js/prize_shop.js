@@ -18,12 +18,12 @@ set_form_ajax_listener(
     "/api/prizes/send_request",
     "#get-prize-submit",
     {success_f: function(data) {
-        modal_exchange_prize.hide()
+        location.replace("/page-success?event=prize")
     }
 })
 
 add_sticky_object(
-    "<a id='sticky-0' href='#carousel-8' class='bg-black-custom text-white text-regular-16-400-L24 absolute -bottom-8 w-full -ml-12 py-2 rounded-b-4xl text-center'>Вернуться к фильтрам</a>",
+    "<a id='sticky-0' href='#carousel-8' class='bg-black-custom text-white text-regular-16-400-L24 absolute -bottom-8 py-2 px-8 rounded-b-3xl text-center w-full self-center'>Вернуться к фильтрам</a>",
     '#sticky-0',
     "#products-container",
     ".green-grid-block",

@@ -66,7 +66,7 @@ set_form_ajax_listener(
                 $(".end-reg-btn").attr("disabled", "disabled")
                 $(".end-reg-btn").addClass("opacity-20")
                 $(".end-reg-btn").addClass("disabled")
-                location.replace("/page-success")
+                location.replace("/page-success?event=reg")
             }
         }
     })

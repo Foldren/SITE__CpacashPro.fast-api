@@ -74,8 +74,26 @@ async def prize_shop(request: Request, category: str = ""):
 
 
 @app.get("/page-success")
-async def page_success(request: Request):
-    return templates.TemplateResponse("page_success.html", {"request": request})
+async def page_success(request: Request, event: str):
+    data: dict = {
+        'prize': {
+            'header': 'Ура!<br>Мы получили твою заявку',
+            'text': 'Скоро мы свяжемся и подтвердим доступ.<br>После этого ты сможешь зайти в личный кабинет.',
+            },
+        'reg': {
+            'header': 'Мы получили твою заявку',
+            'text': 'Скоро мы свяжемся с тобой и расскажем, как действовать дальше.',
+        },
+    }
+
+    return templates.TemplateResponse(
+        name="page_success.html",
+        context={
+            "request": request,
+            "header": data[event]['header'],
+            "text": data[event]['text'],
+        }
+    )
 
 
 @app.get("/contacts")
