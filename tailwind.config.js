@@ -70,6 +70,7 @@ module.exports = {
           screens: {
               'sm-custom': '590px',
               'sm-custom-max': {max: '590px'},
+              'sm-1.5-custom-max': {max: '815px'},
               'sm-2-custom': '886px',
               'sm-2-custom-max': {max: '886px'},
               'md-custom': '710px',

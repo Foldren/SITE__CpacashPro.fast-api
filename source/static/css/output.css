@@ -2969,10 +2969,6 @@ input:checked + .toggle-bg {
   width: 0.625rem;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
-}
-
 .w-20 {
   width: 5rem;
 }
@@ -3106,6 +3102,10 @@ input:checked + .toggle-bg {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .min-w-0 {
@@ -5640,8 +5640,8 @@ input:checked + .toggle-bg {
   --tw-gradient-to: #FCE96A;
 }
 
-.bg-\[length\:171px\] {
-  background-size: 171px;
+.bg-\[length\:200px\] {
+  background-size: 200px;
 }
 
 .bg-auto {
@@ -5658,30 +5658,6 @@ input:checked + .toggle-bg {
 
 .bg-size-500 {
   background-size: 500% 100%;
-}
-
-.bg-\[length\:172px\] {
-  background-size: 172px;
-}
-
-.bg-\[length\:173px\] {
-  background-size: 173px;
-}
-
-.bg-\[length\:174px\] {
-  background-size: 174px;
-}
-
-.bg-\[length\:274px\] {
-  background-size: 274px;
-}
-
-.bg-\[length\:170px\] {
-  background-size: 170px;
-}
-
-.bg-\[length\:200px\] {
-  background-size: 200px;
 }
 
 .bg-local {
@@ -6211,6 +6187,11 @@ input:checked + .toggle-bg {
 .py-px {
   padding-top: 1px;
   padding-bottom: 1px;
+}
+
+.\!px-0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .pb-0 {
@@ -8353,6 +8334,16 @@ input:checked + .toggle-bg {
   }
 }
 
+@media (max-width: 815px) {
+  .sm-1\.5-custom-max\:w-full {
+    width: 100%;
+  }
+
+  .sm-1\.5-custom-max\:w-2\/3 {
+    width: 66.666667%;
+  }
+}
+
 @media (min-width: 886px) {
   .sm-2-custom\:w-full {
     width: 100%;
@@ -8463,30 +8454,6 @@ input:checked + .toggle-bg {
 
   .md-custom\:hidden {
     display: none;
-  }
-
-  .md-custom\:bg-\[length\:301px\] {
-    background-size: 301px;
-  }
-
-  .md-custom\:bg-\[length\:302px\] {
-    background-size: 302px;
-  }
-
-  .md-custom\:bg-\[length\:303px\] {
-    background-size: 303px;
-  }
-
-  .md-custom\:bg-\[length\:304px\] {
-    background-size: 304px;
-  }
-
-  .md-custom\:bg-\[length\:504px\] {
-    background-size: 504px;
-  }
-
-  .md-custom\:bg-\[length\:300px\] {
-    background-size: 300px;
   }
 
   .md-custom\:bg-\[length\:350px\] {
@@ -8620,14 +8587,14 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1350px) {
-  .lg-2\.5-custom\:mx-24 {
-    margin-left: 6rem;
-    margin-right: 6rem;
-  }
-
   .lg-2\.5-custom\:mx-33 {
     margin-left: 132px;
     margin-right: 132px;
+  }
+
+  .lg-2\.5-custom\:mx-44 {
+    margin-left: 11rem;
+    margin-right: 11rem;
   }
 
   .lg-2\.5-custom\:mx-46 {
