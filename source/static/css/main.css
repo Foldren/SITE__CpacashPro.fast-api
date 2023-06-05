@@ -8,6 +8,14 @@ svg{
     -webkit-tap-highlight-color: transparent; /* Убирает синее свчение в моб версии */
 }
 
+* { /* Скрываем скролл */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
 /*input:-webkit-autofill { !* Для правки стилей автозаполнения *!*/
 /*    font-family: Montserrat-Regular, sans-serif !important;*/
 /*    font-size: 16px !important;*/

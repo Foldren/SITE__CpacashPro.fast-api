@@ -21,3 +21,26 @@ generate_carousel_flick(
     },
     {}
 )
+
+generate_carousel_flick(
+    '#carousel-3',
+    {"prevNextButtons": false,
+            "groupCells": '100%',
+            "initialIndex": 0,
+            "pageDots": false,
+            "cellAlign": 'left',
+    },
+    {s_prev: '#carousel-prev-3',
+                             s_next: '#carousel-next-3'}
+)
+
+generate_carousel_flick(
+    '#carousel-4',
+    {"prevNextButtons": false,
+            "groupCells": '100%',
+            "initialIndex": 0,
+            "pageDots": false,
+            "cellAlign": 'left',
+    },
+    {}
+)

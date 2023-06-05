@@ -117,8 +117,16 @@
     @apply font-montserrat text-lg font-normal leading-7
   }
 
+  .text-regular-14-500-L21--c {
+    @apply font-montserrat text-sm font-medium leading-[21px]
+  }
+
   .text-regular-gray-14-400-L20 {
     @apply font-montserrat text-sm text-gray-custom font-normal leading-5
+  }
+
+  .text-semibold-24-600-L36--c {
+    @apply font-montserrat-semibold text-[24px] font-semibold leading-9
   }
 
   .text-semibold-26-600-L36 {
@@ -131,6 +139,10 @@
 
   .text-semibold-23-600-L32 {
     @apply font-montserrat-semibold text-[23px] text-black-custom font-semibold leading-[32px]
+  }
+
+  .text-semibold-20-600-L28--c {
+    @apply font-montserrat-semibold text-xl font-semibold leading-7
   }
 
   .text-semibold-20-600-L28 {
