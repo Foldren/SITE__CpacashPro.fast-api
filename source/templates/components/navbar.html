@@ -1,7 +1,7 @@
-<nav id="navbar-item" class="fixed z-30 w-screen bg-gray-light-custom flex flex-col pt-8 xl-custom:px-46 px-12 pb-10">
+<nav id="navbar-item" class="fixed z-30 w-screen bg-gray-light-custom flex flex-col py-4 xl-custom:px-46 px-12">
     <div class="flex flex-row items-center xl-custom:justify-start justify-between">
         <a href="/">
-            <svg class="flex-none mr-8" width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="flex-none mr-8 sm-custom-max:w-[145px] sm-custom-max:h-[28px]" width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.7985 3.02398L20.9813 8.44148H16.1409C13.7374 8.44148 12.173 9.63681 11.4117 11.9048L7.50211 23.5585H2.3116C0.355435 23.5585 -0.405914 22.3632 0.208167 20.5317L5.93495 3.46332C6.6963 1.19533 8.26068 0 10.6642 0H20.6951C22.6485 0 23.4126 1.19533 22.7985 3.02398Z" fill="url(#paint0_linear_1107_71931)"/>
                 <path d="M28.2721 11.4654L22.5453 28.5366C21.784 30.8046 20.2196 31.9999 17.8161 31.9999H7.78792C5.83175 31.9999 5.0704 30.8046 5.68449 28.9731L7.50172 23.5585H12.3421C14.7456 23.5585 16.31 22.3631 17.0714 20.0951L20.9809 8.44141H26.1687C28.122 8.44141 28.8862 9.63673 28.2721 11.4654Z" fill="url(#paint1_linear_1107_71931)"/>
                 <path d="M28.2721 11.4654L22.5453 28.5366C21.784 30.8046 20.2196 31.9999 17.8161 31.9999H7.78792C5.83175 31.9999 5.0704 30.8046 5.68449 28.9731L7.50172 23.5585H12.3421C14.7456 23.5585 16.31 22.3631 17.0714 20.0951L20.9809 8.44141H26.1687C28.122 8.44141 28.8862 9.63673 28.2721 11.4654Z" fill="url(#paint2_radial_1107_71931)"/>
@@ -38,33 +38,30 @@
                 </defs>
             </svg>
         </a>
-        <ul class="hidden xl-custom:flex gap-x-3 mr-10 select-none">
+        <ul class="flex lg-1.3-custom-max:hidden gap-x-7 mr-10 select-none">
             <li><a class="text-regular-16-400-L24 url">Вебмастерам</a></li>
-            <li><span class="text-regular-16-400-L24">/</span></li>
             <li><a href="/prize-shop" class="text-regular-16-400-L24 url">CpacashStorе</a></li>
-            <li><span class="text-regular-16-400-L24">/</span></li>
             <li><a href="https://t.me/Cpacash_Chat" class="text-regular-16-400-L24 url">Чат Cpacash</a></li>
-            <li><span class="text-regular-16-400-L24">/</span></li>
             <li><a href="/contacts" class="text-regular-16-400-L24 url">Контакты</a></li>
         </ul>
-        <div class="hidden xl-custom:flex flex-row gap-x-3">
-            <a href="/registration" class="btn-lime font-montserrat py-3">Регистрация</a>
-            <a href="https://my.cpacash.pro/v2/sign/in" class="btn-lime font-montserrat py-3">Вход</a>
+        <div class="flex flex-row gap-x-3">
+            <a href="/registration" class="btn-lime font-montserrat py-3 md-max:hidden">Регистрация</a>
+            <a href="https://my.cpacash.pro/v2/sign/in" class="btn-lime font-montserrat py-3 md-max:hidden">Вход</a>
+            <button id="triggerEl-1" aria-expanded="false" type="button" class="lg-1.3-custom-max:flex items-center place-content-center hidden group rounded-full w-[52px] md-max:w-auto p-2.5 transition-shadow ease-in-out duration-500 bg-lime-500 hover:bg-lime-light-custom hover:shadow-custom">
+                <svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="#131A29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
         </div>
-        <button id="triggerEl-1" aria-expanded="false" type="button" class="flex xl-custom:hidden group rounded-full p-2.5 transition-shadow ease-in-out duration-500 bg-lime-500 hover:bg-lime-light-custom hover:shadow-custom">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 6H20M4 12H20M4 18H20" stroke="#131A29" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
     </div>
-    <div id="targetEl-1" class="hidden w-screen pt-16 flex flex-col">
-        <ul class="flex flex-col gap-y-3">
+    <div id="targetEl-1" class="hidden w-screen md-max:pt-16 pt-8 flex flex-col">
+        <ul class="flex md-max:flex-col flex-row gap-y-3 gap-x-5">
             <li><a class="text-regular-16-400-L24 url">Вебмастерам</a></li>
             <li><a href="/prize-shop" class="text-regular-16-400-L24 url">CpacashStorе</a></li>
             <li><a href="https://t.me/Cpacash_Chat" class="text-regular-16-400-L24 url">Чат Cpacash</a></li>
             <li><a href="/contacts" class="text-regular-16-400-L24 url">Контакты</a></li>
         </ul>
-        <div class="flex flex-row gap-x-3 pt-10 -ml-4">
+        <div class="flex md:hidden flex-row gap-x-3 pt-10 -ml-4">
             <a href="/registration" class="btn-lime font-montserrat py-3">Регистрация</a>
             <a href="https://my.cpacash.pro/v2/sign/in" class="btn-lime font-montserrat py-3">Вход</a>
         </div>
