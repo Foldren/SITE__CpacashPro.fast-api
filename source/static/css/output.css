@@ -6413,6 +6413,18 @@ input:checked + .toggle-bg {
   padding-right: 24rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pt-0\.5 {
+  padding-top: 0.125rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -6547,18 +6559,6 @@ input:checked + .toggle-bg {
 
 .pt-9 {
   padding-top: 2.25rem;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
-}
-
-.pt-0 {
-  padding-top: 0px;
-}
-
-.pt-0\.5 {
-  padding-top: 0.125rem;
 }
 
 .text-left {
@@ -8045,6 +8045,11 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 590px) {
+  .sm-custom\:mx-11 {
+    margin-left: 2.75rem;
+    margin-right: 2.75rem;
+  }
+
   .sm-custom\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -8068,11 +8073,6 @@ input:checked + .toggle-bg {
   .sm-custom\:my-6 {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-  }
-
-  .sm-custom\:mx-11 {
-    margin-left: 2.75rem;
-    margin-right: 2.75rem;
   }
 
   .sm-custom\:mb-0 {
