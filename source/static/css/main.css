@@ -8,9 +8,9 @@ svg{
     -webkit-tap-highlight-color: transparent; /* Убирает синее свчение в моб версии */
 }
 
-/** {*/
-/*    overflow-x: hidden;*/
-/*}*/
+body {
+    overflow-x: hidden;
+}
 
 /** { !* Скрываем скролл *!*/
 /*    -ms-overflow-style: none;  !* Internet Explorer 10+ *!*/
