@@ -45,10 +45,10 @@ export function set_bind_show_diff_query_elements(s_elements, top_position, mob_
             let element_last = $(s_elements).eq(2)
 
             if (scroll_pos >= top_position && element_last.parent().find("circle").hasClass("fill-lime-light-custom")) {
-                let duration = 500
+                let duration = 400
 
                 $(s_elements).each(function(index) {
-                    $(this).delay(duration * index).show(duration, function (){
+                    $(this).delay(duration * index).slideDown(duration, function (){
                         if($(this).parent().find("circle").hasClass("fill-lime-light-custom")) {
                             $(this).parent().find("circle").removeClass("fill-lime-light-custom")
                             $(this).parent().find("path").removeClass("fill-lime-custom")
