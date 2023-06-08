@@ -2529,8 +2529,16 @@ input:checked + .toggle-bg {
   margin-left: 21px;
 }
 
+.ml-52 {
+  margin-left: 13rem;
+}
+
 .ml-6 {
   margin-left: 1.5rem;
+}
+
+.ml-64 {
+  margin-left: 16rem;
 }
 
 .ml-7 {
@@ -2541,8 +2549,16 @@ input:checked + .toggle-bg {
   margin-left: 2rem;
 }
 
+.ml-80 {
+  margin-left: 20rem;
+}
+
 .ml-9 {
   margin-left: 2.25rem;
+}
+
+.ml-96 {
+  margin-left: 24rem;
 }
 
 .ml-auto {
@@ -3104,6 +3120,10 @@ input:checked + .toggle-bg {
   width: 44px;
 }
 
+.w-\[52px\] {
+  width: 52px;
+}
+
 .w-\[78px\] {
   width: 78px;
 }
@@ -3133,10 +3153,6 @@ input:checked + .toggle-bg {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[52px\] {
-  width: 52px;
 }
 
 .min-w-0 {
@@ -6369,6 +6385,10 @@ input:checked + .toggle-bg {
   padding-left: 1.25rem;
 }
 
+.pl-52 {
+  padding-left: 13rem;
+}
+
 .pl-6 {
   padding-left: 1.5rem;
 }
@@ -7822,6 +7842,16 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-rose-light-custom:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 230 230 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-rose-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 228 230 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gradient-to-r:hover {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -8138,10 +8168,6 @@ input:checked + .toggle-bg {
     width: 50px;
   }
 
-  .sm-custom\:w-\[52px\] {
-    width: 52px;
-  }
-
   .sm-custom\:min-w-\[44px\] {
     min-width: 44px;
   }
@@ -8354,12 +8380,12 @@ input:checked + .toggle-bg {
     display: none;
   }
 
-  .sm-custom-max\:h-\[128px\] {
-    height: 128px;
-  }
-
   .sm-custom-max\:h-\[28px\] {
     height: 28px;
+  }
+
+  .sm-custom-max\:w-\[145px\] {
+    width: 145px;
   }
 
   .sm-custom-max\:w-\[44px\] {
@@ -8368,14 +8394,6 @@ input:checked + .toggle-bg {
 
   .sm-custom-max\:w-full {
     width: 100%;
-  }
-
-  .sm-custom-max\:w-\[128px\] {
-    width: 128px;
-  }
-
-  .sm-custom-max\:w-\[145px\] {
-    width: 145px;
   }
 
   .sm-custom-max\:items-center {
@@ -8395,6 +8413,11 @@ input:checked + .toggle-bg {
     padding: 1.25rem;
   }
 
+  .sm-custom-max\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .sm-custom-max\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -8402,6 +8425,10 @@ input:checked + .toggle-bg {
 
   .sm-custom-max\:pb-5 {
     padding-bottom: 1.25rem;
+  }
+
+  .sm-custom-max\:pl-6 {
+    padding-left: 1.5rem;
   }
 
   .sm-custom-max\:text-center {
@@ -8537,10 +8564,6 @@ input:checked + .toggle-bg {
 
   .md-max\:w-auto {
     width: auto;
-  }
-
-  .md-max\:w-\[52px\] {
-    width: 52px;
   }
 
   .md-max\:flex-1 {
