@@ -9,10 +9,22 @@ export function generate_dropdown(index_dropdown, placement) {
             placement: placement,
             triggerType: 'click',
             offsetSkidding: 0,
-            offsetDistance: 10,
+            offsetDistance: 5,
             delay: 300,
-            onHide: () => {},
-            onShow: () => {},
+            onHide: (e) => {
+                $(e._targetEl).show()
+                $(e._targetEl).slideUp(200).fadeOut({
+                    duration: 200,
+                    queue: false
+                });
+            },
+            onShow: (e) => {
+                $(e._targetEl).hide()
+                $(e._targetEl).slideDown(200).fadeIn({
+                    duration: 200,
+                    queue: false
+                });
+            },
             onToggle: () => {}
         }
     }
