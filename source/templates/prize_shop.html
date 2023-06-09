@@ -36,7 +36,7 @@
                 <div class="bg-[url('/source/static/images/main/iphone.png')] bg-no-repeat lg-1.5-custom:bg-pos-90-66 bg-pos-90-121 md-custom:bg-[length:350px] bg-[length:200px] flex flex-col gap-y-3 sm-custom:py-11.5 sm-custom:px-12 py-8 px-8">
                     <span class="text-regular-14-400-L20 text-gray-custom">Магазин призов</span>
                     <h1 class="lg-1.5-custom:text-h1 sm-custom:text-h2 text-semibold-20-600-L28 pb-13">Получай баллы<br class="sm-custom:block hidden"> за лиды и <br class="lg-custom:hidden block"> обменивай<br> их на <br class="block sm-custom:hidden">подарки</h1>
-                    <a href="/registration" class="btn-lime max-w-[330px] md-custom:flex hidden px-10">Регистрация в CPACash</a>
+                    <a href="/registration" class="btn-lime max-w-[330px] md-custom:flex hidden px-10">Регистрация в Cpacash</a>
                 </div>
             </section>
             <section class="flex justify-center sm-custom:justify-start">
@@ -47,8 +47,8 @@
             <section class="flex flex-col gap-y-8">
                 <h2 class="sm-custom:text-h2 text-semibold-20-600-L28 sm-custom:pl-2 pl-8">Магазин призов</h2>
                 <div class="flex flex-row h-[52px] bg-white rounded-full shadow-md" role="group">
-                    <button type="button" id="accordion-1-heading-1" class="basis-1/2 rounded-full sm-custom:text-semibold-20-600-L28 text-regular-12-400-L16 text-center m-1.5">Все призы</button>
-                    <button type="button" id="accordion-1-heading-2" class="basis-1/2 rounded-full sm-custom:text-semibold-20-600-L28 text-regular-12-400-L16 text-center m-1.5">Вопросы и ответы</button>
+                    <button type="button" id="accordion-1-heading-1" class="basis-1/2 rounded-full sm-custom:text-semibold-20-600-L28 text-regular-12-400-L16 text-center m-1.5 transition-colors duration-200">Все призы</button>
+                    <button type="button" id="accordion-1-heading-2" class="basis-1/2 rounded-full sm-custom:text-semibold-20-600-L28 text-regular-12-400-L16 text-center m-1.5 transition-colors duration-200">Вопросы и ответы</button>
                 </div>
             </section>
             <section id="accordion-1-body-1" class="flex flex-col mt-6 gap-y-6">
@@ -78,7 +78,7 @@
                 </div>
                 <div class="lg-1.5max:hidden flex flex-row gap-x-6 mt-2">
                     {% for category in categories %}
-                        <label for="radio-category-{{loop.index0}}" class="basis-1/4 flex flex-row cursor-pointer justify-around bg-lime-light-custom shadow-md hover:bg-white select-none group rounded-2.5xl pr-5 hover:ring-1 ring-lime-custom">
+                        <label for="radio-category-{{loop.index0}}" class="basis-1/4 flex flex-row cursor-pointer justify-around transition-colors duration-500 bg-lime-light-custom shadow-md hover:bg-white select-none group rounded-2.5xl pr-5 hover:ring-1 ring-lime-custom">
                             <img class="basis-1/2 max-w-[136px] ml-2 self-end pointer-events-none" src="{{ category.image }}">
                             <span class="group-hover:text-lime-500 text-regular-16-400-L24 self-center ml-3">{{ category.name }}</span>
                         </label>
@@ -129,7 +129,7 @@
                 <div class="flex md:flex-row flex-col gap-6">
                     <div class="flex flex-col gap-y-8 w-[344px] md-max:w-auto md-max:flex-1 flex-none bg-white rounded-4xl p-6 h-max shadow-md">
                         <div class="relative flex items-center content-center">
-                            <input form="filters-form" name="search" id="search-prize-filter" class="flex basis-full placeholder:text-black-custom rounded-full px-5 py-2.5 bg-gray-100 text-regular-16-400-L24 border-0 focus:ring-0 appearance-none" type="text" placeholder="Поиск по товарам">
+                            <input form="filters-form" name="search" id="search-prize-filter" class="flex basis-full placeholder:text-black-custom rounded-full px-5 py-2.5 bg-gray-100 text-regular-16-400-L24 border-0 focus:ring-0 appearance-none text-lime-custom" type="text" placeholder="Поиск по товарам">
                             <svg class="absolute right-6" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5001 7.10544C15.5001 3.46316 12.5367 0.499756 8.89446 0.499756C5.25198 0.499756 2.28878 3.46316 2.28878 7.10544C2.28878 8.70762 2.86209 10.1784 3.81435 11.3233L0.678172 14.4595C0.439958 14.6975 0.439958 15.0837 0.678172 15.3217C0.797293 15.4408 0.953388 15.5004 1.10928 15.5004C1.26537 15.5004 1.42129 15.4408 1.54038 15.3217L4.67656 12.1856C5.82152 13.1378 7.29228 13.7111 8.89446 13.7111C12.5367 13.7111 15.5001 10.7479 15.5001 7.10544ZM14.2806 7.10547C14.2806 10.0754 11.8644 12.4916 8.89446 12.4916C5.92455 12.4916 3.50829 10.0754 3.50829 7.10544C3.50829 4.13553 5.92455 1.71927 8.89446 1.71927C11.8644 1.71927 14.2806 4.13556 14.2806 7.10547Z" fill="#85C83E"/>
                             </svg>
@@ -142,7 +142,7 @@
                                         <input form="filters-form"
                                                name="category"
                                                id="radio-category-{{loop.index0}}" value="{{category.name}}"
-                                               class="radio-category peer w-2.5 h-2.5 bg-white border border-lime-custom checked:bg-lime-custom focus:ring-0 outline-none"
+                                               class="transition-colors duration-200 radio-category peer w-2.5 h-2.5 bg-white border border-lime-custom checked:bg-lime-custom focus:ring-0 outline-none"
                                                type="radio"
                                                {% if category_index == loop.index0|string %} checked {% endif %}>
                                         <span class="text-regular-16-400-L24 peer-checked:text-lime-custom select-none">{{category.name}}</span>
@@ -155,12 +155,12 @@
                             <div class="flex flex-wrap gap-2.5">
                                 <div>
                                     <input id="tag-all" class="hidden peer" form="filters-form" name="tags" type="checkbox" value="Все">
-                                    <label for="tag-all" class="btn-tag py-1 px-5" type="button">Все</label>
+                                    <label for="tag-all" class="btn-tag py-1 px-5 transition-colors duration-200" type="button">Все</label>
                                 </div>
                                 {% for tag in tags %}
                                     <div>
                                         <input id="tag-{{loop.index0}}" class="hidden peer" form="filters-form" name="tags" type="checkbox" value="{{tag.name}}">
-                                        <label for="tag-{{loop.index0}}" class="btn-tag py-1 px-5" type="button">{{tag.name}}</label>
+                                        <label for="tag-{{loop.index0}}" class="btn-tag py-1 px-5 transition-colors duration-200" type="button">{{tag.name}}</label>
                                     </div>
                                 {% endfor %}
                             </div>
@@ -174,7 +174,7 @@
                         </div>
                         <div class="flex lg-custom:hidden flex-row items-center">
                             <span class="text-regular-16-400-L24 pr-5">Товаров на странице</span>
-                            <input form="filters-form" name="number" id="products-number-input" class="w-24 border-0 focus:ring-0 rounded-full pl-5 py-4 text font-montserrat text-lg shadow-sm bg-lime-light-custom" type="number" min="8" size="3" value="16" max="999">
+                            <input form="filters-form" name="number" id="products-number-input" class="disable-to-lg w-24 border-0 focus:ring-0 rounded-full pl-5 py-4 text font-montserrat text-lg shadow-sm bg-lime-light-custom" type="number" min="8" size="3" value="16" max="999">
                         </div>
                         <span class="inline-block lg-custom:hidden text-regular-16-400-L24">Найдено <span class="products-number">16</span> товаров</span>
                         <div class="flex lg-custom:hidden">
@@ -218,10 +218,10 @@
                                   <input name="name_product" type="hidden" value="{{product.name}}" form="exchange-prize-form">
                                   <input name="price_product" type="hidden" value="{{product.scores}}" form="exchange-prize-form">
                                   <span class="text-regular-16-400-L24 text-lime-custom">{{product.category.name}}</span>
-                                  <span class="text-regular-18-400-L28 sm-custom:group-hover:opacity-20">{{product.name}}</span>
-                                  <span class="text-semibold-20-600-L28 text-lime-custom justify-end sm-custom:group-hover:opacity-20">{{product.scores}} БАЛЛОВ</span>
+                                  <span class="text-regular-18-400-L28 transition-opacity duration-300 sm-custom:group-hover:opacity-20">{{product.name}}</span>
+                                  <span class="text-semibold-20-600-L28 text-lime-custom justify-end transition-opacity duration-300 sm-custom:group-hover:opacity-20">{{product.scores}} БАЛЛОВ</span>
                                   <span data-product-id="{{product.id}}" class="hidden product-tags"></span>
-                                  <button type="button" class="btn-black hidden sm-custom:group-hover:block -mt-22 z-10 w-2/3 self-center text-center px-0">Обменять</button>
+                                  <button type="button" class="btn-black transition-opacity duration-300 opacity-0 sm-custom:group-hover:opacity-100 -mt-22 z-10 w-2/3 self-center text-center px-0">Обменять</button>
                               </div>
                           </div>
                         {% endfor %}
@@ -232,11 +232,11 @@
                 <button type="button" id="accordion-2-heading-1" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
+                            <circle class="transition-colors duration-300 group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
                         </svg>
                         <span class="text-regular-20-400-L30 sm-custom-max:text-regular-14-400-L20 text-start">Как зарегистрироваться в бонусной программе?</span>
                     </div>
-                    <svg class="group-[.is-active-ac-i]:-rotate-90" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="group-[.is-active-ac-i]:-rotate-90 flex-none" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
@@ -251,11 +251,11 @@
                 <button type="button" id="accordion-2-heading-2" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
+                            <circle class="transition-colors duration-300 group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
                         </svg>
                         <span class="text-regular-20-400-L30 sm-custom-max:text-regular-14-400-L20 text-start">За какие офферы можно получить баллы?</span>
                     </div>
-                    <svg class="group-[.is-active-ac-i]:-rotate-90" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="group-[.is-active-ac-i]:-rotate-90 flex-none" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
@@ -265,11 +265,11 @@
                 <button type="button" id="accordion-2-heading-3" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
+                            <circle class="transition-colors duration-300 group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
                         </svg>
                         <span class="text-regular-20-400-L30 sm-custom-max:text-regular-14-400-L20 text-start">Как начисляются баллы?</span>
                     </div>
-                    <svg class="group-[.is-active-ac-i]:-rotate-90" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="group-[.is-active-ac-i]:-rotate-90 flex-none" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
@@ -283,11 +283,11 @@
                 <button type="button" id="accordion-2-heading-4" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
+                            <circle class="transition-colors duration-300 group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
                         </svg>
                         <span class="text-regular-20-400-L30 sm-custom-max:text-regular-14-400-L20 text-start">Как обменять баллы на подарок?</span>
                     </div>
-                    <svg class="group-[.is-active-ac-i]:-rotate-90" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="group-[.is-active-ac-i]:-rotate-90 flex-none" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
@@ -297,11 +297,11 @@
                 <button type="button" id="accordion-2-heading-5" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
+                            <circle class="transition-colors duration-300 group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
                         </svg>
                         <span class="text-regular-20-400-L30 sm-custom-max:text-regular-14-400-L20 text-start">Я не в России. Как мне получить подарок?</span>
                     </div>
-                    <svg class="group-[.is-active-ac-i]:-rotate-90" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="group-[.is-active-ac-i]:-rotate-90 flex-none" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>
@@ -311,11 +311,11 @@
                 <button type="button" id="accordion-2-heading-6" class="group rounded-4xl bg-white flex flex-row p-7.5 sm-custom-max:p-5 items-center justify-between shadow-md">
                     <div class="flex items-center flex-nowrap gap-x-10 sm-custom-max:gap-x-5">
                         <svg class="flex-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle class="group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
+                            <circle class="transition-colors duration-300 group-[.is-active-ac-i]:fill-lime-500" cx="12" cy="12" r="12" fill="#1F2227"/>
                         </svg>
                         <span class="text-regular-20-400-L30 sm-custom-max:text-regular-14-400-L20 text-start">Хочу товар, которого нет в каталоге. Как быть?</span>
                     </div>
-                    <svg class="group-[.is-active-ac-i]:-rotate-90" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="group-[.is-active-ac-i]:-rotate-90 flex-none" width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="group-[.is-active-ac-i]:fill-lime-300" d="M9 9L17.6603 0L0.339746 0L9 9Z" fill="#85C83E"/>
                     </svg>
                 </button>

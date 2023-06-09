@@ -7569,6 +7569,10 @@ input:checked + .toggle-bg {
   transition-duration: 150ms;
 }
 
+.transition-none {
+  transition-property: none;
+}
+
 .delay-100 {
   transition-delay: 100ms;
 }
@@ -8069,6 +8073,10 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 590px) {
+  .sm-custom\:pointer-events-none {
+    pointer-events: none;
+  }
+
   .sm-custom\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -8334,6 +8342,10 @@ input:checked + .toggle-bg {
 
   .group:hover .sm-custom\:group-hover\:opacity-20 {
     opacity: 0.2;
+  }
+
+  .group:hover .sm-custom\:group-hover\:opacity-100 {
+    opacity: 1;
   }
 }
 

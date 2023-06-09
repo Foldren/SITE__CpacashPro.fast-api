@@ -5,7 +5,7 @@ export function generate_accordion(number_items,
                                     inactive_classes = "inactive-nothing",
                                     without_fst_element = 0,
                                     animate = false}) {
-
+    let active_index = 0
     let result = {
         accordionItems: [],
         options: {
@@ -32,19 +32,23 @@ export function generate_accordion(number_items,
                     }
                 }
 
-                console.log(e)
                 if(animate) {
-                    $(e._items[1].targetEl).hide()
-                    $(e._items[1].targetEl).slideDown(200).fadeIn({
-                        duration: 200,
-                        queue: false
-                    });
+                    e._items.forEach(function(item, index) {
+                        if(item.active === true) {
+                            active_index = index
+                            $(`#accordion-${index_accordion}-body-${index+1}`).hide()
+                            $(`#accordion-${index_accordion}-body-${index+1}`).slideDown(200).fadeIn({
+                                duration: 200,
+                                queue: false
+                            });
+                        }
+                    })
                 }
             },
             onClose: (e) => {
                 if(animate) {
-                    (e._items[1].targetEl).show()
-                    $(e._items[1].targetEl).slideUp(200).fadeOut({
+                    $(`#accordion-${index_accordion}-body-${active_index+1}`).show()
+                    $(`#accordion-${index_accordion}-body-${active_index+1}`).slideUp(200).fadeOut({
                         duration: 200,
                         queue: false
                     });

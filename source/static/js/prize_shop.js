@@ -13,6 +13,10 @@ activate_empty_forms("#exchange-prize-form")
 
 const modal_exchange_prize = generate_modal(1, ".open-modal")
 
+if(window.innerWidth > 976) {
+    $(".disable-to-lg").remove()
+}
+
 set_form_ajax_listener(
     "#exchange-prize-form",
     "/api/prizes/send_request",
