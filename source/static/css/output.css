@@ -7551,6 +7551,10 @@ input:checked + .toggle-bg {
   transition-duration: 150ms;
 }
 
+.transition-none {
+  transition-property: none;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -7567,10 +7571,6 @@ input:checked + .toggle-bg {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.transition-none {
-  transition-property: none;
 }
 
 .delay-100 {
@@ -8073,10 +8073,6 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 590px) {
-  .sm-custom\:pointer-events-none {
-    pointer-events: none;
-  }
-
   .sm-custom\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -8336,16 +8332,12 @@ input:checked + .toggle-bg {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
-  .group:hover .sm-custom\:group-hover\:block {
-    display: block;
+  .group:hover .sm-custom\:group-hover\:opacity-100 {
+    opacity: 1;
   }
 
   .group:hover .sm-custom\:group-hover\:opacity-20 {
     opacity: 0.2;
-  }
-
-  .group:hover .sm-custom\:group-hover\:opacity-100 {
-    opacity: 1;
   }
 }
 
