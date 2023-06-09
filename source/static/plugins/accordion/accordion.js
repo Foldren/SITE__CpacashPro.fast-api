@@ -3,7 +3,8 @@ export function generate_accordion(number_items,
                                    {active_item = 0,
                                     active_classes = "nothing",
                                     inactive_classes = "inactive-nothing",
-                                    without_fst_element = 0}) {
+                                    without_fst_element = 0,
+                                    animate = false}) {
 
     let result = {
         accordionItems: [],
@@ -30,8 +31,25 @@ export function generate_accordion(number_items,
                         }
                     }
                 }
+
+                console.log(e)
+                if(animate) {
+                    $(e._items[1].targetEl).hide()
+                    $(e._items[1].targetEl).slideDown(200).fadeIn({
+                        duration: 200,
+                        queue: false
+                    });
+                }
             },
-            onClose: () => {},
+            onClose: (e) => {
+                if(animate) {
+                    (e._items[1].targetEl).show()
+                    $(e._items[1].targetEl).slideUp(200).fadeOut({
+                        duration: 200,
+                        queue: false
+                    });
+                }
+            },
             onToggle: () => {},
         }
     }

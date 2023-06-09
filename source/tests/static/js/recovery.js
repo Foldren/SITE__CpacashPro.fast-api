@@ -6,8 +6,8 @@ import {set_form_ajax_listener} from "/source/static/plugins/send_ajax_form/send
 
 activate_empty_forms("#recovery-form")
 
-generate_accordion(
-    3,
-    9,
-    {active_item: 1, without_fst_element: 1}
-)
+// generate_accordion(
+//     3,
+//     9,
+//     {active_item: 1, without_fst_element: 1}
+// )

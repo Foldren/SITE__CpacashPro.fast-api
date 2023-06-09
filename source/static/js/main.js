@@ -4,11 +4,11 @@ import {
     set_bind_show_elements
 } from "/source/static/plugins/show_elements_on_scroll/show_elements_on_scroll.js";
 
-set_bind_show_elements('#show-el-1', 600, 800)
-set_bind_show_elements('#show-el-2', 2300, 3200)
-set_bind_show_elements('#show-el-3', 4164, 5500)
-set_bind_show_elements('#show-el-4', 6800, 8500)
-set_bind_show_diff_query_elements('.gifts-show', 4164, 5500)
+set_bind_show_elements('#show-el-1', 600)
+set_bind_show_elements('#show-el-2', 2300)
+set_bind_show_elements('#show-el-3', 4164)
+set_bind_show_elements('#show-el-4', 6600)
+set_bind_show_diff_query_elements('.gifts-show', 4164, 5700)
 
 generate_carousel_flick(
     '#carousel-1',

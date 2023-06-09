@@ -62,7 +62,7 @@ const accordion_prize_shop = generate_accordion(
 const accordion_answer_questions = generate_accordion(
     6,
     2,
-    {active_item: 0, active_classes: 'is-active-ac-i bg-white/100'})
+    {active_item: 0, active_classes: 'is-active-ac-i bg-white/100', animate: true})
 
 generate_carousel_flick(
     '#carousel-8',
