@@ -137,6 +137,11 @@
     @apply font-montserrat-semibold text-2.5xl text-black-custom font-semibold leading-9
   }
 
+  .text-semibold-28-600-L36--с {
+    @apply font-montserrat-semibold text-2.5xl font-semibold leading-9
+  }
+
+
   .text-semibold-23-600-L32 {
     @apply font-montserrat-semibold text-[23px] text-black-custom font-semibold leading-[32px]
   }
