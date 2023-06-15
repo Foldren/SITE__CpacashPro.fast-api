@@ -6473,6 +6473,10 @@ input:checked + .toggle-bg {
   padding-right: 0.5rem;
 }
 
+.pr-23 {
+  padding-right: 90px;
+}
+
 .pr-3 {
   padding-right: 0.75rem;
 }
@@ -6643,10 +6647,6 @@ input:checked + .toggle-bg {
 
 .pt-9 {
   padding-top: 2.25rem;
-}
-
-.pr-23 {
-  padding-right: 90px;
 }
 
 .text-left {
@@ -8211,16 +8211,8 @@ input:checked + .toggle-bg {
     margin-top: 8rem;
   }
 
-  .sm-custom\:mt-40 {
-    margin-top: 10rem;
-  }
-
   .sm-custom\:mt-6 {
     margin-top: 1.5rem;
-  }
-
-  .sm-custom\:-mt-20 {
-    margin-top: -5rem;
   }
 
   .sm-custom\:block {
@@ -8290,6 +8282,10 @@ input:checked + .toggle-bg {
 
   .sm-custom\:gap-y-8 {
     row-gap: 2rem;
+  }
+
+  .sm-custom\:whitespace-nowrap {
+    white-space: nowrap;
   }
 
   .sm-custom\:bg-transparent {
@@ -8388,12 +8384,20 @@ input:checked + .toggle-bg {
     padding-bottom: 3rem;
   }
 
+  .sm-custom\:pl-12 {
+    padding-left: 3rem;
+  }
+
   .sm-custom\:pl-14 {
     padding-left: 3.5rem;
   }
 
   .sm-custom\:pl-2 {
     padding-left: 0.5rem;
+  }
+
+  .sm-custom\:pr-23 {
+    padding-right: 90px;
   }
 
   .sm-custom\:pt-44 {
@@ -8414,14 +8418,6 @@ input:checked + .toggle-bg {
 
   .sm-custom\:pt-6 {
     padding-top: 1.5rem;
-  }
-
-  .sm-custom\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .sm-custom\:pr-23 {
-    padding-right: 90px;
   }
 
   .sm-custom\:shadow-none {
@@ -8808,10 +8804,6 @@ input:checked + .toggle-bg {
   .lg-2-custom\:mx-80 {
     margin-left: 20rem;
     margin-right: 20rem;
-  }
-
-  .lg-2-custom\:-mt-24 {
-    margin-top: -6rem;
   }
 
   .lg-2-custom\:-mt-32 {
